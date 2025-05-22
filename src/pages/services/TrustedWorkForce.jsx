@@ -255,7 +255,7 @@ const TrustedWorkForce = () => {
                 key={indx}
                 variants={itemVariants}
                 whileHover="hover"
-                variants={cardHover}
+                // variants={cardHover}
                 className="bg-white rounded-xl shadow-lg flex flex-col p-6 transition-all duration-300 border border-gray-100 hover:border-blue-100"
               >
                 <h2 className="text-xl font-bold text-center text-gray-800 border-b-2 border-blue-100 pb-3 mb-4">
@@ -331,7 +331,7 @@ const TrustedWorkForce = () => {
                 key={index}
                 variants={itemVariants}
                 whileHover="hover"
-                variants={cardHover}
+                // variants={cardHover}
                 className={`${service.gradient} rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden border border-gray-100`}
               >
                 {/* Animated border bottom */}
