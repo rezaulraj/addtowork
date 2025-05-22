@@ -8,12 +8,13 @@ import NotFoundPage from "./components/NotFoundPage";
 import Layout from "./components/Layout";
 import HomePage from "./pages/home/HomePage";
 import Hires from "./pages/services/Hires";
-import TrustedWorkForce from "./pages/services/trustedworkforce";
-import WorkPermit from "./pages/services/workpermit";
+
 import AeraOfWork from "./pages/industries/AeraOfWork";
 import Referemces from "./pages/references/Referemces";
 import AboutUpPage from "./pages/about/AboutUpPage";
 import Contact from "./pages/contact/Contact";
+import TrustedWorkForce from "./pages/services/TrustedWorkForce";
+import WorkPermit from "./pages/services/WorkPermit";
 
 NProgress.configure({
   minimum: 0.3,
