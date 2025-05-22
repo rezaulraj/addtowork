@@ -1,0 +1,21 @@
+{
+  "menu": {
+    "home": "Početna",
+    "services": "Usluge",
+    "areas": "Područja rada",
+    "success": "Priče o uspjehu",
+    "about": "O nama"
+  },
+  "services": {
+    "hire_talent": "Zapošljavanje obučenih radnika",
+    "work_permit": "Pomoć pri dobivanju radne dozvole",
+    "workforce": "Vaš pouzdan partner za radnu snagu"
+  },
+  "header": {
+    "location": "Naše lokacije",
+    "faq": "Često postavljana pitanja",
+    "call_us": "Nazovite nas",
+    "contact": "Kontaktirajte nas",
+    "contact_us": "Kontakt"
+  }
+}

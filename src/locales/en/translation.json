@@ -1,0 +1,21 @@
+{
+  "menu": {
+    "home": "Home",
+    "services": "Services",
+    "areas": "Areas of work",
+    "success": "Client Success Stories",
+    "about": "About Us"
+  },
+  "services": {
+    "hire_talent": "Hire Talent-Trained Workers",
+    "work_permit": "Work Permit Assistance",
+    "workforce": "Your Trusted Workforce Partner"
+  },
+  "header": {
+    "location": "Explore Our Locations",
+    "faq": "FAQs",
+    "call_us": "Call Us Today",
+    "contact": "Get In Touch",
+    "contact_us": "Contact Us"
+  }
+}
