@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ChevronDown, Phone, Menu, X, Mail } from "lucide-react";
+import { ChevronDown, Phone, Menu, X, Mail, ChevronRight } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -19,6 +19,7 @@ const Navbar = () => {
   const { t, i18n } = useTranslation();
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  const [openSubmenu, setOpenSubmenu] = useState(null);
   const isScrolled = useIsScrolled();
 
   // Detect country and set language
@@ -56,17 +57,21 @@ const Navbar = () => {
 
   const currentPath = location.pathname;
 
+  const toggleSubmenu = (index) => {
+    setOpenSubmenu(openSubmenu === index ? null : index);
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
-      <div className="max-w-[1250px] mx-auto px-4 py-3">
-        <div className="flex flex-col lg:flex-row gap-8 lg:items-center">
-          <div className="flex items-center justify-between py-4 lg:py-0">
+      <div className="max-w-[1250px] mx-auto px-4 py-2">
+        <div className="flex flex-col lg:flex-row gap-14 lg:items-center">
+          <div className="flex items-center justify-between py-2 lg:py-0">
             <Link to="/" className="flex items-center">
               <img
                 src="/images/off2worklogo.png"
                 alt="Logo"
-                width={160}
-                height={40}
+                width={200}
+                height={100}
               />
             </Link>
             <button
@@ -83,13 +88,13 @@ const Navbar = () => {
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between py-2 ">
                 <div className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-6 mb-2 lg:mb-0 border-b border-gray-200 py-3">
                   <Link
-                    to="/locations"
+                    to="/contact/#location"
                     className="text-sm text-[#0f2a47] hover:underline"
                   >
                     {t("header.location")}
                   </Link>
                   <Link
-                    to="/faq"
+                    to="/contact/#faqs"
                     className="text-sm text-[#0f2a47] hover:underline"
                   >
                     {t("header.faq")}
@@ -150,11 +155,12 @@ const Navbar = () => {
             {/* Main navigation */}
             <nav className="bg-white py-2">
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-2 lg:space-y-0">
-                {navItems.map((item) => (
+                {navItems.map((item, index) => (
                   <div key={item.title} className="relative group">
                     {item.children ? (
                       <>
-                        <div className="flex items-center space-x-1 py-2 text-[#0f2a47] hover:text-blue-600 cursor-pointer">
+                        {/* Desktop version */}
+                        <div className="hidden lg:flex items-center space-x-1 py-2 text-[#0f2a47] hover:text-blue-600 cursor-pointer">
                           <span>{item.title}</span>
                           <ChevronDown className="h-4 w-4" />
                         </div>
@@ -169,6 +175,43 @@ const Navbar = () => {
                             </Link>
                           ))}
                         </div>
+
+                        {/* Mobile version */}
+                        <div className="lg:hidden">
+                          <button
+                            onClick={() => toggleSubmenu(index)}
+                            className={`flex items-center justify-between w-full py-3 text-[#0f2a47] hover:text-blue-600 ${
+                              currentPath === item.href
+                                ? "font-bold border-b-2 border-[#0f2a47]"
+                                : ""
+                            }`}
+                          >
+                            <span>{item.title}</span>
+                            <ChevronRight
+                              className={`h-4 w-4 transition-transform ${
+                                openSubmenu === index ? "rotate-90" : ""
+                              }`}
+                            />
+                          </button>
+                          {openSubmenu === index && (
+                            <div className="pl-4 space-y-2 bg-gray-50 rounded-lg my-2">
+                              {item.children.map((child) => (
+                                <Link
+                                  key={child.href}
+                                  to={child.href}
+                                  className={`block py-2 px-3 text-[#0f2a47] hover:bg-gray-100 rounded ${
+                                    currentPath === child.href
+                                      ? "font-medium bg-gray-100"
+                                      : ""
+                                  }`}
+                                  onClick={() => setIsOpen(false)}
+                                >
+                                  {child.title}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
+                        </div>
                       </>
                     ) : (
                       <Link
@@ -178,6 +221,7 @@ const Navbar = () => {
                             ? "font-bold border-b-2 border-[#0f2a47]"
                             : ""
                         }`}
+                        onClick={() => setIsOpen(false)}
                       >
                         {item.title}
                       </Link>
@@ -187,6 +231,7 @@ const Navbar = () => {
                 <Link
                   to="/contact"
                   className="inline-block bg-[#0f2a47] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  onClick={() => setIsOpen(false)}
                 >
                   {t("header.contact_us")}
                 </Link>

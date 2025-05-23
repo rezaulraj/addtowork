@@ -100,7 +100,7 @@ const HeroPage = () => {
         </div>
 
         {/* Scrolling indicator */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.5, duration: 0.8 }}
@@ -123,7 +123,7 @@ const HeroPage = () => {
               />
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
     </section>
   );

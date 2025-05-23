@@ -54,7 +54,7 @@ const AboutUpPage = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="relative w-full h-[600px] flex items-center justify-center overflow-hidden p-4"
+        className="relative w-full h-[500px] flex items-center justify-center overflow-hidden p-4"
       >
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"

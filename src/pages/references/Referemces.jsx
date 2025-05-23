@@ -61,6 +61,7 @@ const References = () => {
         "We provide reliable workers for agriculture, crop farming, and livestock farming, supporting both family farms and business owners.",
       color: "from-green-100 to-green-50",
       hoverColor: "hover:from-green-200 hover:to-green-100",
+      link: "/areas-of-work/#agriculture",
     },
     {
       id: 2,
@@ -70,6 +71,7 @@ const References = () => {
         "From carpenters and bricklayers to drivers and machine operators, we supply skilled workers for construction and industrial projects.",
       color: "from-amber-100 to-amber-50",
       hoverColor: "hover:from-amber-200 hover:to-amber-100",
+      link: "/areas-of-work/#construction",
     },
     {
       id: 3,
@@ -79,6 +81,7 @@ const References = () => {
         "We help wood processing and manufacturing plants find qualified workers to meet their production needs.",
       color: "from-brown-100 to-brown-50",
       hoverColor: "hover:from-brown-200 hover:to-brown-100",
+      link: "/areas-of-work/#wood",
     },
     {
       id: 4,
@@ -88,6 +91,7 @@ const References = () => {
         "We recruit experienced welders and motivated workers for the shipbuilding industry.",
       color: "from-blue-100 to-blue-50",
       hoverColor: "hover:from-blue-200 hover:to-blue-100",
+      link: "/areas-of-work/#shipbuilding",
     },
   ];
 
@@ -182,7 +186,7 @@ const References = () => {
             whileTap={{ scale: 0.95 }}
             className="self-start px-6 py-3 bg-white text-gray-800 border border-gray-300 rounded-lg font-medium transition-all duration-300 hover:bg-blue-600 hover:text-white hover:border-blue-600"
           >
-            Learn more
+            <a href={industry.link}>Learn more</a>
           </motion.button>
         </div>
       </motion.div>
@@ -334,12 +338,12 @@ const References = () => {
             whileTap={{ scale: 0.98 }}
             className="text-center mt-16"
           >
-            <Link
-              href={"/en/contact"}
+            <a
+              href={"/contact"}
               className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white text-lg font-semibold rounded-xl hover:shadow-xl transition-all duration-300 shadow-lg"
             >
               Contact us!
-            </Link>
+            </a>
           </motion.div>
         </div>
       </div>
@@ -510,12 +514,12 @@ const References = () => {
             whileTap={{ scale: 0.98 }}
             className="text-center mt-16"
           >
-            <Link
-              href={"/en/industries"}
+            <a
+              href={"/areas-of-work"}
               className="inline-block px-8 py-4 bg-blue-600 text-white text-lg font-semibold rounded-xl hover:bg-blue-700 transition-colors duration-300 shadow-lg hover:shadow-xl"
             >
               Explore All Industries
-            </Link>
+            </a>
           </motion.div>
         </div>
       </div>

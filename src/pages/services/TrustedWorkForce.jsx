@@ -88,6 +88,7 @@ const TrustedWorkForce = () => {
       icon: <Users className="w-8 h-8 text-blue-600" />,
       buttonText: "Learn More",
       gradient: "bg-gradient-to-br from-blue-50 to-blue-100",
+      link: "#flexable-worksolutaion",
     },
     {
       title: "Work Permit and Immigration Support",
@@ -96,6 +97,7 @@ const TrustedWorkForce = () => {
       icon: <File className="w-8 h-8 text-green-600" />,
       buttonText: "Learn More",
       gradient: "bg-gradient-to-br from-green-50 to-green-100",
+      link: "#flexable-worksolutaion",
     },
     {
       title: "Long-Term Staffing Partnerships",
@@ -104,6 +106,7 @@ const TrustedWorkForce = () => {
       icon: <Handshake className="w-8 h-8 text-purple-600" />,
       buttonText: "Learn More",
       gradient: "bg-gradient-to-br from-purple-50 to-purple-100",
+      link: "/client-success-stories",
     },
   ];
 
@@ -120,14 +123,14 @@ const TrustedWorkForce = () => {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
-        className="h-[500px] w-full flex items-center justify-center relative overflow-hidden"
+        className="h-[500px] w-full flex items-center justify-center"
       >
         {/* <div className="absolute inset-0 bg-black/30"></div> */}
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="text-start max-w-screen-md mx-auto h-[400px] mt-8 p-4 relative z-10"
+          className="text-start max-w-screen-md mx-auto h-[400px] mt-8 p-4"
         >
           <motion.p
             initial={{ x: -20, opacity: 0 }}
@@ -290,7 +293,10 @@ const TrustedWorkForce = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl mb-4">
+            <h2
+              id="flexable-worksolutaion"
+              className="text-4xl font-bold text-gray-900 sm:text-5xl mb-4"
+            >
               Explore Our <span className="text-blue-600">Services</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -303,7 +309,7 @@ const TrustedWorkForce = () => {
               className="mt-8 inline-block"
             >
               <Link
-                to="/industries#service"
+                to="/areas-of-work/#services-area"
                 className="px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-md hover:shadow-lg inline-flex items-center"
               >
                 <span>See more</span>
@@ -337,7 +343,10 @@ const TrustedWorkForce = () => {
                 {/* Animated border bottom */}
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-                <div className="relative z-10 h-full flex flex-col">
+                <Link
+                  to={service.link}
+                  className="relative z-10 h-full flex flex-col"
+                >
                   <div className="mb-6 p-4 bg-white rounded-full w-16 h-16 flex items-center justify-center shadow-sm">
                     {service.icon}
                   </div>
@@ -357,7 +366,7 @@ const TrustedWorkForce = () => {
                       <ArrowRight className="w-5 h-5" />
                     </motion.span>
                   </div>
-                </div>
+                </Link>
               </motion.div>
             ))}
           </motion.div>

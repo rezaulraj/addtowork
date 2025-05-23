@@ -122,7 +122,7 @@ const ServicesSection = () => {
       <div className="flex items-center justify-center mb-16">
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Link
-            to="/services"
+            to="/services/hires"
             className="bg-[#3E4247] hover:bg-blue-600 text-white px-8 py-3 rounded-lg text-xl font-medium transition-colors duration-300"
           >
             Explore Our Services
@@ -147,7 +147,7 @@ const ServicesSection = () => {
         </p>
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Link
-            to="/services"
+            to="/services/trustedworkforce"
             className="bg-[#3E4247] hover:bg-blue-600 text-white px-8 py-3 rounded-lg text-xl font-medium transition-colors duration-300"
           >
             Discover Our Services

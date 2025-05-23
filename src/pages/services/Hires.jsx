@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, File, Handshake, Users } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const listData = [
   {
@@ -54,6 +54,7 @@ const listData = [
 ];
 
 const Hires = () => {
+  const location = useLocation();
   const services = [
     {
       title: "Flexible Workforce Solutions",
@@ -62,6 +63,7 @@ const Hires = () => {
       icon: <Users className="w-8 h-8 text-blue-600" />,
       buttonText: "Learn More",
       gradient: "bg-gradient-to-br from-blue-50 to-blue-100",
+      link: "#flexable-worksolutaion",
     },
     {
       title: "Work Permit and Immigration Support",
@@ -70,6 +72,7 @@ const Hires = () => {
       icon: <File className="w-8 h-8 text-green-600" />,
       buttonText: "Learn More",
       gradient: "bg-gradient-to-br from-green-50 to-green-100",
+      link: "#flexable-worksolutaion",
     },
     {
       title: "Long-Term Staffing Partnerships",
@@ -78,6 +81,7 @@ const Hires = () => {
       icon: <Handshake className="w-8 h-8 text-purple-600" />,
       buttonText: "Learn More",
       gradient: "bg-gradient-to-br from-purple-50 to-purple-100",
+      link: "/client-success-stories",
     },
   ];
 
@@ -97,12 +101,24 @@ const Hires = () => {
   };
 
   const cardHover = {
-  hover: {
-    y: -10,
-    boxShadow:
-      "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-  },
-};
+    hover: {
+      y: -10,
+      boxShadow:
+        "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+    },
+  };
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const target = document.querySelector(hash);
+      if (target) {
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [location.hash]);
 
   return (
     <div className="min-h-screen">
@@ -213,7 +229,10 @@ const Hires = () => {
             viewport={{ once: true }}
             className="max-w-2xl mx-auto my-6"
           >
-            <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl mb-6">
+            <h2
+              id="flexable-worksolutaion"
+              className="text-4xl font-bold text-gray-900 sm:text-5xl mb-6"
+            >
               Choose A <span className="text-blue-600"> Service Tailored </span>
               To Your Business.
             </h2>
@@ -280,7 +299,7 @@ const Hires = () => {
               className="mt-8"
             >
               <Link
-                to="/en/industries#service"
+                to="/areas-of-work/#services-area"
                 className="px-8 py-3 inline-block bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-300 mx-auto"
               >
                 <span className="flex items-center justify-center">
@@ -308,7 +327,10 @@ const Hires = () => {
                 {/* Animated border bottom */}
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-                <div className="relative z-10">
+                <Link
+                  to={service.link}
+                  className="relative z-10 cursor-pointer"
+                >
                   <div className="mb-6 p-4 bg-white rounded-full w-16 h-16 flex items-center justify-center shadow-sm">
                     {service.icon}
                   </div>
@@ -320,7 +342,7 @@ const Hires = () => {
                     {service.buttonText}
                     <ArrowRight className="ml-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-1 group-hover:translate-x-0" />
                   </div>
-                </div>
+                </Link>
               </motion.div>
             ))}
           </motion.div>

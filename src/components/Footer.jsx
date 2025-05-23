@@ -119,13 +119,8 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-8 flex items-center justify-between text-center border-t border-gray-300 text-sm text-gray-500 pt-4">
-          <p>
-            ©2025 • Off2 Work • Powered by
-            <Link href="#" className="text-[#063556] hover:underline">
-              Innovation
-            </Link>
-          </p>
+        <div className="mt-8 flex items-center flex-col gap-4 md:flex-row justify-between text-center border-t border-gray-300 text-sm text-gray-500 pt-4">
+          <p>©2025 • Powered by Off2 Work</p>
           <div className="flex items-center gap-2">
             <Link
               href={"https://www.facebook.com/off2work"}
@@ -171,10 +166,10 @@ const Footer = () => {
             </Link>
           </div>
           <Link
-            href="#top"
+            to={"https://off2.work/"}
             className="block text-[#063556] hover:underline flex items-center"
           >
-            Back to top <ArrowUpToLine />
+            off2.work.com
           </Link>
         </div>
       </div>

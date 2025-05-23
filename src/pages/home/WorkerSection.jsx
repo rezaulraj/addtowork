@@ -87,6 +87,10 @@ const WorkerSection = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-[#023a51] hover:bg-[#035b7a] text-xl cursor-pointer hover:shadow-xl transition-all duration-300 text-white px-8 py-4 rounded-lg uppercase font-medium tracking-wide shadow-lg"
+            onClick={() => {
+              const section = document.querySelector("#get-in-touch");
+              section?.scrollIntoView({ behavior: "smooth" });
+            }}
           >
             Get in Touch
           </motion.button>
@@ -204,7 +208,11 @@ const WorkerSection = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-[#023a51] hover:bg-gray-100 px-8 py-3 uppercase rounded-lg font-medium tracking-wide shadow-md transition-all duration-300"
+                className="bg-white text-[#023a51] hover:bg-gray-100 px-8 py-3 uppercase rounded-lg font-medium tracking-wide shadow-md transition-all duration-300 cursor-pointer"
+                onClick={() => {
+                  const section = document.querySelector("#get-in-touch");
+                  section?.scrollIntoView({ behavior: "smooth" });
+                }}
               >
                 Get in Touch
               </motion.button>

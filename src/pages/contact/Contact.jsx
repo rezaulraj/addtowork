@@ -3,15 +3,17 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import ContactInfo from "./ContactInfo";
 import FAQSection from "./FAQSection";
-
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 const Contact = () => {
+  const location = useLocation();
   const [formData, setFormData] = useState({
     fullName: "",
     mobile: "",
     email: "",
     company: "",
     message: "",
-    workerCount: 1
+    workerCount: 1,
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -19,25 +21,35 @@ const Contact = () => {
 
   const handleChange = (e) => {
     const { id, value } = e.target;
-    setFormData(prev => ({ ...prev, [id]: value }));
+    setFormData((prev) => ({ ...prev, [id]: value }));
   };
 
   const handleSliderChange = (value) => {
-    setFormData(prev => ({ ...prev, workerCount: value[0] }));
+    setFormData((prev) => ({ ...prev, workerCount: value[0] }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
+
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitSuccess(true);
-      // Reset form after 3 seconds
       setTimeout(() => setSubmitSuccess(false), 3000);
     }, 1500);
   };
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const target = document.querySelector(hash);
+      if (target) {
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [location.hash]);
 
   // Animation variants
   const containerVariants = {
@@ -46,9 +58,9 @@ const Contact = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
+        delayChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
@@ -58,14 +70,14 @@ const Contact = () => {
       opacity: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   const fadeInVariants = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 0.8 } }
+    visible: { opacity: 1, transition: { duration: 0.8 } },
   };
 
   return (
@@ -75,41 +87,41 @@ const Contact = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="relative h-[500px] w-full flex items-center justify-center overflow-hidden"
+        className="relative w-full h-[500px] flex items-center justify-center overflow-hidden p-4"
       >
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: "url('/images/Off2work/1x/asset2.png')",
-            transform: "translateZ(0)"
+            transform: "translateZ(0)",
           }}
         />
-        <div className="absolute inset-0 bg-black/30" />
-        
-        <motion.div 
-          className="text-start max-w-screen-md mx-auto p-4 relative z-10"
+        {/* <div className="absolute inset-0 bg-black/30" /> */}
+
+        <motion.div
+          className="max-w-screen-md mx-auto min-h-[400px] space-y-4 mt-8 relative z-10"
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
         >
-          <motion.p 
-            className="text-4xl text-white my-4"
+          <motion.p
+            className="text-2xl text-[#023a51] my-4"
             initial={{ scale: 0.9 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.5, type: "spring", stiffness: 100 }}
           >
             Contact us
           </motion.p>
-          <motion.p 
-            className="text-5xl text-white font-bold my-4"
+          <motion.p
+            className="text-4xl md:text-5xl text-[#023a51] font-bold my-4"
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.7, duration: 0.8 }}
           >
             Let&apos;s Get to Know Each Other
           </motion.p>
-          <motion.p 
-            className="text-xl text-white/90"
+          <motion.p
+            className="text-xl text-foreground-muted"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 0.8 }}
@@ -128,10 +140,7 @@ const Contact = () => {
         variants={containerVariants}
         className="bg-white rounded-xl py-10 px-6 md:px-12 space-y-3 max-w-[700px] mx-auto shadow-2xl -mt-16 relative z-20"
       >
-        <motion.div 
-          className="pb-4"
-          variants={itemVariants}
-        >
+        <motion.div className="pb-4" variants={itemVariants}>
           <h2 className="text-4xl font-bold text-center text-[#3D4147]">
             Get in Touch
           </h2>
@@ -146,12 +155,12 @@ const Contact = () => {
             <p>Thank you for your inquiry! We'll contact you shortly.</p>
           </motion.div>
         ) : (
-          <motion.form 
+          <motion.form
             className="space-y-6"
             onSubmit={handleSubmit}
             variants={containerVariants}
           >
-            <motion.div 
+            <motion.div
               className="grid md:grid-cols-2 gap-4"
               variants={itemVariants}
             >
@@ -184,7 +193,7 @@ const Contact = () => {
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="grid md:grid-cols-2 gap-4"
               variants={itemVariants}
             >
@@ -217,11 +226,10 @@ const Contact = () => {
               </div>
             </motion.div>
 
-            <motion.div 
-              className="space-y-2"
-              variants={itemVariants}
-            >
-              <label className="text-gray-600 font-medium">Number of Workers Needed? *</label>
+            <motion.div className="space-y-2" variants={itemVariants}>
+              <label className="text-gray-600 font-medium">
+                Number of Workers Needed? *
+              </label>
               <div className="flex items-center space-x-4">
                 <span className="inline-block border px-4 py-2 border-gray-300 rounded-lg bg-gray-50 font-medium min-w-[60px] text-center">
                   {formData.workerCount}
@@ -231,16 +239,15 @@ const Contact = () => {
                   min="1"
                   max="150"
                   value={formData.workerCount}
-                  onChange={(e) => handleSliderChange([parseInt(e.target.value)])}
+                  onChange={(e) =>
+                    handleSliderChange([parseInt(e.target.value)])
+                  }
                   className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
                 />
               </div>
             </motion.div>
 
-            <motion.div 
-              className="space-y-2"
-              variants={itemVariants}
-            >
+            <motion.div className="space-y-2" variants={itemVariants}>
               <label htmlFor="message" className="text-gray-600 font-medium">
                 Send an inquiry
               </label>
@@ -256,23 +263,43 @@ const Contact = () => {
 
             <motion.button
               type="submit"
-              className={`w-full bg-[#3D4147] text-white py-3 rounded-3xl font-medium flex items-center justify-center transition-all ${isSubmitting ? 'opacity-70' : 'hover:bg-blue-700 hover:shadow-md'}`}
+              className={`w-full bg-[#3D4147] text-white py-3 rounded-3xl font-medium flex items-center justify-center transition-all ${
+                isSubmitting
+                  ? "opacity-70"
+                  : "hover:bg-blue-700 hover:shadow-md"
+              }`}
               variants={itemVariants}
               whileHover={!isSubmitting ? { scale: 1.02 } : {}}
               whileTap={!isSubmitting ? { scale: 0.98 } : {}}
               disabled={isSubmitting}
             >
               {isSubmitting ? (
-                <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                <svg
+                  className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  ></circle>
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                  ></path>
                 </svg>
               ) : (
                 <>
-                  <Send className="mr-2 h-4 w-4" /> 
+                  <Send className="mr-2 h-4 w-4" />
                 </>
               )}
-              {isSubmitting ? 'Sending...' : 'Send Inquiry'}
+              {isSubmitting ? "Sending..." : "Send Inquiry"}
             </motion.button>
           </motion.form>
         )}
@@ -280,13 +307,14 @@ const Contact = () => {
 
       {/* Office Location Section */}
       <motion.div
+        id="location"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeInVariants}
         className="max-w-screen-xl mx-auto px-4 md:px-2 mt-16 mb-8"
       >
-        <motion.h2 
+        <motion.h2
           className="font-bold text-3xl md:text-5xl max-w-md border-b-4 pb-2 border-[#404049]"
           initial={{ x: -20, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
@@ -307,6 +335,7 @@ const Contact = () => {
       </motion.div>
 
       <motion.div
+        id="faqs"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}

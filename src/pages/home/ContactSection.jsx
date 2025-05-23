@@ -13,7 +13,7 @@ const ContactSection = () => {
 
   return (
     <section
-      id="offices"
+      id="get-in-touch"
       className="bg-black bg-gradient-to-br from-[#063556] to-gray-900 overflow-hidden"
     >
       <div
@@ -58,7 +58,7 @@ const ContactSection = () => {
                     </span>
                     Romania Office:
                   </p>
-                  <Link href={""} className="text-lg text-gray-200 font-medium">
+                  <Link href={""} className="text-lg text-gray-300 ">
                     HQ {">"} Municipiul Ploieşti, Strada MIHAI BRAVU, Nr. 239,
                     Bloc C4, Ap. 71, Judet Prahova
                   </Link>
@@ -74,7 +74,7 @@ const ContactSection = () => {
                     </span>
                     New Zealand:
                   </p>
-                  <Link href={""} className="text-lg text-gray-200 font-medium">
+                  <Link href={""} className="text-lg text-gray-300 ">
                     Level 1/3 Johnsonville Road, Johnsonville, Wellington 6037
                   </Link>
                 </motion.div>
@@ -89,7 +89,7 @@ const ContactSection = () => {
                     </span>
                     Australia:
                   </p>
-                  <Link href={""} className="text-lg text-gray-200 font-medium">
+                  <Link href={""} className="text-lg text-gray-300 ">
                     Level 25, 108 St Georges Terrace, Perth WA 6000
                   </Link>
                 </motion.div>
@@ -97,7 +97,7 @@ const ContactSection = () => {
             </div>
 
             {/* Contact Info */}
-            <motion.div
+            {/* <motion.div
               whileHover={{ scale: 1.01 }}
               className="p-4 rounded-lg bg-gray-800/50"
             >
@@ -112,7 +112,7 @@ const ContactSection = () => {
                   +123-456-7890
                 </p>
               </div>
-            </motion.div>
+            </motion.div> */}
 
             {/* Working Hours */}
             <motion.div

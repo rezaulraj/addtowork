@@ -88,6 +88,7 @@ const WorkPermit = () => {
       icon: <Users className="w-8 h-8 text-blue-600" />,
       buttonText: "Learn More",
       gradient: "bg-gradient-to-br from-blue-50 to-blue-100",
+      link: "#flexable-worksolutaion",
     },
     {
       title: "Work Permit and Immigration Support",
@@ -96,6 +97,7 @@ const WorkPermit = () => {
       icon: <File className="w-8 h-8 text-green-600" />,
       buttonText: "Learn More",
       gradient: "bg-gradient-to-br from-green-50 to-green-100",
+      link: "#flexable-worksolutaion",
     },
     {
       title: "Long-Term Staffing Partnerships",
@@ -104,6 +106,7 @@ const WorkPermit = () => {
       icon: <Handshake className="w-8 h-8 text-purple-600" />,
       buttonText: "Learn More",
       gradient: "bg-gradient-to-br from-purple-50 to-purple-100",
+      link: "/client-success-stories",
     },
   ];
 
@@ -120,20 +123,20 @@ const WorkPermit = () => {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
-        className="h-[500px] w-full flex items-center justify-center relative overflow-hidden"
+        className="h-[500px] w-full flex items-center justify-center"
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-black/20"></div>
+        {/* <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-black/20"></div> */}
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="text-start max-w-screen-md mx-auto h-[400px] mt-8 p-4 relative z-10 text-white"
+          className="text-start max-w-screen-md mx-auto h-[400px] mt-8 p-4"
         >
           <motion.p
             initial={{ x: -20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.6 }}
-            className="text-2xl my-4 font-light"
+            className="text-2xl text-[#023a51] my-4"
           >
             Work Permit Assistance
           </motion.p>
@@ -141,7 +144,7 @@ const WorkPermit = () => {
             initial={{ x: -20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.7, duration: 0.6 }}
-            className="text-3xl md:text-5xl font-bold my-4 leading-tight"
+            className="text-4xl md:text-5xl text-[#023a51] font-bold my-4"
           >
             Comprehensive Work Permit <br />
             Support Services
@@ -150,7 +153,7 @@ const WorkPermit = () => {
             initial={{ x: -20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.9, duration: 0.6 }}
-            className="text-xl text-gray-100 max-w-lg"
+            className="text-xl text-gray-700"
           >
             Trust us to handle the search, selection, and recruitment of
             motivated, skilled professionals tailored to your needs.
@@ -176,7 +179,7 @@ const WorkPermit = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-gradient-to-br from-indigo-900 to-purple-900 p-8 rounded-2xl shadow-xl"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-gradient-to-br from-[#023a51] to-[#3E4048] p-8 rounded-2xl shadow-xl"
         >
           {[
             {
@@ -290,7 +293,10 @@ const WorkPermit = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl mb-4">
+            <h2
+              id="flexable-worksolutaion"
+              className="text-4xl font-bold text-gray-900 sm:text-5xl mb-4"
+            >
               Explore Our <span className="text-blue-600">Services</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -302,7 +308,7 @@ const WorkPermit = () => {
               className="mt-8 inline-block"
             >
               <Link
-                to="/en/industries#service"
+                to="/areas-of-work/#services-area"
                 className="px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-md hover:shadow-lg inline-flex items-center"
               >
                 <span>See more</span>
@@ -336,7 +342,10 @@ const WorkPermit = () => {
                 {/* Animated border bottom */}
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-                <div className="relative z-10 h-full flex flex-col">
+                <Link
+                  to={service.link}
+                  className="relative z-10 h-full flex flex-col"
+                >
                   <div className="mb-6 p-4 bg-white rounded-full w-16 h-16 flex items-center justify-center shadow-sm">
                     {service.icon}
                   </div>
@@ -356,7 +365,7 @@ const WorkPermit = () => {
                       <ArrowRight className="w-5 h-5" />
                     </motion.span>
                   </div>
-                </div>
+                </Link>
               </motion.div>
             ))}
           </motion.div>

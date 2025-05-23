@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ServicesSection from "../home/ServicesSection";
 import LogoGallery from "../home/LogoGallery";
 import ContactSection from "../home/ContactSection";
 import { ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useLocation } from "react-router-dom";
 
 const ServiceItem = ({ service, index }) => {
   const [ref, inView] = useInView({
@@ -77,6 +78,7 @@ const TextCard = ({ title, description, services }) => {
 };
 
 const AeraOfWork = () => {
+  const location = useLocation();
   const services = [
     "Skilled workers in agriculture and livestock farming.",
     "Drivers for various categories.",
@@ -108,6 +110,18 @@ const AeraOfWork = () => {
     "Forklift operators, warehouse staff, and delivery personnel.",
   ];
 
+  useEffect(() => {
+      const hash = window.location.hash;
+      if (hash) {
+        const target = document.querySelector(hash);
+        if (target) {
+          setTimeout(() => {
+            target.scrollIntoView({ behavior: "smooth" });
+          }, 100);
+        }
+      }
+    }, [location.hash]);
+
   return (
     <div className="min-h-screen pt-5 overflow-hidden bg-gray-50">
       {/* Hero Section */}
@@ -133,6 +147,7 @@ const AeraOfWork = () => {
             Industries We Serve
           </motion.p>
           <motion.h1
+            id="services-area"
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.4 }}
@@ -153,7 +168,7 @@ const AeraOfWork = () => {
       </motion.div>
 
       {/* Agriculture Section */}
-      <div className="max-w-[1000px] mx-auto flex flex-col md:flex-row bg-transparent gap-4 mt-2 md:mt-20 -mb-10">
+      <div id="agriculture" className="max-w-[1000px] mx-auto flex flex-col md:flex-row bg-transparent gap-4 mt-2 md:mt-20 -mb-10">
         <TextCard
           title="Agriculture."
           description="We provide reliable and motivated foreign workers for agriculture, crop farming, and livestock farming, supporting both family farms and business owners."
@@ -168,7 +183,7 @@ const AeraOfWork = () => {
       <div className="bg-[#3E3F49] h-[180px]" />
 
       {/* Wood Industry Section */}
-      <div className="max-w-[1000px] mx-auto flex flex-col md:flex-row flex-col-reverse gap-4 -mt-10 mb-8 md:mb-30">
+      <div id="wood" className="max-w-[1000px] mx-auto flex flex-col md:flex-row flex-col-reverse gap-4 -mt-10 mb-8 md:mb-30">
         <ImageCard
           src="/images/Off2work/Area-of-Work/wood-industry.jpg"
           alt="Apples in wooden box"
@@ -181,7 +196,7 @@ const AeraOfWork = () => {
       </div>
 
       {/* Construction Section */}
-      <div className="max-w-[1000px] mx-auto flex flex-col md:flex-row bg-transparent gap-4 mt-30 -mb-10">
+      <div id="construction" className="max-w-[1000px] mx-auto flex flex-col md:flex-row bg-transparent gap-4 mt-30 -mb-10">
         <TextCard
           title="Construction and industry."
           description="We provide skilled workers for construction and industrial projects, sourced from reliable partners in countries like Uzbekistan."
@@ -196,7 +211,7 @@ const AeraOfWork = () => {
       <div className="bg-[#3E3F49] h-[180px]" />
 
       {/* Shipbuilding Section */}
-      <div className="max-w-[1000px] mx-auto flex flex-col md:flex-row flex-col-reverse gap-4 -mt-10 mb-8 md:mb-30">
+      <div id="shipbuilding" className="max-w-[1000px] mx-auto flex flex-col md:flex-row flex-col-reverse gap-4 -mt-10 mb-8 md:mb-30">
         <ImageCard
           src="/images/Off2work/Area-of-Work/shipbuilding.jpeg"
           alt="shipbuilding"
