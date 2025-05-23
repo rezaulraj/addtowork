@@ -3,10 +3,11 @@ import { Clock, Send, MapPin, Mail, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer, textVariant } from "./staggerContainer";
+import { useTranslation } from "react-i18next";
 
 const ContactSection = () => {
   const [workerCount, setWorkerCount] = useState(1);
-
+  const { t } = useTranslation();
   const handleSliderChange = (value) => {
     setWorkerCount(value[0]);
   };
@@ -32,7 +33,6 @@ const ContactSection = () => {
           viewport={{ once: false, amount: 0.25 }}
           className="max-w-7xl mx-auto bg-[#3E4247]/90 backdrop-blur-sm rounded-2xl px-6 md:px-20 mb-12 py-16 grid md:grid-cols-2 gap-12 shadow-2xl border border-gray-700/50"
         >
-          {/* Left Side - Contact Information */}
           <motion.div
             variants={fadeIn("right", "tween", 0.2, 1)}
             className="text-gray-200 space-y-8"
@@ -41,24 +41,24 @@ const ContactSection = () => {
               variants={textVariant(0.1)}
               className="text-4xl font-bold leading-tight uppercase bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-600"
             >
-              Our Team is Here for You
+              {t("contact.homelocationh")}
             </motion.h2>
 
             {/* Address */}
             <div className="flex flex-col space-y-4">
-              <p className="font-semibold text-xl">Office Locations:</p>
+              <p className="font-bold text-xl">{t("contact.officel")}</p>
               <div className="space-y-4">
                 <motion.div
                   whileHover={{ scale: 1.02 }}
                   className="p-4 rounded-lg bg-gray-800/50 hover:bg-gray-800/70 transition-all duration-300"
                 >
-                  <p className="text-lg font-bold text-gray-100 flex items-center gap-3">
+                  <p className="text-lg font-bold text-gray-300 flex items-center gap-3">
                     <span className="text-blue-400">
                       <MapPin />
                     </span>
                     Romania Office:
                   </p>
-                  <Link href={""} className="text-lg text-gray-300 ">
+                  <Link href={""} className="text-lg text-gray-400 ">
                     HQ {">"} Municipiul Ploieşti, Strada MIHAI BRAVU, Nr. 239,
                     Bloc C4, Ap. 71, Judet Prahova
                   </Link>
@@ -68,7 +68,7 @@ const ContactSection = () => {
                   whileHover={{ scale: 1.02 }}
                   className="p-4 rounded-lg bg-gray-800/50 hover:bg-gray-800/70 transition-all duration-300"
                 >
-                  <p className="text-lg text-gray-100 font-bold flex items-center gap-3">
+                  <p className="text-lg text-gray-300 font-bold flex items-center gap-3">
                     <span className="text-blue-400">
                       <MapPin />
                     </span>
@@ -83,7 +83,7 @@ const ContactSection = () => {
                   whileHover={{ scale: 1.02 }}
                   className="p-4 rounded-lg bg-gray-800/50 hover:bg-gray-800/70 transition-all duration-300"
                 >
-                  <p className="text-lg text-gray-100 font-bold flex items-center gap-3">
+                  <p className="text-lg text-gray-300 font-bold flex items-center gap-3">
                     <span className="text-blue-400">
                       <MapPin />
                     </span>
@@ -119,7 +119,9 @@ const ContactSection = () => {
               whileHover={{ scale: 1.01 }}
               className="p-4 rounded-lg bg-gray-800/50"
             >
-              <p className="font-semibold text-xl mb-3">Working Hours:</p>
+              <p className="font-semibold text-gray-300 text-xl mb-3">
+                Working Hours:
+              </p>
               <div className="flex items-center gap-4 text-gray-200">
                 <Clock className="w-5 h-5 text-blue-400" />
                 <div>
@@ -147,7 +149,7 @@ const ContactSection = () => {
                   transition={{ duration: 0.5 }}
                   className="text-[#063556] text-3xl font-bold"
                 >
-                  Get in Touch
+                  {t("contact.contactget")}
                 </motion.h2>
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
@@ -155,8 +157,7 @@ const ContactSection = () => {
                   transition={{ duration: 0.5, delay: 0.1 }}
                   className="text-center font-medium text-[#063556]"
                 >
-                  Let us know how we can assist you. Fill out the form below,
-                  and we'll get back to you promptly.
+                  {t("contact.hometouch")}
                 </motion.p>
               </div>
 
@@ -169,18 +170,18 @@ const ContactSection = () => {
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label htmlFor="fullName" className="text-gray-700">
-                      Name and Surname *
+                      {t("contact.name")} *
                     </label>
                     <input
                       id="fullName"
-                      placeholder="Name Surname*"
+                      placeholder={t("contact.name")}
                       required
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
                     />
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="mobile" className="text-gray-700">
-                      Mobile Phone Number *
+                      {t("contact.phone")} *
                     </label>
                     <input
                       id="mobile"
@@ -195,7 +196,7 @@ const ContactSection = () => {
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-gray-700">
-                      Email*
+                      {t("contact.email")}*
                     </label>
                     <input
                       id="email"
@@ -207,11 +208,11 @@ const ContactSection = () => {
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="company" className="text-gray-700">
-                      Company Name *
+                      {t("contact.conpany")} *
                     </label>
                     <input
                       id="company"
-                      placeholder="primjer d.o.o.*"
+                      placeholder={t("contact.conpany")}
                       required
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
                     />
@@ -220,7 +221,7 @@ const ContactSection = () => {
 
                 <div className="space-y-2">
                   <label className="text-gray-700">
-                    Number of Workers Needed? *
+                    {t("contact.employee")} *
                   </label>
                   <div className="flex items-center">
                     <span className="text-gray-700 inline-block border px-4 py-2 border-gray-300 rounded-l-lg mr-0">
@@ -239,11 +240,11 @@ const ContactSection = () => {
 
                 <div className="space-y-2">
                   <label htmlFor="message" className="text-gray-700">
-                    How Can We Help You?
+                    {t("contact.textare")}
                   </label>
                   <textarea
                     id="message"
-                    placeholder="How Can We Help You?"
+                    placeholder={t("contact.textare")}
                     rows={4}
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
                   />
@@ -255,7 +256,7 @@ const ContactSection = () => {
                   type="submit"
                   className="w-full bg-gradient-to-r from-[#063556] to-[#0a5485] hover:from-[#0a5485] hover:to-[#063556] text-white py-3 px-6 rounded-lg font-medium flex items-center justify-center transition-all duration-300 shadow-lg"
                 >
-                  <Send className="mr-2 h-5 w-5" /> Send Inquiry
+                  <Send className="mr-2 h-5 w-5" /> {t("contact.contactbtn")}
                 </motion.button>
               </motion.form>
             </div>

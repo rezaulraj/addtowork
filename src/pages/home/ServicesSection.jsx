@@ -2,8 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FileText, ShieldCheck, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const ServicesSection = () => {
+  const { t } = useTranslation();
   const cardVariants = {
     offscreen: {
       y: 50,
@@ -37,9 +39,11 @@ const ServicesSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-3xl md:text-4xl font-bold text-center text-[#3E4247] uppercase mb-12"
+        className="text-4xl md:text-5xl font-bold text-center text-[#3E4247] uppercase mb-12"
       >
-        All the services in one place
+        {t("home.serviceh")}{" "}
+        <span className="text-blue-600">{t("home.servicehh")}</span>
+        {t("home.servicehl")}
       </motion.h2>
 
       <motion.div
@@ -59,15 +63,11 @@ const ServicesSection = () => {
                 <FileText className="w-8 h-8 text-[#642D91]" />
               </div>
               <h3 className="text-xl font-bold text-[#023a51]">
-                Hire Talent-Trained Workers
+                {t("home.subserviceh1")}
               </h3>
             </div>
             <div className="mt-4">
-              <p className="text-gray-600">
-                Let us handle the search, selection, and recruitment of skilled,
-                motivated professionals who align with your business goals and
-                culture.
-              </p>
+              <p className="text-gray-600">{t("home.subservicep1")}</p>
             </div>
           </div>
         </motion.div>
@@ -82,15 +82,11 @@ const ServicesSection = () => {
                 <TrendingUp className="w-8 h-8 text-[#642D91]" />
               </div>
               <h3 className="text-xl font-bold text-[#023a51]">
-                Work Permit Assistance
+                {t("home.subserviceh2")}
               </h3>
             </div>
             <div className="mt-4">
-              <p className="text-gray-600">
-                We take care of the entire documentation process, including
-                visas, work permits, residency permits, and employment
-                contracts, ensuring full compliance with local laws.
-              </p>
+              <p className="text-gray-600">{t("home.subservicep2")}</p>
             </div>
           </div>
         </motion.div>
@@ -105,15 +101,11 @@ const ServicesSection = () => {
                 <ShieldCheck className="w-8 h-8 text-[#642D91]" />
               </div>
               <h3 className="text-xl font-bold text-[#023a51]">
-                Your Trusted Workforce Partner
+                {t("home.subserviceh3")}
               </h3>
             </div>
             <div className="mt-4">
-              <p className="text-gray-600">
-                From talent sourcing to onboarding, our experts manage every
-                step of the hiring process, so you can focus on growing your
-                business.
-              </p>
+              <p className="text-gray-600">{t("home.subservicep3")}</p>
             </div>
           </div>
         </motion.div>
@@ -125,7 +117,7 @@ const ServicesSection = () => {
             to="/services/hires"
             className="bg-[#3E4247] hover:bg-blue-600 text-white px-8 py-3 rounded-lg text-xl font-medium transition-colors duration-300"
           >
-            Explore Our Services
+            {t("home.subservicebtn")}
           </Link>
         </motion.div>
       </div>
@@ -138,19 +130,17 @@ const ServicesSection = () => {
         className="rounded-lg p-8 text-center max-w-[600px] mx-auto"
       >
         <h3 className="text-3xl md:text-4xl font-semibold text-[#3E4247] mb-4">
-          Your Trusted Partner in Workforce Solutions
+          {t("home.serviceswth")}{" "}
+          <span className="text-blue-600">{t("home.serviceswthh")} </span>{" "}
+          {t("home.serviceswthl")}
         </h3>
-        <p className="text-gray-600 text-lg mb-6">
-          Rely on our experts to manage the entire process—from selecting and
-          recruiting to employing skilled foreign workers. We ensure seamless
-          integration and compliance, so your business thrives.
-        </p>
+        <p className="text-gray-600 text-lg mb-6">{t("home.serviceswtp")}</p>
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Link
             to="/services/trustedworkforce"
             className="bg-[#3E4247] hover:bg-blue-600 text-white px-8 py-3 rounded-lg text-xl font-medium transition-colors duration-300"
           >
-            Discover Our Services
+            {t("home.serviceswtbtn")}
           </Link>
         </motion.div>
       </motion.div>

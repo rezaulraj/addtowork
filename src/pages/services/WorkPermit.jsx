@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, File, Handshake, Users } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 // Animation variants
 const containerVariants = {
@@ -28,90 +29,104 @@ const itemVariants = {
 // };
 
 const WorkPermit = () => {
+  const location = useLocation();
+  const { t } = useTranslation();
   const listData = [
     {
-      listt: "Hire Talent-Trained Workers",
+      listt: t("service.servicetaiblh1"),
+
       lists: [
         {
-          list: "We manage the entire process of recruiting and onboarding foreign workers, ensuring a seamless experience for your business.",
+          list: t("service.servicetaiblh1l1"),
         },
         {
-          list: "End-to-end management of hiring and administrative processes.",
+          list: t("service.servicetaiblh1l2"),
         },
         {
-          list: "Access to a diverse pool of candidates across various industries.",
+          list: t("service.servicetaiblh1l3"),
         },
         {
-          list: "Recruitment of skilled, motivated professionals tailored to your needs.",
+          list: t("service.servicetaiblh1l4"),
         },
       ],
     },
     {
-      listt: "Flexible Workforce Solutions",
+      listt: t("service.servicetaiblh2"),
       lists: [
         {
-          list: "Hire foreign workers for specific periods with ease and flexibility.",
+          list: t("service.servicetaiblh2l1"),
         },
         {
-          list: "Workers come pre-equipped with valid residence and work permits.",
+          list: t("service.servicetaiblh2l2"),
         },
         {
-          list: "Simplified employment process with minimal administrative hassle.",
+          list: t("service.servicetaiblh2l3"),
         },
         {
-          list: "A wide range of candidates available for multiple industries and roles.",
+          list: t("service.servicetaiblh2l4"),
         },
       ],
     },
     {
-      listt: "Work Permit and Immigration Support",
+      listt: t("service.servicetaiblh3"),
       lists: [
         {
-          list: "Already found your ideal candidate? Let us handle the administrative heavy lifting.",
+          list: t("service.servicetaiblh3l1"),
         },
         {
-          list: "Comprehensive support for work permits, visas, and legal compliance.",
+          list: t("service.servicetaiblh3l2"),
         },
         {
-          list: "Streamlined processes managed by experienced immigration experts.",
+          list: t("service.servicetaiblh3l3"),
         },
-        { list: "Ongoing assistance throughout the employment lifecycle." },
+        {
+          list: t("service.servicetaiblh3l4"),
+        },
       ],
     },
   ];
 
   const services = [
     {
-      title: "Flexible Workforce Solutions",
-      description:
-        "Hire workers for specific projects or timeframes with ease.",
+      title: t("service.serviceexplorelh1"),
+      description: t("service.serviceexplorelp1"),
       icon: <Users className="w-8 h-8 text-blue-600" />,
-      buttonText: "Learn More",
+      buttonText: t("service.serviceexplorelbtn"),
       gradient: "bg-gradient-to-br from-blue-50 to-blue-100",
       link: "#flexable-worksolutaion",
     },
     {
-      title: "Work Permit and Immigration Support",
-      description:
-        "We handle all documentation for foreign workers, ensuring compliance and efficiency.",
+      title: t("service.serviceexplorelh2"),
+      description: t("service.serviceexplorelp2"),
       icon: <File className="w-8 h-8 text-green-600" />,
-      buttonText: "Learn More",
+      buttonText: t("service.serviceexplorelbtn"),
       gradient: "bg-gradient-to-br from-green-50 to-green-100",
       link: "#flexable-worksolutaion",
     },
     {
-      title: "Long-Term Staffing Partnerships",
-      description:
-        "Build lasting relationships with reliable workers for ongoing business needs.",
+      title: t("service.serviceexplorelh3"),
+      description: t("service.serviceexplorelp3"),
       icon: <Handshake className="w-8 h-8 text-purple-600" />,
-      buttonText: "Learn More",
+      buttonText: t("service.serviceexplorelbtn"),
       gradient: "bg-gradient-to-br from-purple-50 to-purple-100",
       link: "/client-success-stories",
     },
   ];
 
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const target = document.querySelector(hash);
+      if (target) {
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [location.hash]);
+
   return (
-    <div className="min-h-screen pt-5">
+    <div className="min-h-screen pt-5 overflow-hidden">
       {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -138,7 +153,7 @@ const WorkPermit = () => {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="text-2xl text-[#023a51] my-4"
           >
-            Work Permit Assistance
+            {t("service.serviceworkph")}
           </motion.p>
           <motion.h1
             initial={{ x: -20, opacity: 0 }}
@@ -146,8 +161,7 @@ const WorkPermit = () => {
             transition={{ delay: 0.7, duration: 0.6 }}
             className="text-4xl md:text-5xl text-[#023a51] font-bold my-4"
           >
-            Comprehensive Work Permit <br />
-            Support Services
+            {t("service.serviceworkpsh")}
           </motion.h1>
           <motion.p
             initial={{ x: -20, opacity: 0 }}
@@ -155,8 +169,7 @@ const WorkPermit = () => {
             transition={{ delay: 0.9, duration: 0.6 }}
             className="text-xl text-gray-700"
           >
-            Trust us to handle the search, selection, and recruitment of
-            motivated, skilled professionals tailored to your needs.
+            {t("service.serviceworkpp")}
           </motion.p>
         </motion.div>
       </motion.div>
@@ -170,8 +183,11 @@ const WorkPermit = () => {
           viewport={{ once: true }}
           className="text-4xl font-bold text-gray-900 sm:text-5xl mb-6 text-center"
         >
-          When <span className="text-blue-600">Work Permit</span> Assistance
-          Proves Indispensable
+          {t("service.serviceworkpsubh")}
+          <span className="text-blue-600">
+            {t("service.serviceworkpsubhh")}
+          </span>{" "}
+          {t("service.serviceworkpsubhl")}
         </motion.h2>
 
         <motion.div
@@ -183,24 +199,20 @@ const WorkPermit = () => {
         >
           {[
             {
-              title: "Expert Guidance Every Step of the Way",
-              description:
-                "If you've already identified your ideal candidates, we step in to manage the administrative and legal processes, ensuring a smooth hiring experience.",
+              title: t("service.serviceworkpsublh1"),
+              description: t("service.serviceworkpsublh1p"),
             },
             {
-              title: "Simplifying the Employment Process",
-              description:
-                "We handle all documentation, including work permits, visas, and employment contracts, making it easier for you to onboard foreign workers.",
+              title: t("service.serviceworkpsublh2"),
+              description: t("service.serviceworkpsublh2p"),
             },
             {
-              title: "Managed by Industry Experts",
-              description:
-                "Our team specializes in employment and immigration processes, ensuring compliance and efficiency at every stage.",
+              title: t("service.serviceworkpsublh3"),
+              description: t("service.serviceworkpsublh3p"),
             },
             {
-              title: "All-in-One Employment Solutions",
-              description:
-                "From visa processing and document translation to preparing employment contracts, we provide everything you need to hire foreign workers seamlessly.",
+              title: t("service.serviceworkpsublh4"),
+              description: t("service.serviceworkpsublh4p"),
             },
           ].map((item, index) => (
             <motion.div
@@ -237,12 +249,17 @@ const WorkPermit = () => {
             viewport={{ once: true }}
             className="max-w-2xl mx-auto mb-12 text-center"
           >
-            <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl mb-4">
-              Tailored Services for{" "}
-              <span className="text-blue-600">Your Business</span>
+            <h2
+              id="flexable-worksolutaion"
+              className="text-4xl font-bold text-gray-900 sm:text-5xl mb-4"
+            >
+              {t("service.serviceworkpth")}
+              <span className="text-blue-600">
+                {t("service.serviceworkpthh")}
+              </span>
             </h2>
             <p className="text-lg text-gray-600">
-              Custom solutions designed to meet your specific workforce needs
+              {t("service.serviceworkpthp")}
             </p>
           </motion.div>
 
@@ -293,14 +310,12 @@ const WorkPermit = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2
-              id="flexable-worksolutaion"
-              className="text-4xl font-bold text-gray-900 sm:text-5xl mb-4"
-            >
-              Explore Our <span className="text-blue-600">Services</span>
+            <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl mb-4">
+              {t("service.expoloserhf")}
+              <span className="text-blue-600">{t("service.expoloserhh")}</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Comprehensive solutions for your workforce needs
+              {t("service.expoloserhf")}
             </p>
             <motion.div
               whileHover={{ scale: 1.05 }}

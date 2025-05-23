@@ -22,7 +22,6 @@ const Navbar = () => {
   const [openSubmenu, setOpenSubmenu] = useState(null);
   const isScrolled = useIsScrolled();
 
-  // Detect country and set language
   useEffect(() => {
     const detectCountry = async () => {
       try {
@@ -63,15 +62,15 @@ const Navbar = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
-      <div className="max-w-[1250px] mx-auto px-4 py-2">
+      <div className="max-w-[1250px] mx-auto py-2 px-4">
         <div className="flex flex-col lg:flex-row gap-14 lg:items-center">
           <div className="flex items-center justify-between py-2 lg:py-0">
             <Link to="/" className="flex items-center">
               <img
                 src="/images/off2worklogo.png"
                 alt="Logo"
-                width={200}
-                height={100}
+                width={160}
+                height={80}
               />
             </Link>
             <button
@@ -83,7 +82,7 @@ const Navbar = () => {
           </div>
 
           <div className={`${isOpen ? "block" : "hidden lg:block"} w-full`}>
-            {/* Top info bar */}
+            
             {!isScrolled && (
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between py-2 ">
                 <div className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-6 mb-2 lg:mb-0 border-b border-gray-200 py-3">
@@ -152,36 +151,41 @@ const Navbar = () => {
               </div>
             )}
 
-            {/* Main navigation */}
+            
             <nav className="bg-white py-2">
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-2 lg:space-y-0">
                 {navItems.map((item, index) => (
-                  <div key={item.title} className="relative group">
+                  <div key={item.title} className="relative">
                     {item.children ? (
                       <>
-                        {/* Desktop version */}
-                        <div className="hidden lg:flex items-center space-x-1 py-2 text-[#0f2a47] hover:text-blue-600 cursor-pointer">
-                          <span>{item.title}</span>
-                          <ChevronDown className="h-4 w-4" />
-                        </div>
-                        <div className="absolute left-0 hidden group-hover:block w-[300px] bg-white shadow-lg z-50 border border-gray-200 rounded">
-                          {item.children.map((child) => (
-                            <Link
-                              key={child.href}
-                              to={child.href}
-                              className="block px-4 py-2 text-[#0f2a47] hover:bg-gray-50 hover:border-b "
-                            >
-                              {child.title}
-                            </Link>
-                          ))}
+                       
+                        <div className="hidden lg:block relative group">
+                          <div className="flex items-center space-x-1 py-2 text-[#0f2a47] hover:text-blue-600 cursor-pointer">
+                            <span>{item.title}</span>
+                            <ChevronDown className="h-4 w-4" />
+                          </div>
+                          <div className="absolute left-0 mt-0 hidden group-hover:block w-[300px] bg-white shadow-lg z-50 border border-gray-200 rounded">
+                            {item.children.map((child) => (
+                              <Link
+                                key={child.href}
+                                to={child.href}
+                                className="block px-4 py-2 text-[#0f2a47] hover:bg-gray-50 hover:text-blue-600"
+                              >
+                                {child.title}
+                              </Link>
+                            ))}
+                          </div>
                         </div>
 
-                        {/* Mobile version */}
+                       
                         <div className="lg:hidden">
                           <button
                             onClick={() => toggleSubmenu(index)}
                             className={`flex items-center justify-between w-full py-3 text-[#0f2a47] hover:text-blue-600 ${
-                              currentPath === item.href
+                              currentPath === item.href ||
+                              item.children.some(
+                                (child) => currentPath === child.href
+                              )
                                 ? "font-bold border-b-2 border-[#0f2a47]"
                                 : ""
                             }`}
@@ -193,24 +197,26 @@ const Navbar = () => {
                               }`}
                             />
                           </button>
-                          {openSubmenu === index && (
-                            <div className="pl-4 space-y-2 bg-gray-50 rounded-lg my-2">
-                              {item.children.map((child) => (
-                                <Link
-                                  key={child.href}
-                                  to={child.href}
-                                  className={`block py-2 px-3 text-[#0f2a47] hover:bg-gray-100 rounded ${
-                                    currentPath === child.href
-                                      ? "font-medium bg-gray-100"
-                                      : ""
-                                  }`}
-                                  onClick={() => setIsOpen(false)}
-                                >
-                                  {child.title}
-                                </Link>
-                              ))}
-                            </div>
-                          )}
+                          <div
+                            className={`${
+                              openSubmenu === index ? "block" : "hidden"
+                            } pl-4 space-y-2`}
+                          >
+                            {item.children.map((child) => (
+                              <Link
+                                key={child.href}
+                                to={child.href}
+                                className={`block py-2 px-3 text-[#0f2a47] hover:bg-gray-100 rounded ${
+                                  currentPath === child.href
+                                    ? "font-medium bg-gray-100"
+                                    : ""
+                                }`}
+                                onClick={() => setIsOpen(false)}
+                              >
+                                {child.title}
+                              </Link>
+                            ))}
+                          </div>
                         </div>
                       </>
                     ) : (
@@ -230,7 +236,7 @@ const Navbar = () => {
                 ))}
                 <Link
                   to="/contact"
-                  className="inline-block bg-[#0f2a47] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="inline-block bg-[#0f2a47] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors mt-2 lg:mt-0"
                   onClick={() => setIsOpen(false)}
                 >
                   {t("header.contact_us")}

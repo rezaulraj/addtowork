@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, File, Handshake, Users } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 // Animation variants
 const containerVariants = {
@@ -28,88 +29,101 @@ const itemVariants = {
 // };
 
 const TrustedWorkForce = () => {
+  const location = useLocation();
+  const { t } = useTranslation();
   const listData = [
     {
-      listt: "Hire Talent-Trained Workers",
+      listt: t("service.servicetaiblh1"),
+
       lists: [
         {
-          list: "We manage the entire process of recruiting and onboarding foreign workers, ensuring a seamless experience for your business.",
+          list: t("service.servicetaiblh1l1"),
         },
         {
-          list: "End-to-end management of hiring and administrative processes.",
+          list: t("service.servicetaiblh1l2"),
         },
         {
-          list: "Access to a diverse pool of candidates across various industries.",
+          list: t("service.servicetaiblh1l3"),
         },
         {
-          list: "Recruitment of skilled, motivated professionals tailored to your needs.",
+          list: t("service.servicetaiblh1l4"),
         },
       ],
     },
     {
-      listt: "Flexible Workforce Solutions",
+      listt: t("service.servicetaiblh2"),
       lists: [
         {
-          list: "Hire foreign workers for specific periods with ease and flexibility.",
+          list: t("service.servicetaiblh2l1"),
         },
         {
-          list: "Workers come pre-equipped with valid residence and work permits.",
+          list: t("service.servicetaiblh2l2"),
         },
         {
-          list: "Simplified employment process with minimal administrative hassle.",
+          list: t("service.servicetaiblh2l3"),
         },
         {
-          list: "A wide range of candidates available for multiple industries and roles.",
+          list: t("service.servicetaiblh2l4"),
         },
       ],
     },
     {
-      listt: "Work Permit and Immigration Support",
+      listt: t("service.servicetaiblh3"),
       lists: [
         {
-          list: "Already found your ideal candidate? Let us handle the administrative heavy lifting.",
+          list: t("service.servicetaiblh3l1"),
         },
         {
-          list: "Comprehensive support for work permits, visas, and legal compliance.",
+          list: t("service.servicetaiblh3l2"),
         },
         {
-          list: "Streamlined processes managed by experienced immigration experts.",
+          list: t("service.servicetaiblh3l3"),
         },
-        { list: "Ongoing assistance throughout the employment lifecycle." },
+        {
+          list: t("service.servicetaiblh3l4"),
+        },
       ],
     },
   ];
 
   const services = [
     {
-      title: "Flexible Workforce Solutions",
-      description:
-        "Hire workers for specific projects or timeframes with ease.",
+      title: t("service.serviceexplorelh1"),
+      description: t("service.serviceexplorelp1"),
       icon: <Users className="w-8 h-8 text-blue-600" />,
-      buttonText: "Learn More",
+      buttonText: t("service.serviceexplorelbtn"),
       gradient: "bg-gradient-to-br from-blue-50 to-blue-100",
       link: "#flexable-worksolutaion",
     },
     {
-      title: "Work Permit and Immigration Support",
-      description:
-        "We handle all documentation for foreign workers, ensuring compliance and efficiency.",
+      title: t("service.serviceexplorelh2"),
+      description: t("service.serviceexplorelp2"),
       icon: <File className="w-8 h-8 text-green-600" />,
-      buttonText: "Learn More",
+      buttonText: t("service.serviceexplorelbtn"),
       gradient: "bg-gradient-to-br from-green-50 to-green-100",
       link: "#flexable-worksolutaion",
     },
     {
-      title: "Long-Term Staffing Partnerships",
-      description:
-        "Build lasting relationships with reliable workers for ongoing business needs.",
+      title: t("service.serviceexplorelh3"),
+      description: t("service.serviceexplorelp3"),
       icon: <Handshake className="w-8 h-8 text-purple-600" />,
-      buttonText: "Learn More",
+      buttonText: t("service.serviceexplorelbtn"),
       gradient: "bg-gradient-to-br from-purple-50 to-purple-100",
       link: "/client-success-stories",
     },
   ];
 
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const target = document.querySelector(hash);
+      if (target) {
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [location.hash]);
   return (
     <div className="min-h-screen pt-5">
       {/* Hero Section */}
@@ -138,7 +152,7 @@ const TrustedWorkForce = () => {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="text-2xl text-[#023a51] my-4"
           >
-            Your Trusted Workforce Partner
+            {t("service.servicewfh")}
           </motion.p>
           <motion.p
             initial={{ x: -20, opacity: 0 }}
@@ -146,7 +160,7 @@ const TrustedWorkForce = () => {
             transition={{ delay: 0.7, duration: 0.6 }}
             className="text-4xl md:text-5xl text-[#023a51] font-bold my-4"
           >
-            Hire foreign workers for specific projects or timeframes
+            {t("service.servicewfsh")}
           </motion.p>
           <motion.p
             initial={{ x: -20, opacity: 0 }}
@@ -154,8 +168,7 @@ const TrustedWorkForce = () => {
             transition={{ delay: 0.9, duration: 0.6 }}
             className="text-xl text-gray-700"
           >
-            Enjoy lower costs and simplified administration while we handle the
-            complexities.
+            {t("service.servicewfp")}
           </motion.p>
         </motion.div>
       </motion.div>
@@ -169,8 +182,9 @@ const TrustedWorkForce = () => {
           viewport={{ once: true }}
           className="text-4xl font-bold text-gray-900 sm:text-5xl mb-6"
         >
-          When is <span className="text-blue-600">Hiring Temporary </span>
-          Workers the Best Choice?
+          {t("service.servicewfsubh")}
+          <span className="text-blue-600"> {t("service.servicewfsubhh")}</span>
+          {t("service.servicewfsubhl")}
         </motion.h2>
 
         <motion.div
@@ -182,24 +196,20 @@ const TrustedWorkForce = () => {
         >
           {[
             {
-              title: "Hire Skilled Workers for Short-Term Needs",
-              description:
-                "Outsourced workers integrate seamlessly into your workflows, supervised by your team, while we manage recruitment, payroll, and compliance.",
+              title: t("service.servicewfsublh1"),
+              description: t("service.servicewfsublp1"),
             },
             {
-              title: "Access a Diverse Talent Pool",
-              description:
-                "We provide candidates with the right qualifications and skills, tailored to your industry and project requirements.",
+              title: t("service.servicewfsublh2"),
+              description: t("service.servicewfsublp2"),
             },
             {
-              title: "Streamlined Process, No Hassle",
-              description:
-                "From recruitment to payroll, medical checks, and workplace safety, we handle all administrative tasks, so you can focus on your business.",
+              title: t("service.servicewfsublh3"),
+              description: t("service.servicewfsublp3"),
             },
             {
-              title: "Fast and Efficient Hiring",
-              description:
-                "With workers pre-equipped with valid permits, this service offers speed and flexibility. After a trial period, you can transition them to permanent roles if needed.",
+              title: t("service.servicewfsublh4"),
+              description: t("service.servicewfsublp4"),
             },
           ].map((item, index) => (
             <motion.div
@@ -236,13 +246,18 @@ const TrustedWorkForce = () => {
             viewport={{ once: true }}
             className="max-w-2xl mx-auto mb-12 text-center"
           >
-            <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl mb-4">
-              Choose A <span className="text-blue-600">Service Tailored</span>{" "}
-              To Your Business
+            <h2
+              id="flexable-worksolutaion"
+              className="text-4xl font-bold text-gray-900 sm:text-5xl mb-4"
+            >
+              {t("service.servicewfsubth")}{" "}
+              <span className="text-blue-600">
+                {t("service.servicewfsubtsh")}
+              </span>{" "}
+              {t("service.servicewfsubtl")}
             </h2>
             <p className="text-lg text-gray-600">
-              Discover the advantages of our specialized services designed to
-              meet your unique needs
+              {t("service.servicewfsubtp")}
             </p>
           </motion.div>
 
@@ -293,15 +308,14 @@ const TrustedWorkForce = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2
-              id="flexable-worksolutaion"
-              className="text-4xl font-bold text-gray-900 sm:text-5xl mb-4"
-            >
-              Explore Our <span className="text-blue-600">Services</span>
+            <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl mb-4">
+              {t("service.expoloserwfhf")}{" "}
+              <span className="text-blue-600">
+                {t("service.expoloserwfhh")}
+              </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Discover how we can help you build a skilled and reliable
-              workforce
+              {t("service.expoloserwfp")}
             </p>
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -312,7 +326,7 @@ const TrustedWorkForce = () => {
                 to="/areas-of-work/#services-area"
                 className="px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-md hover:shadow-lg inline-flex items-center"
               >
-                <span>See more</span>
+                <span>{t("service.serviceexplorebtn")}</span>
                 <motion.span
                   animate={{ x: [0, 5, 0] }}
                   transition={{ repeat: Infinity, duration: 2 }}

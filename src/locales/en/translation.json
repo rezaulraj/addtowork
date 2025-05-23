@@ -17,5 +17,183 @@
     "call_us": "Call Us Today",
     "contact": "Get In Touch",
     "contact_us": "Contact Us"
+  },
+  "home": {
+    "herohead": "Connecting Businesses with ",
+    "heroheadhi": "Exceptional ",
+    "heroheadhl": "Global Talent",
+    "herop": "Simplify your hiring process with Off2 Work. From sourcing top talent to handling work permits and immigration, we provide reliable, end-to-end workforce solutions tailored to your needs.",
+    "herobtn": "Start Your Journey with Us",
+
+    "serviceh": "All the ",
+    "servicehh": "services ",
+    "servicehl": "in one place",
+    "subserviceh1": "Hire Talent-Trained Workers",
+    "subservicep1": "Let us handle the search, selection, and recruitment of skilled, motivated professionals who align with your business goals and culture.",
+    "subserviceh2": "Work Permit Assistance",
+    "subservicep2": "We take care of the entire documentation process, including visas, work permits, residency permits, and employment contracts, ensuring full compliance with local laws.",
+    "subserviceh3": "Your Trusted Workforce Partner",
+    "subservicep3": "From talent sourcing to onboarding, our experts manage every step of the hiring process, so you can focus on growing your business.",
+
+    "subservicebtn": "Explore Our Services",
+
+    "serviceswth": "Your ",
+    "serviceswthh": "Trusted ",
+    "serviceswthl": "Partner in Workforce Solutions",
+    "serviceswtp": "Rely on our experts to manage the entire process—from selecting and recruiting to employing skilled foreign workers. We ensure seamless integration and compliance, so your business thrives.",
+    "serviceswtbtn": "Discover Our Services",
+
+    "seasonalwh": "Seasonal Workers from Our Network",
+    "seasonalwp": "We specialize in providing skilled seasonal workers from our extensive network, ensuring your business has the manpower it needs during peak seasons.",
+    "seasonalwbtn": "Get in Touch",
+
+    "partnerh": "Your Partner in Boosting Productivity and Growth",
+    "partnerp": "At Off2 Work, we streamline the hiring of foreign workers for industries like agriculture, tourism, manufacturing, construction, and more. For clients in the Gulf region, our dedicated team offers tailored recruitment solutions.",
+
+    "partnerl1": "We collaborate with trusted partners in countries like Nepal, India, Bangladesh, Uzbekistan, Vietnam, and the Philippines to source top talent that meets your specific requirements.",
+    "partnerl2": "Our end-to-end services include document translation, visa and work permit processing, and employment contract management.",
+    "partnerl3": "We also handle worker transportation and ensure smooth onboarding and integration into your company.",
+
+    "liveInterh": "Live Interview Service",
+    "liveInterp": "We offer live interview services in the worker's home country, ensuring you can connect with potential candidates directly and make informed hiring decisions.",
+    "liveInterc": "Contact Us",
+    "getint": "Get In TOUCH",
+
+    "hiringph": "We Guide You Through Every Step of the ",
+    "hiringphh": "Hiring Process",
+
+    "hiringplh1": "Talent Recruitment",
+    "hiringplp1": "We select candidates and only start the process of bringing them to Croatia when we are sure that we have found a suitable worker.",
+    "hiringplh2": "Work Permits",
+    "hiringplp2": "The process of bringing workers to your location typically takes around 90 days. While we handle the logistics, certain steps are managed by government authorities in compliance with local laws.",
+    "hiringplh3": "Employment and adaptation",
+    "hiringplp3": "Our support doesn’t stop at hiring. We remain by your side throughout the entire process, acting as a bridge between you and your new employees to ensure a smooth transition and adaptation."
+  },
+  "contact": {
+    "contacth": "Contact us",
+    "contactsubh": "Let's Get to Know Each Other",
+    "contactp": "Reach out to our team of experts for a no-obligation consultation tailored to your business needs.",
+    "contactget": "Get in Touch",
+    "name": "Name and Surname",
+    "phone": "Mobile Phone Number",
+    "email": "Email",
+    "conpany": "Company Name",
+    "employee": "Number of Workers Needed?",
+    "sendae": "Send an inquiry",
+    "textare": "How Can We Help You?",
+    "contactbtn": "Send Inquiry",
+
+    "locationh": "Look For The ",
+    "locationhh": "Office Near ",
+    "locationhl": "You",
+
+    "homelocationh": "Our Team is Here for You",
+    "officel": "Office Locations",
+
+    "hometouch": "Let us know how we can assist you. Fill out the form below, and we'll get back to you promptly."
+  },
+  "service": {
+    "servicehireh": "Hire Talent-Trained Workers",
+    "servicehirehs": "End-to-End Recruitment Solutions",
+    "servicehirep": "We manage the entire process of hiring foreign workers. Trust us to find, select, and recruit motivated, skilled professionals tailored to your business needs.",
+    "servicehirsubhf": "When is ",
+    "servicehirsubhh": "Hiring Talent-Trained Workers ",
+    "servicehirsubhl": "the Best Choice?",
+
+    "servicehirsubhlh1": "We Handle the Entire Hiring Process",
+    "servicehirsubhlp1": "From sourcing to onboarding, we take care of everything, ensuring you get the right talent for your business.",
+    "servicehirsubhlh2": "Access a Diverse Talent Pool",
+    "servicehirsubhlp2": "Our extensive network and collaboration with local partners allow us to provide candidates with the skills and qualifications you need, across various industries.",
+
+    "servicehirsubhlh3": "End-to-End Administration and Logistics",
+    "servicehirsubhlp3": "We manage all aspects of hiring, from work permits and visas to transportation and onboarding, so you can focus on your business.",
+    "servicehirsubhlh4": "Reliable, Fast, and Efficient Solutions",
+    "servicehirsubhlp4": "We deliver qualified, motivated staff who are ready to meet your challenges and contribute to your success.",
+
+    "servicetaibh": "Choose A ",
+    "servicetaibhh": "Service Tailored",
+    "servicetaibl": "Your Business.",
+    "servicetaibp": "Discover the advantages of our specialized services designed to meet your unique needs.",
+
+    "servicetaiblh1": "Hire Talent-Trained Workers",
+    "servicetaiblh1l1": "We manage the entire process of recruiting and onboarding foreign workers, ensuring a seamless experience for your business.",
+    "servicetaiblh1l2": "End-to-end management of hiring and administrative processes.",
+    "servicetaiblh1l3": "Access to a diverse pool of candidates across various industries.",
+    "servicetaiblh1l4": "Recruitment of skilled, motivated professionals tailored to your needs",
+
+    "servicetaiblh2": "Flexible Workforce Solutions",
+    "servicetaiblh2l1": "Hire foreign workers for specific periods with ease and flexibility.",
+    "servicetaiblh2l2": "Workers come pre-equipped with valid residence and work permits.",
+    "servicetaiblh2l3": "Simplified employment process with minimal administrative hassle.",
+    "servicetaiblh2l4": "A wide range of candidates available for multiple industries and roles.",
+
+    "servicetaiblh3": "Work Permit and Immigration Support",
+    "servicetaiblh3l1": "Already found your ideal candidate? Let us handle the administrative heavy lifting.",
+    "servicetaiblh3l2": "Comprehensive support for work permits, visas, and legal compliance.",
+    "servicetaiblh3l3": "Streamlined processes managed by experienced immigration experts.",
+    "servicetaiblh3l4": "Ongoing assistance throughout the employment lifecycle.",
+
+    "serviceexploreh": "Explore Our ",
+    "serviceexplorehh": "Services",
+    "serviceexplorep": "Discover how we can help you build a skilled and reliable workforce.",
+    "serviceexplorebtn": "See more",
+
+    "serviceexplorelh1": "Flexible Workforce Solutions",
+    "serviceexplorelp1": "Hire workers for specific projects or timeframes with ease.",
+    "serviceexplorelbtn": "Learn More",
+    "serviceexplorelh2": "Work Permit and Immigration Support",
+    "serviceexplorelp2": "We handle all documentation for foreign workers, ensuring compliance and efficiency.",
+    "serviceexplorelh3": "Long-Term Staffing Partnerships",
+    "serviceexplorelp3": "Build lasting relationships with reliable workers for ongoing business needs.",
+
+    "serviceworkph": "Work Permit Assistance",
+
+    "serviceworkpsh": "Comprehensive Work Permit Support Services",
+
+    "serviceworkpp": "Trust us to handle the search, selection, and recruitment of motivated, skilled professionals tailored to your needs.",
+
+    "serviceworkpsubh": "When ",
+    "serviceworkpsubhh": "Work Permit",
+    "serviceworkpsubhl": "Assistance Proves Indispensable",
+
+    "serviceworkpsublh1": "Expert Guidance Every Step of the Way",
+    "serviceworkpsublh1p": "If you've already identified your ideal candidates, we step in to manage the administrative and legal processes, ensuring a smooth hiring experience.",
+    "serviceworkpsublh2": "Simplifying the Employment Process",
+    "serviceworkpsublh2p": "We handle all documentation, including work permits, visas, and employment contracts, making it easier for you to onboard foreign workers.",
+    "serviceworkpsublh3": "Managed by Industry Experts",
+    "serviceworkpsublh3p": "Our team specializes in employment and immigration processes, ensuring compliance and efficiency at every stage.",
+    "serviceworkpsublh4": "All-in-One Employment Solutions",
+    "serviceworkpsublh4p": "From visa processing and document translation to preparing employment contracts, we provide everything you need to hire foreign workers seamlessly.",
+    "serviceworkpth": "Tailored Services for ",
+    "serviceworkpthh": "Your Business",
+    "serviceworkpthp": "Custom solutions designed to meet your specific workforce needs",
+
+    "expoloserhf": "Explore Our ",
+    "expoloserhh": "Services",
+    "expoloserp": "Comprehensive solutions for your workforce needs",
+
+    "servicewfh": "Your Trusted Workforce Partner",
+    "servicewfsh": "Hire foreign workers for specific projects or timeframes",
+    "servicewfp": "Enjoy lower costs and simplified administration while we handle the complexities.",
+    "servicewfsubh": "When is ",
+    "servicewfsubhh": "Hiring Temporary",
+    "servicewfsubhl": "Workers the Best Choice?",
+
+    "servicewfsublh1": "Hire Skilled Workers for Short-Term Needs",
+    "servicewfsublp1": "Outsourced workers integrate seamlessly into your workflows, supervised by your team, while we manage recruitment, payroll, and compliance.",
+    "servicewfsublh2": "Access a Diverse Talent Pool",
+    "servicewfsublp2": "We provide candidates with the right qualifications and skills, tailored to your industry and project requirements.",
+    "servicewfsublh3": "Streamlined Process, No Hassle",
+    "servicewfsublp3": "From recruitment to payroll, medical checks, and workplace safety, we handle all administrative tasks, so you can focus on your business.",
+    "servicewfsublh4": "Fast and Efficient Hiring",
+    "servicewfsublp4": "With workers pre-equipped with valid permits, this service offers speed and flexibility. After a trial period, you can transition them to permanent roles if needed.",
+
+    "servicewfsubth": "Choose A ",
+    "servicewfsubtsh": "Service Tailored ",
+    "servicewfsubtl": "Your Business",
+    "servicewfsubtp": "Discover the advantages of our specialized services designed to meet your unique needs",
+    "expoloserwfhf": "Explore Our ",
+    "expoloserwfhh": "Services",
+    "expoloserwfp": "Discover how we can help you build a skilled and reliable workforce"
   }
 }

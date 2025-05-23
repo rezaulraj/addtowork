@@ -17,5 +17,185 @@
     "call_us": "Nazovite nas",
     "contact": "Kontaktirajte nas",
     "contact_us": "Kontakt"
+  },
+  "home": {
+    "herohead": "Povezivanje poduzeća s ",
+    "heroheadhi": "izvrsnim ",
+    "heroheadhl": "globalnim talentima",
+    "herop": "Pojednostavite svoj proces zapošljavanja uz Off2 Work. Od pronalaska vrhunskih talenata do obrade radnih dozvola i imigracije, pružamo pouzdana, sveobuhvatna rješenja za radnu snagu prilagođena vašim potrebama.",
+    "herobtn": "Započnite svoje putovanje s nama",
+
+    "serviceh": "Sve ",
+    "servicehh": "usluge ",
+    "servicehl": "na jednom mjestu",
+    "subserviceh1": "Zaposlite obučene radnike",
+    "subservicep1": "Prepustite nama potragu, selekciju i zapošljavanje kvalificiranih, motiviranih profesionalaca koji se uklapaju u ciljeve i kulturu vašeg poduzeća.",
+    "subserviceh2": "Pomoć pri radnim dozvolama",
+    "subservicep2": "Brinemo o cjelokupnom procesu dokumentacije, uključujući vize, radne dozvole, boravišne dozvole i ugovore o radu, osiguravajući potpunu usklađenost s lokalnim zakonima.",
+    "subserviceh3": "Vaš pouzdani partner za radnu snagu",
+    "subservicep3": "Od pronalaska talenata do uvođenja u posao, naši stručnjaci upravljaju svakim korakom procesa zapošljavanja, kako biste se vi mogli fokusirati na razvoj vašeg poduzeća.",
+
+    "subservicebtn": "Istražite naše usluge",
+
+    "serviceswth": "Vaš ",
+    "serviceswthh": "pouzdani ",
+    "serviceswthl": "partner za rješenja radne snage",
+    "serviceswtp": "Oslonite se na naše stručnjake da upravljaju cjelokupnim procesom—od selekcije i zapošljavanja do angažiranja kvalificiranih stranih radnika. Osiguravamo besprijekornu integraciju i usklađenost, kako bi vaše poduzeće napredovalo.",
+    "serviceswtbtn": "Otkrijte naše usluge",
+
+    "seasonalwh": "Sezonski radnici iz naše mreže",
+    "seasonalwp": "Specijalizirani smo za osiguravanje kvalificiranih sezonskih radnika iz naše opsežne mreže, osiguravajući da vaše poduzeće ima potrebnu radnu snagu tijekom vrhunca sezone.",
+    "seasonalwbtn": "Kontaktirajte nas",
+
+    "partnerh": "Vaš partner u povećanju produktivnosti i rasta",
+    "partnerp": "U Off2 Work pojednostavljujemo zapošljavanje stranih radnika za industrije poput poljoprivrede, turizma, proizvodnje, građevinarstva i drugih. Za klijente u Zaljevskom području, naš posvećeni tim nudi prilagođena rješenja za zapošljavanje.",
+
+    "partnerl1": "Surađujemo s pouzdanim partnerima u zemljama poput Nepala, Indije, Bangladeša, Uzbekistana, Vijetnama i Filipina kako bismo pronašli vrhunske talente koji odgovaraju vašim specifičnim zahtjevima.",
+    "partnerl2": "Naše sveobuhvatne usluge uključuju prijevod dokumenata, obradu viza i radnih dozvola, kao i upravljanje ugovorima o radu.",
+    "partnerl3": "Također organiziramo prijevoz radnika i osiguravamo glatko uvođenje i integraciju u vaše poduzeće.",
+
+    "liveInterh": "Usluga intervjua uživo",
+    "liveInterp": "Nudimo usluge intervjua uživo u zemlji podrijetla radnika, omogućujući vam izravno povezivanje s potencijalnim kandidatima i donošenje informiranih odluka o zapošljavanju.",
+    "liveInterc": "Kontaktirajte nas",
+    "getint": "Stupite u kontakt",
+
+    "hiringph": "Vodimo vas kroz svaki korak procesa",
+    "hiringphh": "Zapošljavanje",
+
+    "hiringplh1": "Regrutacija talenata",
+    "hiringplp1": "Biramo kandidate i započinjemo proces njihovog dovođenja u Hrvatsku tek kada budemo sigurni da smo pronašli odgovarajućeg radnika.",
+    "hiringplh2": "Radne dozvole",
+    "hiringplp2": "Proces dovođenja radnika na vašu lokaciju obično traje oko 90 dana. Dok mi upravljamo logistikom, određene korake obavljaju državne vlasti u skladu s lokalnim zakonima.",
+    "hiringplh3": "Zapošljavanje i adaptacija",
+    "hiringplp3": "Naša podrška ne prestaje pri zapošljavanju. Ostajemo uz vas tijekom cijelog procesa, djelujući kao most između vas i vaših novih zaposlenika kako bismo osigurali glatku tranziciju i adaptaciju."
+  },
+  "contact": {
+    "contacth": "Kontaktirajte nas",
+    "contactsubh": "Upoznajmo se bolje",
+    "contactp": "Obratite se našem timu stručnjaka za konzultacije bez obaveza prilagođene vašim poslovnim potrebama.",
+    "contactget": "Stupite u kontakt",
+    "name": "Ime i prezime",
+    "phone": "Broj mobitela",
+    "email": "Email",
+    "conpany": "Naziv tvrtke",
+    "employee": "Koliko radnika vam je potrebno?",
+    "sendae": "Pošalji upit",
+    "textare": "Kako vam možemo pomoći?",
+    "contactbtn": "Pošalji upit",
+
+    "locationh": "Potražite ",
+    "locationhh": "ured u blizini ",
+    "locationhl": "vas",
+
+    "homelocationh": "Naš tim je ovdje za vas",
+    "officel": "Lokacije ureda",
+
+    "hometouch": "Recite nam kako vam možemo pomoći. Ispunite obrazac u nastavku i uskoro ćemo vam se javiti."
+  },
+  "service": {
+    "servicehireh": "Zaposlite stručno osposobljene radnike",
+    "servicehirehs": "Kompletna rješenja za zapošljavanje",
+    "servicehirep": "Upravljamo cijelim procesom zapošljavanja stranih radnika. Povjerite nam pronalazak, odabir i zapošljavanje motiviranih, kvalificiranih stručnjaka prilagođenih vašim poslovnim potrebama.",
+    "servicehirsubhf": "Kada je ",
+    "servicehirsubhh": "zapošljavanje stručno osposobljenih radnika ",
+    "servicehirsubhl": "najbolji izbor?",
+
+    "servicehirsubhlh1": "Mi upravljamo cijelim procesom zapošljavanja",
+    "servicehirsubhlp1": "Od pronalaženja kandidata do uvođenja u posao – brinemo o svemu kako biste dobili odgovarajući kadar za svoje poslovanje.",
+    "servicehirsubhlh2": "Pristup raznolikom bazenu talenata",
+    "servicehirsubhlp2": "Naša široka mreža i suradnja s lokalnim partnerima omogućuju nam da osiguramo kandidate s potrebnim vještinama i kvalifikacijama u raznim industrijama.",
+
+    "servicehirsubhlh3": "Cjelokupna administracija i logistika",
+    "servicehirsubhlp3": "Upravljamo svim aspektima zapošljavanja – od radnih dozvola i viza do prijevoza i uvođenja u posao – kako biste se vi mogli usredotočiti na svoje poslovanje.",
+    "servicehirsubhlh4": "Pouzdana, brza i učinkovita rješenja",
+    "servicehirsubhlp4": "Isporučujemo kvalificirano i motivirano osoblje spremno suočiti se s vašim izazovima i pridonijeti vašem uspjehu.",
+
+    "servicetaibh": "Odaberite ",
+    "servicetaibhh": "uslugu prilagođenu",
+    "servicetaibl": "vašem poslovanju.",
+    "servicetaibp": "Otkrijte prednosti naših specijaliziranih usluga osmišljenih kako bi zadovoljile vaše jedinstvene potrebe.",
+
+    "servicetaiblh1": "Zaposlite stručno osposobljene radnike",
+    "servicetaiblh1l1": "Upravljamo cijelim procesom regrutacije i uvođenja stranih radnika, osiguravajući nesmetano iskustvo za vaše poslovanje.",
+    "servicetaiblh1l2": "Potpuno upravljanje procesima zapošljavanja i administracije.",
+    "servicetaiblh1l3": "Pristup raznolikom bazenu kandidata iz raznih industrija.",
+    "servicetaiblh1l4": "Zapošljavanje kvalificiranih, motiviranih stručnjaka prilagođenih vašim potrebama",
+
+    "servicetaiblh2": "Fleksibilna radna snaga",
+    "servicetaiblh2l1": "Zaposlite strane radnike na određena razdoblja uz jednostavnost i fleksibilnost.",
+    "servicetaiblh2l2": "Radnici dolaze s valjanim boravišnim i radnim dozvolama.",
+    "servicetaiblh2l3": "Pojednostavljen proces zapošljavanja uz minimalnu administraciju.",
+    "servicetaiblh2l4": "Širok izbor kandidata dostupan za različite industrije i uloge.",
+
+    "servicetaiblh3": "Podrška za radne dozvole i imigraciju",
+    "servicetaiblh3l1": "Već ste pronašli idealnog kandidata? Prepustite nama administrativne zadatke.",
+    "servicetaiblh3l2": "Sveobuhvatna podrška za radne dozvole, vize i pravnu usklađenost.",
+    "servicetaiblh3l3": "Učinkoviti procesi koje vode iskusni imigracijski stručnjaci.",
+    "servicetaiblh3l4": "Stalna podrška tijekom cijelog radnog odnosa.",
+
+    "serviceexploreh": "Istražite naše ",
+    "serviceexplorehh": "usluge",
+    "serviceexplorep": "Otkrijte kako vam možemo pomoći izgraditi kvalificiranu i pouzdanu radnu snagu.",
+    "serviceexplorebtn": "Pogledajte više",
+
+    "serviceexplorelh1": "Fleksibilna radna snaga",
+    "serviceexplorelp1": "Zaposlite radnike za određene projekte ili vremenska razdoblja s lakoćom.",
+    "serviceexplorelbtn": "Saznajte više",
+    "serviceexplorelh2": "Podrška za radne dozvole i imigraciju",
+    "serviceexplorelp2": "Brinemo se o cjelokupnoj dokumentaciji za strane radnike, osiguravajući usklađenost i učinkovitost.",
+    "serviceexplorelh3": "Dugoročna partnerstva u zapošljavanju",
+    "serviceexplorelp3": "Izgradite dugotrajne odnose s pouzdanim radnicima za stalne poslovne potrebe.",
+
+    "serviceworkph": "Pomoć pri radnim dozvolama",
+
+    "serviceworkpsh": "Sveobuhvatne usluge podrške za radne dozvole",
+
+    "serviceworkpp": "Povjerite nam pronalazak, selekciju i zapošljavanje motiviranih, kvalificiranih stručnjaka prilagođenih vašim potrebama.",
+
+    "serviceworkpsubh": "Kada je ",
+    "serviceworkpsubhh": "pomoć pri radnoj dozvoli ",
+    "serviceworkpsubhl": "neophodna",
+
+    "serviceworkpsublh1": "Stručno vođenje u svakom koraku",
+    "serviceworkpsublh1p": "Ako ste već identificirali idealne kandidate, mi preuzimamo upravljanje administrativnim i pravnim procesima kako bismo osigurali nesmetano zapošljavanje.",
+    "serviceworkpsublh2": "Pojednostavljenje procesa zapošljavanja",
+    "serviceworkpsublh2p": "Vodimo brigu o cjelokupnoj dokumentaciji, uključujući radne dozvole, vize i ugovore o radu, olakšavajući zapošljavanje stranih radnika.",
+    "serviceworkpsublh3": "Upravljanje od strane industrijskih stručnjaka",
+    "serviceworkpsublh3p": "Naš tim je specijaliziran za procese zapošljavanja i imigracije, osiguravajući usklađenost i učinkovitost u svakom koraku.",
+    "serviceworkpsublh4": "Sveobuhvatna rješenja za zapošljavanje",
+    "serviceworkpsublh4p": "Od obrade viza i prijevoda dokumenata do pripreme ugovora o radu, pružamo sve što vam je potrebno za nesmetano zapošljavanje stranih radnika.",
+
+    "serviceworkpth": "Usluge po mjeri za ",
+    "serviceworkpthh": "vaše poslovanje",
+    "serviceworkpthp": "Prilagođena rješenja dizajnirana prema vašim specifičnim potrebama radne snage",
+
+    "expoloserhf": "Istražite naše ",
+    "expoloserhh": "Usluge",
+    "expoloserp": "Sveobuhvatna rješenja za vaše potrebe radne snage",
+
+    "servicewfh": "Vaš pouzdani partner za radnu snagu",
+    "servicewfsh": "Zaposlite strane radnike za određene projekte ili vremenska razdoblja",
+    "servicewfp": "Uživajte u nižim troškovima i pojednostavljenoj administraciji dok mi rješavamo složenosti.",
+    "servicewfsubh": "Kada je ",
+    "servicewfsubhh": "privremeno zapošljavanje ",
+    "servicewfsubhl": "radnika najbolji izbor?",
+
+    "servicewfsublh1": "Zaposlite kvalificirane radnike za kratkoročne potrebe",
+    "servicewfsublp1": "Outsourcani radnici se besprijekorno uklapaju u vaše radne procese pod nadzorom vašeg tima, dok mi upravljamo zapošljavanjem, obračunom plaća i usklađenošću.",
+    "servicewfsublh2": "Pristup raznolikom kadrovskom bazenu",
+    "servicewfsublp2": "Pružamo kandidate s pravim kvalifikacijama i vještinama, prilagođene vašoj industriji i projektnim zahtjevima.",
+    "servicewfsublh3": "Pojednostavljen proces, bez stresa",
+    "servicewfsublp3": "Od zapošljavanja do obračuna plaća, liječničkih pregleda i sigurnosti na radu – vodimo sve administrativne zadatke kako biste se vi mogli fokusirati na svoje poslovanje.",
+    "servicewfsublh4": "Brzo i učinkovito zapošljavanje",
+    "servicewfsublp4": "S radnicima koji već posjeduju važeće dozvole, ova usluga nudi brzinu i fleksibilnost. Nakon probnog razdoblja, možete ih prebaciti u stalne uloge ako je potrebno.",
+
+    "servicewfsubth": "Odaberite ",
+    "servicewfsubtsh": "uslugu prilagođenu ",
+    "servicewfsubtl": "vašem poslovanju",
+    "servicewfsubtp": "Otkrijte prednosti naših specijaliziranih usluga osmišljenih da zadovolje vaše jedinstvene potrebe",
+
+    "expoloserwfhf": "Istražite naše ",
+    "expoloserwfhh": "Usluge",
+    "expoloserwfp": "Saznajte kako vam možemo pomoći u izgradnji kvalificirane i pouzdane radne snage"
   }
 }

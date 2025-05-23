@@ -7,12 +7,14 @@ import {
   textVariant,
   zoomIn,
 } from "./staggerContainer";
+import { useTranslation } from "react-i18next";
 
 const WorkerSection = () => {
+  const { t } = useTranslation();
   const features = [
-    "We collaborate with trusted partners in countries like Nepal, India, Bangladesh, Uzbekistan, Vietnam, and the Philippines to source top talent that meets your specific requirements.",
-    "Our end-to-end services include document translation, visa and work permit processing, and employment contract management.",
-    "We also handle worker transportation and ensure smooth onboarding and integration into your company.",
+    t("home.partnerl1"),
+    t("home.partnerl2"),
+    t("home.partnerl3"),
   ];
 
   return (
@@ -73,15 +75,13 @@ const WorkerSection = () => {
             variants={textVariant(0.2)}
             className="text-4xl font-bold mb-6"
           >
-            Seasonal Workers from Our Network
+            {t("home.seasonalwh")}
           </motion.h2>
           <motion.p
             variants={textVariant(0.4)}
             className="mb-8 text-lg leading-relaxed"
           >
-            We specialize in providing skilled seasonal workers from our
-            extensive network, ensuring your business has the manpower it needs
-            during peak seasons.
+            {t("home.seasonalwp")}
           </motion.p>
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -92,7 +92,7 @@ const WorkerSection = () => {
               section?.scrollIntoView({ behavior: "smooth" });
             }}
           >
-            Get in Touch
+            {t("home.seasonalwbtn")}
           </motion.button>
         </motion.div>
 
@@ -148,13 +148,10 @@ const WorkerSection = () => {
           className="md:w-[400px] text-center md:text-start mt-12 md:mt-0"
         >
           <h2 className="text-3xl font-bold mb-6 text-[#023a51]">
-            Your Partner in Boosting Productivity and Growth
+            {t("home.partnerh")}
           </h2>
           <p className="mb-8 text-lg text-gray-700 bg-gray-100/50 rounded-md p-4 leading-relaxed">
-            At Off2 Work, we streamline the hiring of foreign workers for
-            industries like agriculture, tourism, manufacturing, construction,
-            and more. For clients in the Gulf region, our dedicated team offers
-            tailored recruitment solutions.
+            {t("home.partnerp")}
           </p>
 
           <div className="space-y-4">
@@ -190,11 +187,9 @@ const WorkerSection = () => {
             variants={fadeIn("right", "tween", 0.2, 1)}
             className="md:w-2/3 text-center md:text-left mb-10 md:mb-0"
           >
-            <h2 className="text-3xl font-bold mb-6">Live Interview Service</h2>
+            <h2 className="text-3xl font-bold mb-6">{t("home.liveInterh")}</h2>
             <p className="mb-8 text-lg leading-relaxed max-w-2xl">
-              We offer live interview services in the worker's home country,
-              ensuring you can connect with potential candidates directly and
-              make informed hiring decisions.
+              {t("home.liveInterp")}
             </p>
           </motion.div>
 
@@ -204,7 +199,9 @@ const WorkerSection = () => {
             className="md:w-1/3 flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0 md:space-x-6"
           >
             <div className="text-center md:text-right">
-              <h3 className="text-2xl font-semibold mb-4">Contact Us</h3>
+              <h3 className="text-2xl font-semibold mb-4">
+                {t("home.liveInterc")}
+              </h3>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -214,7 +211,7 @@ const WorkerSection = () => {
                   section?.scrollIntoView({ behavior: "smooth" });
                 }}
               >
-                Get in Touch
+                {t("home.getint")}
               </motion.button>
             </div>
 

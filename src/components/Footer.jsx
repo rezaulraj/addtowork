@@ -17,12 +17,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Left Section */}
           <div>
-            <img
-              src="/images/off2worklogo.png"
-              alt="Logo"
-              width={140}
-              height={40}
-            />
+            <Link to={"/"}>
+              <img
+                src="/images/off2worklogo.png"
+                alt="Logo"
+                width={140}
+                height={40}
+              />
+            </Link>
             <p className="mt-4 text-xl text-[#262930]">
               Trust Off2 Work to Optimize Your Workforce
             </p>
@@ -39,25 +41,25 @@ const Footer = () => {
 
               <div className="flex flex-col space-y-4">
                 <Link
-                  href="/en/services/hires"
+                  to="/services/hires"
                   className="hover:border-b-2 hover:border-[#063556]"
                 >
                   Services
                 </Link>
                 <Link
-                  href="/en/industries"
+                  to="/areas-of-work"
                   className="hover:border-b-2 hover:border-[#063556]"
                 >
-                  Industries We Serve
+                  Area Of Work
                 </Link>
                 <Link
-                  href="/en/reference"
+                  to="/client-success-stories"
                   className="hover:border-b-2 hover:border-[#063556]"
                 >
                   Client Success Stories
                 </Link>
                 <Link
-                  href="/en/about-us"
+                  to="/about-us"
                   className="hover:border-b-2 hover:border-[#063556]"
                 >
                   About Us
@@ -68,13 +70,13 @@ const Footer = () => {
               <h2 className="text-2xl font-semibold">Support</h2>
               <div className="flex flex-col space-y-4">
                 <Link
-                  href="/en/contact#faq"
+                  to="/contact/#faq"
                   className="hover:border-b-2 hover:border-[#063556]"
                 >
                   FAQs
                 </Link>
                 <Link
-                  href="/en/contact"
+                  to="/contact"
                   className="hover:border-b-2 hover:border-[#063556]"
                 >
                   Contact Information
@@ -123,42 +125,38 @@ const Footer = () => {
           <p>©2025 • Powered by Off2 Work</p>
           <div className="flex items-center gap-2">
             <Link
-              href={"https://www.facebook.com/off2work"}
+              to={"https://www.facebook.com/off2work"}
               target="_blank"
               className="  "
             >
               <FaFacebookSquare className="w-8 h-8 p-1 bg-gray-600 text-white hover:bg-blue-900 rounded-md hover:text-white hover:translate-y-2 transition-transform duration-300 hover:shadow-2xl shadow-gray-400" />
             </Link>
             <Link
-              href={"https://www.linkedin.com/company/off2-work"}
+              to={"https://www.linkedin.com/company/off2-work"}
               className="  "
               target="_blank"
             >
               <FaLinkedin className="w-8 h-8 p-1 bg-gray-600 text-white hover:bg-blue-900 rounded-md hover:text-white hover:translate-y-2 transition-transform duration-300 hover:shadow-2xl shadow-gray-400" />
             </Link>
-            <Link
-              href={"https://x.com/off2_work"}
-              className="  "
-              target="_blank"
-            >
+            <Link to={"https://x.com/off2_work"} className="  " target="_blank">
               <FaSquareTwitter className="w-8 h-8 p-1 bg-gray-600 text-white hover:bg-blue-900 rounded-md hover:text-white hover:translate-y-2 transition-transform duration-300 hover:shadow-2xl shadow-gray-400" />
             </Link>
             <Link
-              href={"https://in.pinterest.com/off_2_work"}
+              to={"https://in.pinterest.com/off_2_work"}
               className="  "
               target="_blank"
             >
               <FaSquarePinterest className="w-8 h-8 p-1 bg-gray-600 text-white hover:bg-blue-900 rounded-md hover:text-white hover:translate-y-2 transition-transform duration-300 hover:shadow-2xl shadow-gray-400" />
             </Link>
             <Link
-              href={"https://www.youtube.com/@Off2Work"}
+              to={"https://www.youtube.com/@Off2Work"}
               className="  "
               target="_blank"
             >
               <FaYoutube className="w-8 h-8 p-1 bg-gray-600 text-white hover:bg-blue-900 rounded-md hover:text-white hover:translate-y-2 transition-transform duration-300 hover:shadow-2xl shadow-gray-400" />
             </Link>
             <Link
-              href={"https://www.tiktok.com/@off2.work"}
+              to={"https://www.tiktok.com/@off2.work"}
               className="  "
               target="_blank"
             >

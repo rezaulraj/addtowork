@@ -25,14 +25,28 @@ NProgress.configure({
 
 function App() {
   const location = useLocation();
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [showScrollButton, setShowScrollButton] = useState(false);
-  const [progress, setProgress] = useState(0);
 
-  // Scroll to top on route change
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.pathname]);
+    const handleStart = () => {
+      NProgress.start();
+      setIsLoading(true);
+    };
+    const handleComplete = () => {
+      NProgress.done();
+      setIsLoading(false);
+    };
+
+    handleStart();
+
+    const timer = setTimeout(() => {
+      handleComplete();
+      window.scrollTo(0, 0);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, [location]);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -43,94 +57,29 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 300) {
-        setShowScrollButton(true);
-      } else {
-        setShowScrollButton(false);
-      }
+      setShowScrollButton(window.scrollY > 300);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    let interval;
-
-    const handleStart = () => {
-      setIsLoading(true);
-      setProgress(0);
-      interval = setInterval(() => {
-        setProgress((prev) => {
-          if (prev >= 100) {
-            clearInterval(interval);
-            return 100;
-          }
-          return prev + 10;
-        });
-      }, 200);
-    };
-
-    const handleComplete = () => {
-      clearInterval(interval);
-      setProgress(100);
-      setTimeout(() => setIsLoading(false), 300);
-    };
-
-    handleStart();
-    const timer = setTimeout(handleComplete, 2000);
-
-    return () => {
-      clearTimeout(timer);
-      clearInterval(interval);
-    };
-  }, []);
-
   if (isLoading) {
     return (
-      <div className="w-full h-screen bg-white flex items-center justify-center">
-        <div className="relative w-48 h-48">
-          {/* Square outline */}
-          <div className="absolute inset-0 border-4 border-gray-200"></div>
-
-          {/* Animated progress square */}
-          <motion.div
-            className="absolute inset-0 border-4 border-primary"
-            style={{
-              clipPath: `polygon(0% 0%, ${progress}% 0%, ${progress}% 100%, 0% 100%)`,
-            }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.3 }}
-          />
-
-          {/* Logo in center */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <motion.img
+      <div className="w-full h-screen bg-[#023047] flex items-center justify-center">
+        <div className="relative w-20 h-20">
+          <div className="absolute top-0 left-0 w-0 h-2 bg-[#e9c46a] animate-border-top"></div>
+          <div className="absolute top-0 right-0 w-2 h-0 bg-[#e9c46a] animate-border-right"></div>
+          <div className="absolute bottom-0 right-0 w-0 h-2 bg-[#e9c46a] animate-border-bottom"></div>
+          <div className="absolute bottom-0 left-0 w-2 h-0 bg-[#e9c46a] animate-border-left"></div>
+          <span className="absolute inset-0 flex items-center justify-center">
+            <img
               src="/off2worklogo.png"
               alt="Loading"
-              width={130}
-              height={60}
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{
-                type: "spring",
-                stiffness: 100,
-                damping: 10,
-                delay: 0.1,
-              }}
+              width={160}
+              height={80}
             />
-          </div>
-
-          {/* Progress percentage */}
-          <motion.div
-            className="absolute bottom-0 left-0 right-0 text-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-          >
-            <span className="text-gray-900 font-medium">{progress}%</span>
-          </motion.div>
+          </span>
         </div>
       </div>
     );
@@ -138,9 +87,9 @@ function App() {
 
   return (
     <>
-      <Routes location={location} key={location.pathname}>
+      <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="/" element={<HomePage />} />
+          <Route index element={<HomePage />} />
           <Route path="/services/hires" element={<Hires />} />
           <Route
             path="/services/trustedworkforce"
@@ -156,12 +105,17 @@ function App() {
       </Routes>
 
       {showScrollButton && (
-        <button
+        <motion.button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 bg-[#6A3494] text-white p-2 rounded-full shadow-lg hover:bg-primary-dark transition-colors z-50"
+          className="fixed bottom-8 right-8 bg-[#6A3494] text-white p-2 cursor-pointer rounded-full shadow-lg hover:bg-primary-dark transition-colors z-50"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
         >
           <FaArrowUp className="animate-pulse size-6" />
-        </button>
+        </motion.button>
       )}
     </>
   );
