@@ -10,7 +10,9 @@ import {
 } from "react-icons/fa6";
 import { ArrowUpToLine, MapPinCheckInside } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className=" bg-gray-100 ">
       <div className="max-w-screen-2xl mx-auto  py-8 px-6 text-gray-700">
@@ -26,60 +28,62 @@ const Footer = () => {
               />
             </Link>
             <p className="mt-4 text-xl text-[#262930]">
-              Trust Off2 Work to Optimize Your Workforce
+              {t("footer.footert1")}
             </p>
             <p className="mt-1 text-base text-[#262930]">
-              Rely on our expertise to help you organize and manage foreign
-              workers efficiently, ensuring your business thrives.
+              {t("footer.footert2")}
             </p>
           </div>
 
           {/* Middle Section */}
           <div className="flex text-xl justify-evenly gap-4 space-y-2 text-[#063556]">
             <div className="flex flex-col space-y-4">
-              <h2 className="text-2xl font-semibold">Quick Links</h2>
+              <h2 className="text-2xl font-semibold">
+                {" "}
+                {t("footer.fquilern")}
+              </h2>
 
               <div className="flex flex-col space-y-4">
                 <Link
                   to="/services/hires"
                   className="hover:border-b-2 hover:border-[#063556]"
                 >
-                  Services
+                  {t("footer.service")}
                 </Link>
                 <Link
                   to="/areas-of-work"
                   className="hover:border-b-2 hover:border-[#063556]"
                 >
-                  Area Of Work
+                  {t("footer.areow")}
                 </Link>
                 <Link
                   to="/client-success-stories"
                   className="hover:border-b-2 hover:border-[#063556]"
                 >
-                  Client Success Stories
+                  {t("footer.clents")}
                 </Link>
                 <Link
                   to="/about-us"
                   className="hover:border-b-2 hover:border-[#063556]"
                 >
-                  About Us
+                  {t("footer.abous")}
                 </Link>
               </div>
             </div>
             <div className="flex flex-col space-y-4">
-              <h2 className="text-2xl font-semibold">Support</h2>
+              <h2 className="text-2xl font-semibold">{t("footer.support")}</h2>
               <div className="flex flex-col space-y-4">
                 <Link
                   to="/contact/#faq"
                   className="hover:border-b-2 hover:border-[#063556]"
                 >
-                  FAQs
+                  {t("footer.faqs")}
                 </Link>
                 <Link
                   to="/contact"
                   className="hover:border-b-2 hover:border-[#063556]"
                 >
-                  Contact Information
+                  {t("footer.cdum")}
                 </Link>
               </div>
             </div>
@@ -87,7 +91,9 @@ const Footer = () => {
 
           {/* Right Section */}
           <div className="space-y-2">
-            <h3 className="text-2xl text-[#023a51] font-semibold">Addresses</h3>
+            <h3 className="text-2xl text-[#023a51] font-semibold">
+              {t("footer.address")}
+            </h3>
             <p className="text-lg font-bold text-[#616e84] flex items-center gap-3">
               <span>
                 <MapPinCheckInside />

@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { FaMinus, FaPlus } from "react-icons/fa6";
 const FAQSection = () => {
+  const { t } = useTranslation();
   const [openSection, setOpenSection] = useState(null);
 
   const toggleSection = (index) => {
@@ -9,79 +11,43 @@ const FAQSection = () => {
 
   const faqData = [
     {
-      question:
-        "What are the obligations of an agency for the employment of foreign workers?",
+      question: t("faqs.faqh1"),
       answer: (
         <ul className="list-disc pl-5">
-          <li>
-            Finding suitable workers based on your criteria, conducting
-            selection procedures, and preparing necessary documentation.
-          </li>
-          <li>
-            Submitting all required documents to obtain temporary residence and
-            work permits for foreign workers.
-          </li>
-          <li>Covering travel insurance costs for workers.</li>
-          <li>Assisting with visa applications for residence and work.</li>
-          <li>
-            Arranging and covering the cost of flight tickets for workers.
-          </li>
+          <li>{t("faqs.faqh1l1")}</li>
+          <li>{t("faqs.faqh1l2")}</li>
+          <li>{t("faqs.faqh1l3")}</li>
+          <li>{t("faqs.faqh1l4")}</li>
+          <li>{t("faqs.faqh1l5")}</li>
         </ul>
       ),
     },
     {
-      question: "What are my obligations as an employer?",
-      answer: (
-        <p>
-          Provide accommodation and meals for workers upon their arrival.
-          Accommodation must meet minimum living standards, and if meals are not
-          provided, a food allowance must be paid. Register workers for pension
-          and health insurance, just like local employees.
-        </p>
-      ),
+      question: t("faqs.faqh2"),
+      answer: <p>{t("faqs.faqh2l1")}</p>,
     },
     {
-      question:
-        "What conditions must I meet to obtain a residence and work permit?",
+      question: t("faqs.faqh3"),
       answer: (
         <ul className="list-disc pl-5">
-          <li>
-            Conduct economic activity in a field registered in the country.
-          </li>
-          <li>
-            Employ at least 1/4 Croatian citizens compared to foreign workers,
-            on a full-time and indefinite basis for the past 6 months.
-          </li>
-          <li>
-            Provide a certificate from the Tax Administration confirming no
-            outstanding public debts, dated no earlier than the permit
-            application submission.
-          </li>
-          <li>
-            Ensure no final convictions for labor-related or social security
-            offenses.
-          </li>
+          <li>{t("faqs.faqh3l1")}</li>
+          <li>{t("faqs.faqh3l2")}</li>
+          <li>{t("faqs.faqh3l3")}</li>
+          <li>{t("faqs.faqh3l4")}</li>
         </ul>
       ),
     },
     {
-      question: "Can the worker come immediately?",
+      question: t("faqs.faqh4"),
       answer: (
         <ul className="list-disc pl-5">
-          <p>
-            No. For third-country nationals, a work permit and visa are
-            required, which can take 45 to 90 days depending on the efficiency
-            of relevant institutions.
-          </p>
-          <li>Document preparation: 4–10 days (employer-dependent).</li>
-          <li>
-            Recruitment and selection: 1–30 days (up to 60 days for specialized
-            roles).
-          </li>
-          <li>Labor market test (if applicable): 15 days.</li>
-          <li>Work permit processing: 15–30 days.</li>
-          <li>Visa processing: 15–30 days.</li>
-          <li>Travel arrangements: 1–10 days.</li>
+          <p>{t("faqs.faqh4l1")}</p>
+          <li>{t("faqs.faqh4l2")}</li>
+          <li>{t("faqs.faqh4l3")}</li>
+          <li>{t("faqs.faqh4l4")}</li>
+          <li>{t("faqs.faqh4l5")}</li>
+          <li>{t("faqs.faqh4l6")}</li>
+          <li>{t("faqs.faqh4l7")}</li>
         </ul>
       ),
     },
@@ -90,7 +56,7 @@ const FAQSection = () => {
   return (
     <div id="faq" className="max-w-4xl mx-auto my-10 px-4">
       <h2 className="text-2xl font-bold text-center mb-6 text-[#3D4147]">
-        Most Common Questions
+        {t("faqs.faqh")}
       </h2>
 
       <div className="divide-y divide-gray-200">
@@ -101,7 +67,11 @@ const FAQSection = () => {
               onClick={() => toggleSection(index)}
             >
               <span className="mr-4 text-white text-xl w-6 text-center border rounded bg-[#3D4147] hover:bg-red-500">
-                {openSection === index ? <FaMinus className="p-1"/> : <FaPlus className="p-1"/>}
+                {openSection === index ? (
+                  <FaMinus className="p-1" />
+                ) : (
+                  <FaPlus className="p-1" />
+                )}
               </span>
               <h3
                 className={`text-lg font-medium ${
@@ -119,6 +89,6 @@ const FAQSection = () => {
       </div>
     </div>
   );
-}
+};
 
-export default FAQSection
+export default FAQSection;

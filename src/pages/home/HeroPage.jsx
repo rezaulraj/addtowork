@@ -61,12 +61,12 @@ const HeroPage = () => {
         variants={staggerContainer}
         initial="hidden"
         animate={loaded ? "show" : "hidden"}
-        className="relative z-30 text-start text-white px-4 sm:px-8 max-w-[1200px] mx-auto"
+        className="relative z-30 text-start text-white px-4 sm:px-8  max-w-[1200px] mx-auto"
       >
         <div className="max-w-[800px]">
           <motion.div variants={textVariant(0.2)}>
             <motion.h1
-              className="text-6xl sm:text-5xl md:text-6xl font-bold leading-tight"
+              className="text-4xl sm:text-4xl md:text-5xl py-4 font-bold leading-tight"
               whileHover={{ scale: 1.01 }}
             >
               {t("home.herohead")}
@@ -77,7 +77,7 @@ const HeroPage = () => {
 
           <motion.div variants={textVariant(0.4)}>
             <motion.p
-              className="mt-6 text-lg md:text-xl font-medium text-gray-100 max-w-[700px]"
+              className="mt-6 text-md md:text-xl font-medium text-gray-100 max-w-[700px]"
               whileHover={{ scale: 1.01 }}
             >
               {t("home.herop")}
@@ -92,7 +92,7 @@ const HeroPage = () => {
               }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              className="px-8 py-4 bg-gradient-to-r from-[#023a51] to-[#642D91] hover:from-[#642D91] hover:to-[#023a51] uppercase font-semibold text-white rounded-lg text-md md:text-lg shadow-lg"
+              className="px-8 py-4 bg-gradient-to-r from-[#023a51] to-[#642D91] hover:from-[#642D91] hover:to-[#023a51] uppercase font-semibold text-white rounded-lg text-sm md:text-lg shadow-lg"
             >
               {t("home.herobtn")}
             </motion.button>

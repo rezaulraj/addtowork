@@ -6,6 +6,7 @@ import { ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const ServiceItem = ({ service, index }) => {
   const [ref, inView] = useInView({
@@ -78,49 +79,50 @@ const TextCard = ({ title, description, services }) => {
 };
 
 const AeraOfWork = () => {
+  const { t } = useTranslation();
   const location = useLocation();
   const services = [
-    "Skilled workers in agriculture and livestock farming.",
-    "Drivers for various categories.",
-    "Support staff to assist with daily operations.",
+    t("areaofwork.aofservice1l1"),
+     t("areaofwork.aofservice1l2"),
+     t("areaofwork.aofservice1l3"),
   ];
   const services2 = [
-    "Sawmill workers",
-    "Furniture manufacturing workers",
-    "Warehouse workers and forklift operators",
+    t("areaofwork.aofservice2l1"),
+     t("areaofwork.aofservice2l2"),
+     t("areaofwork.aofservice2l3"),
   ];
   const services3 = [
-    "Reinforcement workers, masons, roofers, waterproofers, and painters.",
-    "Forklift drivers and warehouse staff.",
-    "Construction machinery operators and drivers of all categories.",
+    t("areaofwork.aofservice3l1"),
+     t("areaofwork.aofservice3l2"),
+     t("areaofwork.aofservice3l3"),
   ];
   const services4 = [
-    "Welders, locksmiths, metalworkers",
-    "Maids and cleaning staff.",
-    "Caregivers and support personnel.",
+    t("areaofwork.aofservice4l1"),
+     t("areaofwork.aofservice4l2"),
+     t("areaofwork.aofservice4l3"),
   ];
   const services5 = [
-    "Chefs, baristas, and waiters",
-    "Housekeepers, cleaners",
-    "Caregivers, support staff",
+    t("areaofwork.aofservice5l1"),
+     t("areaofwork.aofservice5l2"),
+     t("areaofwork.aofservice5l3"),
   ];
   const services6 = [
-    "Workers in food processing and manufacturing.",
-    "Textile industry specialists.",
-    "Forklift operators, warehouse staff, and delivery personnel.",
+    t("areaofwork.aofservice6l1"),
+     t("areaofwork.aofservice6l2"),
+     t("areaofwork.aofservice6l3"),
   ];
 
   useEffect(() => {
-      const hash = window.location.hash;
-      if (hash) {
-        const target = document.querySelector(hash);
-        if (target) {
-          setTimeout(() => {
-            target.scrollIntoView({ behavior: "smooth" });
-          }, 100);
-        }
+    const hash = window.location.hash;
+    if (hash) {
+      const target = document.querySelector(hash);
+      if (target) {
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: "smooth" });
+        }, 100);
       }
-    }, [location.hash]);
+    }
+  }, [location.hash]);
 
   return (
     <div className="min-h-screen pt-5 overflow-hidden bg-gray-50">
@@ -144,7 +146,7 @@ const AeraOfWork = () => {
             transition={{ delay: 0.2 }}
             className="text-2xl text-[#023a51] my-4"
           >
-            Industries We Serve
+            {t("areaofwork.aowht")}
           </motion.p>
           <motion.h1
             id="services-area"
@@ -153,7 +155,7 @@ const AeraOfWork = () => {
             transition={{ delay: 0.4 }}
             className="text-4xl md:text-5xl text-[#023a51] font-bold my-4"
           >
-            We specialize in finding the ideal staff for your business.
+            {t("areaofwork.aowhs")}
           </motion.h1>
           <motion.p
             initial={{ y: -20, opacity: 0 }}
@@ -161,17 +163,19 @@ const AeraOfWork = () => {
             transition={{ delay: 0.6 }}
             className="text-xl text-foreground-muted"
           >
-            Trust us to search, select, and recruit qualified workers tailored
-            to your industry's needs.
+            {t("areaofwork.aowhp")}
           </motion.p>
         </div>
       </motion.div>
 
       {/* Agriculture Section */}
-      <div id="agriculture" className="max-w-[1000px] mx-auto flex flex-col md:flex-row bg-transparent gap-4 mt-2 md:mt-20 -mb-10">
+      <div
+        id="agriculture"
+        className="max-w-[1000px] mx-auto flex flex-col md:flex-row bg-transparent gap-4 mt-2 md:mt-20 -mb-10"
+      >
         <TextCard
-          title="Agriculture."
-          description="We provide reliable and motivated foreign workers for agriculture, crop farming, and livestock farming, supporting both family farms and business owners."
+          title={t("areaofwork.agricultureh")}
+          description={t("areaofwork.agriculturep")}
           services={services}
         />
         <ImageCard
@@ -183,23 +187,29 @@ const AeraOfWork = () => {
       <div className="bg-[#3E3F49] h-[180px]" />
 
       {/* Wood Industry Section */}
-      <div id="wood" className="max-w-[1000px] mx-auto flex flex-col md:flex-row flex-col-reverse gap-4 -mt-10 mb-8 md:mb-30">
+      <div
+        id="wood"
+        className="max-w-[1000px] mx-auto flex flex-col md:flex-row flex-col-reverse gap-4 -mt-10 mb-8 md:mb-30"
+      >
         <ImageCard
           src="/images/Off2work/Area-of-Work/wood-industry.jpg"
           alt="Apples in wooden box"
         />
         <TextCard
-          title="Wood industry."
-          description="Through our network of trusted partners, we supply qualified workers for wood processing and manufacturing plants."
+          title={t("areaofwork.woodh")}
+          description={t("areaofwork.woodp")}
           services={services2}
         />
       </div>
 
       {/* Construction Section */}
-      <div id="construction" className="max-w-[1000px] mx-auto flex flex-col md:flex-row bg-transparent gap-4 mt-30 -mb-10">
+      <div
+        id="construction"
+        className="max-w-[1000px] mx-auto flex flex-col md:flex-row bg-transparent gap-4 mt-30 -mb-10"
+      >
         <TextCard
-          title="Construction and industry."
-          description="We provide skilled workers for construction and industrial projects, sourced from reliable partners in countries like Uzbekistan."
+          title={t("areaofwork.contractionh")}
+          description={t("areaofwork.contractionp")}
           services={services3}
         />
         <ImageCard
@@ -211,14 +221,17 @@ const AeraOfWork = () => {
       <div className="bg-[#3E3F49] h-[180px]" />
 
       {/* Shipbuilding Section */}
-      <div id="shipbuilding" className="max-w-[1000px] mx-auto flex flex-col md:flex-row flex-col-reverse gap-4 -mt-10 mb-8 md:mb-30">
+      <div
+        id="shipbuilding"
+        className="max-w-[1000px] mx-auto flex flex-col md:flex-row flex-col-reverse gap-4 -mt-10 mb-8 md:mb-30"
+      >
         <ImageCard
           src="/images/Off2work/Area-of-Work/shipbuilding.jpeg"
           alt="shipbuilding"
         />
         <TextCard
-          title="Shipbuilding."
-          description="We recruit experienced welders and motivated workers for the shipbuilding industry."
+          title={t("areaofwork.shipbuildingh")}
+          description={t("areaofwork.shipbuildingp")}
           services={services4}
         />
       </div>
@@ -226,8 +239,8 @@ const AeraOfWork = () => {
       {/* Tourism Section */}
       <div className="max-w-[1000px] mx-auto flex flex-col md:flex-row bg-transparent gap-4 mt-8 md:mt-30 -mb-10">
         <TextCard
-          title="Tourism and Hospitality"
-          description="We supply qualified workers for all positions in tourism and catering."
+          title={t("areaofwork.tourismh")}
+          description={t("areaofwork.tourismp")}
           services={services5}
         />
         <ImageCard
@@ -245,8 +258,8 @@ const AeraOfWork = () => {
           alt="Production"
         />
         <TextCard
-          title="Production."
-          description="With the help of our reliable partners, we recruit workers in the food and processing industry and agriculture from all the countries with which we cooperate."
+          title={t("areaofwork.productionh")}
+          description={t("areaofwork.productionp")}
           services={services6}
         />
       </div>
@@ -259,7 +272,7 @@ const AeraOfWork = () => {
         viewport={{ once: true }}
         className="bg-[#3E3F49] h-[100px] text-center text-white flex items-center justify-center"
       >
-        Just some of the companies that have entrusted us with their trust:
+        {t("areaofwork.tuastc")}
       </motion.div>
 
       <ServicesSection />

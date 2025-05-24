@@ -17,12 +17,14 @@ import {
 } from "lucide-react";
 import LogoGallery from "../home/LogoGallery";
 import { useInView } from "react-intersection-observer";
+import { useTranslation } from "react-i18next";
 
 const References = () => {
   const [activeStep, setActiveStep] = useState(1);
   const [hoveredCard, setHoveredCard] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const { t } = useTranslation();
   const [heroRef, heroInView] = useInView({
     threshold: 0.1,
     triggerOnce: true,
@@ -31,64 +33,56 @@ const References = () => {
   const steps = [
     {
       id: 1,
-      title: "Talent Recruitment",
+      title: t("clienstory.stepsh1"),
       icon: <Users className="w-8 h-8" />,
-      description:
-        "We conduct detailed interviews and assessments to ensure we find the right candidates. Only when we're confident in a match do we proceed with the hiring process.",
+      description: t("clienstory.stepsh1p"),
     },
     {
       id: 2,
-      title: "Employment and Onboarding",
+      title: t("clienstory.stepsh2"),
       icon: <Clipboard className="w-8 h-8" />,
-      description:
-        "Our support doesn't end with hiring. We remain by your side, acting as a bridge between you and your new employees to ensure a smooth transition.",
+      description: t("clienstory.stepsh2p"),
     },
     {
       id: 3,
-      title: "Work Permits and Compliance",
+      title: t("clienstory.stepsh3"),
       icon: <File className="w-8 h-8" />,
-      description:
-        "The process of bringing workers typically takes around 90 days. While we handle the logistics, certain steps are managed by government authorities in compliance with local laws.",
+      description: t("clienstory.stepsh3p"),
     },
   ];
 
   const industries = [
     {
       id: 1,
-      title: "Agriculture",
+      title: t("clienstory.indussh1"),
       icon: <Leaf className="w-8 h-8" />,
-      description:
-        "We provide reliable workers for agriculture, crop farming, and livestock farming, supporting both family farms and business owners.",
+      description: t("clienstory.indush1p"),
       color: "from-green-100 to-green-50",
       hoverColor: "hover:from-green-200 hover:to-green-100",
       link: "/areas-of-work/#agriculture",
     },
     {
       id: 2,
-      title: "Construction and Industry",
+      title: t("clienstory.indussh2"),
       icon: <HardHat className="w-8 h-8" />,
-      description:
-        "From carpenters and bricklayers to drivers and machine operators, we supply skilled workers for construction and industrial projects.",
+      description: t("clienstory.indush2p"),
       color: "from-amber-100 to-amber-50",
       hoverColor: "hover:from-amber-200 hover:to-amber-100",
       link: "/areas-of-work/#construction",
     },
     {
       id: 3,
-      title: "Wood Industry",
+      title: t("clienstory.indussh3"),
       icon: <Trees className="w-8 h-8" />,
-      description:
-        "We help wood processing and manufacturing plants find qualified workers to meet their production needs.",
-      color: "from-brown-100 to-brown-50",
+      description: t("clienstory.indush3p"),
       hoverColor: "hover:from-brown-200 hover:to-brown-100",
       link: "/areas-of-work/#wood",
     },
     {
       id: 4,
-      title: "Shipbuilding",
+      title: t("clienstory.indussh4"),
       icon: <Ship className="w-8 h-8" />,
-      description:
-        "We recruit experienced welders and motivated workers for the shipbuilding industry.",
+      description: t("clienstory.indush4p"),
       color: "from-blue-100 to-blue-50",
       hoverColor: "hover:from-blue-200 hover:to-blue-100",
       link: "/areas-of-work/#shipbuilding",
@@ -97,34 +91,34 @@ const References = () => {
 
   const testimonials = [
     {
-      text: "Off2 Work's professional approach and expertise gave us the assurance we needed to confidently hire foreign workers for our business. We look forward to a long and fruitful collaboration.",
-      name: "Marko Jurić",
-      company: "ABC Solutions",
+      text: t("clienstory.testimonialt1"),
+      name: t("clienstory.testimonialn1"),
+      company: t("clienstory.testimonialc1"),
     },
     {
-      text: "Our partnership with Off2 Work in hiring over 200 skilled workers from Nepal for our agricultural operations in 2022 was seamless and efficient. Their deep understanding of foreign employment processes made all the difference.",
-      name: "Ana Petrović",
-      company: "Green Harvest Ltd.",
+      text: t("clienstory.testimonialt2"),
+      name: t("clienstory.testimonialn2"),
+      company: t("clienstory.testimonialc2"),
     },
     {
-      text: "Thanks to Off2 Work, we've resolved our staffing challenges with ease. After just one season, we're confident in their ability to consistently provide motivated and reliable workers.",
-      name: "Ivana Novak",
-      company: "Family Farm Novak",
+      text: t("clienstory.testimonialt3"),
+      name: t("clienstory.testimonialn3"),
+      company: t("clienstory.testimonialc3"),
     },
     {
-      text: "Off2 Work's expertise simplified the recruitment process for us. Their professionalism and dedication make them stand out in this field.",
-      name: "Hrvoje Kovačić",
-      company: "Kovačić Orchards",
+      text: t("clienstory.testimonialt4"),
+      name: t("clienstory.testimonialn4"),
+      company: t("clienstory.testimonialc4"),
     },
     {
-      text: "The workers we hired through Off2 Work were diligent, dependable, and hardworking. Their step-by-step guidance was invaluable to ensuring smooth operations.",
-      name: "Zoran Horvat",
-      company: "Horvat Farms",
+      text: t("clienstory.testimonialt5"),
+      name: t("clienstory.testimonialn5"),
+      company: t("clienstory.testimonialc5"),
     },
     {
-      text: "Off2 Work supported us throughout the entire process—from selecting candidates to managing documentation and providing post-arrival assistance. They've proven to be exceptional partners, and we continue to work with them successfully.",
-      name: "Filip Matić",
-      company: "NutriGrow Ltd.",
+      text: t("clienstory.testimonialt6"),
+      name: t("clienstory.testimonialn6"),
+      company: t("clienstory.testimonialc6"),
     },
   ];
 
@@ -216,7 +210,7 @@ const References = () => {
             transition={{ delay: 0.2 }}
             className="text-2xl text-[#023a51] my-4"
           >
-            Client Success Stories
+            {t("clienstory.csht")}
           </motion.p>
           <motion.h1
             initial={{ y: 20, opacity: 0 }}
@@ -224,7 +218,7 @@ const References = () => {
             transition={{ delay: 0.4 }}
             className="text-4xl md:text-5xl text-[#023a51] font-bold my-4"
           >
-            Just some of the companies that have trusted us.
+            {t("clienstory.cshs")}
           </motion.h1>
           <motion.p
             initial={{ y: 20, opacity: 0 }}
@@ -232,9 +226,7 @@ const References = () => {
             transition={{ delay: 0.6 }}
             className="text-xl text-foreground-muted"
           >
-            Partnering with Off2 Work offers a simple, fast, and efficient way
-            to access quality staff, saving you time and resources while
-            providing a diverse pool of skilled candidates.
+            {t("clienstory.cshp")}
           </motion.p>
         </div>
       </motion.div>
@@ -251,11 +243,11 @@ const References = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl">
-              Our Clients' <span className="text-blue-600">Experiences</span>
+              {t("clienstory.cssubhf")}{" "}
+              <span className="text-blue-600">{t("clienstory.cssubhh")}</span>
             </h2>
             <p className="mt-6 text-xl text-gray-600 max-w-3xl mx-auto">
-              Join the ranks of satisfied employers who have found success with
-              Off2 Work
+              {t("clienstory.cssubp")}
             </p>
           </motion.div>
 
@@ -342,7 +334,7 @@ const References = () => {
               href={"/contact"}
               className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white text-lg font-semibold rounded-xl hover:shadow-xl transition-all duration-300 shadow-lg"
             >
-              Contact us!
+              {t("clienstory.contactus")}
             </a>
           </motion.div>
         </div>
@@ -360,8 +352,11 @@ const References = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl">
-              We Guide You Through Every Step of the
-              <span className="text-blue-600"> Hiring Process</span>
+              {t("clienstory.proceeshf")}
+              <span className="text-blue-600">
+                {" "}
+                {t("clienstory.processhh")}
+              </span>
             </h2>
             <motion.div
               initial={{ scaleX: 0 }}
@@ -454,7 +449,7 @@ const References = () => {
                       : "bg-blue-100 text-blue-600 hover:bg-blue-200"
                   }`}
                 >
-                  Previous
+                  {t("clienstory.preius")}
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -467,7 +462,7 @@ const References = () => {
                       : "bg-[#3E4247] text-white hover:bg-[#3E4247]"
                   }`}
                 >
-                  Next
+                  {t("clienstory.next")}
                 </motion.button>
               </div>
             </div>
@@ -487,11 +482,12 @@ const References = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl">
-              We Find the <span className="text-blue-600">Ideal Staff</span> for
-              Your Business
+              {t("clienstory.stafthf")}{" "}
+              <span className="text-blue-600">{t("clienstory.stafthh")}</span>{" "}
+              {t("clienstory.stafthl")}
             </h2>
             <p className="mt-6 text-xl text-gray-600 max-w-3xl mx-auto">
-              Specialized workforce solutions tailored to your industry needs
+              {t("clienstory.stafthp")}
             </p>
           </motion.div>
 
@@ -518,7 +514,7 @@ const References = () => {
               href={"/areas-of-work"}
               className="inline-block px-8 py-4 bg-blue-600 text-white text-lg font-semibold rounded-xl hover:bg-blue-700 transition-colors duration-300 shadow-lg hover:shadow-xl"
             >
-              Explore All Industries
+              {t("clienstory.explorei")}
             </a>
           </motion.div>
         </div>

@@ -74,6 +74,7 @@
     "contactsubh": "Upoznajmo se bolje",
     "contactp": "Obratite se našem timu stručnjaka za konzultacije bez obaveza prilagođene vašim poslovnim potrebama.",
     "contactget": "Stupite u kontakt",
+    "think": "Hvala na upitu! Kontaktirat ćemo vas uskoro.",
     "name": "Ime i prezime",
     "phone": "Broj mobitela",
     "email": "Email",
@@ -197,5 +198,165 @@
     "expoloserwfhf": "Istražite naše ",
     "expoloserwfhh": "Usluge",
     "expoloserwfp": "Saznajte kako vam možemo pomoći u izgradnji kvalificirane i pouzdane radne snage"
-  }
+  },
+  "areaofwork": {
+    "aowht": "Industrije koje opslužujemo",
+    "aowhs": "Specijalizirani smo za pronalazak idealnog osoblja za vaše poslovanje.",
+    "aowhp": "Povjerite nam potragu, odabir i zapošljavanje kvalificiranih radnika prilagođenih potrebama vaše industrije.",
+    "agricultureh": "Poljoprivreda.",
+    "agriculturep": "Osiguravamo pouzdane i motivirane strane radnike za poljoprivredu, ratarstvo i stočarstvo, podržavajući obiteljska gospodarstva i poslovne subjekte.",
+    "woodh": "Drvna industrija.",
+    "woodp": "Putem naše mreže pouzdanih partnera osiguravamo kvalificirane radnike za preradu drva i proizvodne pogone.",
+    "contractionh": "Građevinarstvo i industrija.",
+    "contractionp": "Pružamo kvalificirane radnike za građevinske i industrijske projekte, dobivene od pouzdanih partnera iz zemalja poput Uzbekistana.",
+    "shipbuildingh": "Brodogradnja.",
+    "shipbuildingp": "Zapošljavamo iskusne zavarivače i motivirane radnike za brodograđevnu industriju.",
+    "tourismh": "Turizam i ugostiteljstvo",
+    "tourismp": "Osiguravamo kvalificirane radnike za sve pozicije u turizmu i ugostiteljstvu.",
+    "productionh": "Proizvodnja.",
+    "productionp": "Uz pomoć naših pouzdanih partnera zapošljavamo radnike u prehrambenoj i prerađivačkoj industriji te poljoprivredi iz svih zemalja s kojima surađujemo.",
+    "tuastc": "Samo neke od tvrtki koje su nam ukazale povjerenje:",
+
+    "aofservice1l1": "Kvalificirani radnici u poljoprivredi i stočarstvu.",
+    "aofservice1l2": "Vozači različitih kategorija.",
+    "aofservice1l3": "Pomoćno osoblje za podršku svakodnevnom poslovanju.",
+
+    "aofservice2l1": "Radnici u pilanama",
+    "aofservice2l2": "Radnici u proizvodnji namještaja",
+    "aofservice2l3": "Skladištari i vozači viličara",
+
+    "aofservice3l1": "Armirači, zidari, krovopokrivači, hidroizolateri i ličioci.",
+    "aofservice3l2": "Vozači viličara i skladišno osoblje.",
+    "aofservice3l3": "Rukovatelji građevinskim strojevima i vozači svih kategorija.",
+
+    "aofservice4l1": "Zavarivači, bravari, metalci",
+    "aofservice4l2": "Sobarice i čistačice.",
+    "aofservice4l3": "Njegovatelji i pomoćno osoblje.",
+
+    "aofservice5l1": "Kuhari, baristi i konobari",
+    "aofservice5l2": "Sobarice, čistačice",
+    "aofservice5l3": "Njegovatelji, pomoćno osoblje",
+
+    "aofservice6l1": "Radnici u preradi hrane i proizvodnji.",
+    "aofservice6l2": "Specijalisti za tekstilnu industriju.",
+    "aofservice6l3": "Vozači viličara, skladištari i dostavljači."
+  },
+  "clienstory": {
+    "csht": "Priče o uspjehu klijenata",
+    "cshs": "Samo neke od tvrtki koje su nam ukazale povjerenje.",
+    "cshp": "Partnerstvom s Off2 Work-om dolazite jednostavno, brzo i učinkovito do kvalitetnog osoblja, štedeći vrijeme i resurse, uz pristup raznolikom izboru kvalificiranih kandidata.",
+
+    "cssubhf": "Iskustva ",
+    "cssubhh": "naših klijenata",
+    "cssubp": "Pridružite se brojnim zadovoljnim poslodavcima koji su pronašli uspjeh s Off2 Work-om",
+    "contactus": "Kontaktirajte nas!",
+    "proceeshf": "Vodimo vas kroz svaki korak ",
+    "processhh": "procesa zapošljavanja",
+    "preius": "Prethodno",
+    "next": "Sljedeće",
+    "stafthf": "Pronalazimo ",
+    "stafthh": "idealno osoblje ",
+    "stafthl": "za vaše poslovanje",
+    "stafthp": "Specijalizirana rješenja radne snage prilagođena vašim industrijskim potrebama",
+    "explorei": "Istraži sve industrije",
+
+    "stepsh1": "Regrutacija talenata",
+    "stepsh1p": "Provodimo detaljne intervjue i procjene kako bismo osigurali da pronađemo prave kandidate. Tek kada smo sigurni u podudaranje, nastavljamo s procesom zapošljavanja.",
+    "stepsh2": "Zapošljavanje i uvođenje",
+    "stepsh2p": "Naša podrška ne prestaje zapošljavanjem. Ostajemo uz vas kao most između vas i vaših novih zaposlenika kako bi tranzicija bila što lakša.",
+    "stepsh3": "Radne dozvole i usklađenost",
+    "stepsh3p": "Proces dovođenja radnika obično traje oko 90 dana. Dok mi upravljamo logistikom, određene korake provode državna tijela u skladu s lokalnim zakonima.",
+
+    "indussh1": "Poljoprivreda",
+    "indush1p": "Osiguravamo pouzdane radnike za poljoprivredu, ratarstvo i stočarstvo, uz podršku i obiteljskim farmama i vlasnicima poduzeća.",
+    "indussh2": "Građevina i industrija",
+    "indush2p": "Od stolara i zidara do vozača i rukovatelja strojevima – isporučujemo kvalificirane radnike za građevinske i industrijske projekte.",
+    "indussh3": "Drvna industrija",
+    "indush3p": "Pomažemo pogonima za obradu i proizvodnju drva pronaći kvalificirane radnike koji odgovaraju njihovim proizvodnim potrebama.",
+    "indussh4": "Brodogradnja",
+    "indush4p": "Regrutiramo iskusne zavarivače i motivirane radnike za brodograđevnu industriju.",
+
+    "testimonialt1": "Profesionalan pristup i stručnost Off2 Work-a dali su nam sigurnost da s povjerenjem zaposlimo strane radnike za naše poslovanje. Radujemo se dugoročnoj i plodnoj suradnji.",
+    "testimonialn1": "Marko Jurić",
+    "testimonialc1": "ABC Solutions",
+
+    "testimonialt2": "Naše partnerstvo s Off2 Work-om pri zapošljavanju preko 200 kvalificiranih radnika iz Nepala za naše poljoprivredne operacije 2022. godine bilo je besprijekorno i učinkovito. Njihovo duboko razumijevanje procesa stranog zapošljavanja činilo je ključnu razliku.",
+    "testimonialn2": "Ana Petrović",
+    "testimonialc2": "Green Harvest d.o.o.",
+
+    "testimonialt3": "Zahvaljujući Off2 Work-u, s lakoćom smo riješili izazove s radnom snagom. Već nakon jedne sezone uvjereni smo u njihovu sposobnost da dosljedno osiguraju motivirane i pouzdane radnike.",
+    "testimonialn3": "Ivana Novak",
+    "testimonialc3": "OPG Novak",
+
+    "testimonialt4": "Stručnost Off2 Work-a pojednostavila je proces zapošljavanja za nas. Njihova profesionalnost i posvećenost ih čine izuzetnima u ovom području.",
+    "testimonialn4": "Hrvoje Kovačić",
+    "testimonialc4": "Voćnjak Kovačić",
+
+    "testimonialt5": "Radnici koje smo zaposlili putem Off2 Work-a bili su marljivi, pouzdani i vrijedni. Njihovo vođenje korak po korak bilo je neprocjenjivo za osiguravanje nesmetanog poslovanja.",
+    "testimonialn5": "Zoran Horvat",
+    "testimonialc5": "Horvat farme",
+
+    "testimonialt6": "Off2 Work nas je podržavao kroz cijeli proces – od odabira kandidata do upravljanja dokumentacijom i pomoći nakon dolaska. Pokazali su se kao izvanredni partneri i i dalje uspješno surađujemo s njima.",
+    "testimonialn6": "Filip Matić",
+    "testimonialc6": "NutriGrow d.o.o."
+  },
+  "aboutus": {
+    "abouth": "O nama",
+    "aboutsh": "Vaše poslovanje, naša stručnost",
+    "aboutp": "Prepustite složenosti zapošljavanja i upravljanja radnom snagom našim stručnjacima. Specijalizirani smo za povezivanje poduzeća s kvalificiranim stručnjacima, osiguravajući usklađenost i učinkovitost na svakom koraku.",
+    "absubh": "Upoznajmo se bolje",
+    "absubp1": " Otkrijte kako prilagođena rješenja Off2 Work-a mogu odgovoriti na vaše izazove s radnom snagom. Suradnjom možemo stvoriti jednostavan i usklađen put za vaše poslovanje.",
+    "absubp2": "Kao vaš pouzdan partner, pomažemo vam pronaći prave talente kako biste povećali produktivnost i konkurentnost na tržištu rada. Suradujemo s partnerima u Nepalu, Indiji, Bangladešu, Uzbekistanu, Vijetnamu, Kosovu i Zaljevskim zemljama kako bismo pronašli vrhunske kandidate prema vašim potrebama.",
+    "absubp3": "S godinama iskustva u posredovanju pri zapošljavanju i privremenom zapošljavanju, mi smo vaši stručnjaci za strane radnike.",
+    "misstionh": "Naša misija",
+    "missionp1": "Naša je misija pružiti vrhunsku uslugu i besprijekorno poslovno iskustvo kroz kvalitetna rješenja, profesionalan pristup i konkurentne cijene.",
+    "missionp2": "Cilj nam je povećati produktivnost i konkurentnost identificiranjem i privlačenjem najboljih kandidata.",
+    "missionp3": "Nastojimo biti prepoznati kao pouzdan partner koji nadmašuje očekivanja.",
+    "visstionh": "Naša vizija",
+    "vissionp1": "Naša je vizija postati vodeća agencija za rješenja vezana uz radnu snagu, poznata po izvrsnosti i inovacijama.",
+    "vissionp2": "Cilj nam je graditi trajne odnose koji potiču uzajamni rast i uspjeh.",
+    "vissionp3": "Fokusirani smo na dugoročnu suradnju i kontinuirano unaprjeđenje."
+  },
+  "footer": {
+    "footert1": "Vjerujte Off2 Work-u za optimizaciju vaše radne snage",
+    "footert2": "Oslonite se na naše znanje kako biste učinkovito organizirali i upravljali stranim radnicima te osigurali uspjeh svog poslovanja.",
+    "fquilern": "Brze poveznice",
+    "service": "Usluge",
+    "areow": "Područja rada",
+    "clents": "Iskustva klijenata",
+    "abous": "O nama",
+    "faqs": "Česta pitanja",
+    "cdum": "Kontakt informacije",
+    "address": "Adrese",
+    "support": "Podrška"
+  },
+  "faqs": {
+  "faqh": "Najčešća pitanja",
+
+  "faqh1": "Koje su obveze agencije za zapošljavanje stranih radnika?",
+  "faqh1l1": "Pronalaženje odgovarajućih radnika prema vašim kriterijima, provođenje selekcijskog postupka i priprema potrebne dokumentacije.",
+  "faqh1l2": "Podnošenje svih potrebnih dokumenata za ishođenje privremenog boravka i radne dozvole za strane radnike.",
+  "faqh1l3": "Pokriće troškova putnog osiguranja za radnike.",
+  "faqh1l4": "Pomoć pri podnošenju zahtjeva za vizu za boravak i rad.",
+  "faqh1l5": "Organizacija i pokrivanje troškova avionskih karata za radnike.",
+
+  "faqh2": "Koje su moje obveze kao poslodavca?",
+  "faqh2l1": "Osigurati smještaj i obroke za radnike po njihovom dolasku. Smještaj mora zadovoljavati minimalne životne uvjete, a ako obroci nisu osigurani, mora se isplaćivati prehrambeni dodatak. Radnike treba prijaviti na mirovinsko i zdravstveno osiguranje, kao i domaće zaposlenike.",
+
+  "faqh3": "Koje uvjete moram ispuniti za dobivanje dozvole za boravak i rad?",
+  "faqh3l1": "Obavljati gospodarsku djelatnost u djelatnosti registriranoj u državi.",
+  "faqh3l2": "Zaposliti najmanje 1/4 hrvatskih državljana u odnosu na strane radnike, na puno radno vrijeme i na neodređeno, u posljednjih 6 mjeseci.",
+  "faqh3l3": "Priložiti potvrdu Porezne uprave o nepostojanju nepodmirenih javnih davanja, izdanu najkasnije na dan podnošenja zahtjeva.",
+  "faqh3l4": "Ne smijete imati pravomoćne presude za prekršaje iz područja rada ili socijalne sigurnosti.",
+
+  "faqh4": "Može li radnik doći odmah?",
+  "faqh4l1": "Ne. Državljani trećih zemalja trebaju radnu dozvolu i vizu, što može trajati od 45 do 90 dana, ovisno o učinkovitosti nadležnih institucija.",
+  "faqh4l2": "Priprema dokumentacije: 4–10 dana (ovisno o poslodavcu).",
+  "faqh4l3": "Zapošljavanje i selekcija: 1–30 dana (do 60 dana za specijalizirane poslove).",
+  "faqh4l4": "Test tržišta rada (ako je primjenjivo): 15 dana.",
+  "faqh4l5": "Obrada dozvole za rad: 15–30 dana.",
+  "faqh4l6": "Obrada vize: 15–30 dana.",
+  "faqh4l7": "Organizacija putovanja: 1–10 dana."
+}
+
 }

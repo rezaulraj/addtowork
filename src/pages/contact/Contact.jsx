@@ -5,7 +5,9 @@ import ContactInfo from "./ContactInfo";
 import FAQSection from "./FAQSection";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 const Contact = () => {
+  const { t } = useTranslation();
   const location = useLocation();
   const [formData, setFormData] = useState({
     fullName: "",
@@ -110,7 +112,7 @@ const Contact = () => {
             animate={{ scale: 1 }}
             transition={{ delay: 0.5, type: "spring", stiffness: 100 }}
           >
-            Contact us
+            {t("contact.contacth")}
           </motion.p>
           <motion.p
             className="text-4xl md:text-5xl text-[#023a51] font-bold my-4"
@@ -118,7 +120,7 @@ const Contact = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.7, duration: 0.8 }}
           >
-            Let&apos;s Get to Know Each Other
+            {t("contact.contactsubh")}
           </motion.p>
           <motion.p
             className="text-xl text-foreground-muted"
@@ -126,8 +128,7 @@ const Contact = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 0.8 }}
           >
-            Reach out to our team of experts for a no-obligation consultation
-            tailored to your business needs.
+            {t("contact.contactp")}
           </motion.p>
         </motion.div>
       </motion.div>
@@ -142,7 +143,7 @@ const Contact = () => {
       >
         <motion.div className="pb-4" variants={itemVariants}>
           <h2 className="text-4xl font-bold text-center text-[#3D4147]">
-            Get in Touch
+            {t("contact.contactget")}
           </h2>
         </motion.div>
 
@@ -152,7 +153,7 @@ const Contact = () => {
             animate={{ scale: 1, opacity: 1 }}
             className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative text-center"
           >
-            <p>Thank you for your inquiry! We'll contact you shortly.</p>
+            <p>{t("contact.think")}</p>
           </motion.div>
         ) : (
           <motion.form
@@ -166,20 +167,20 @@ const Contact = () => {
             >
               <div className="space-y-2">
                 <label htmlFor="fullName" className="text-gray-600 font-medium">
-                  Name and Surname *
+                  {t("contact.name")} *
                 </label>
                 <input
                   id="fullName"
                   value={formData.fullName}
                   onChange={handleChange}
-                  placeholder="Name and Surname *"
+                  placeholder={t("contact.name")}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
                   required
                 />
               </div>
               <div className="space-y-2">
                 <label htmlFor="mobile" className="text-gray-600 font-medium">
-                  Mobile Phone Number *
+                  {t("contact.phone")} *
                 </label>
                 <input
                   id="mobile"
@@ -199,13 +200,13 @@ const Contact = () => {
             >
               <div className="space-y-2">
                 <label htmlFor="email" className="text-gray-600 font-medium">
-                  Email*
+                  {t("contact.email")} *
                 </label>
                 <input
                   id="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="ime@mail.com*"
+                  placeholder="me@mail.com*"
                   type="email"
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
                   required
@@ -213,13 +214,13 @@ const Contact = () => {
               </div>
               <div className="space-y-2">
                 <label htmlFor="company" className="text-gray-600 font-medium">
-                  Company Name *
+                   {t("contact.conpany")} *
                 </label>
                 <input
                   id="company"
                   value={formData.company}
                   onChange={handleChange}
-                  placeholder="Company Name *"
+                  placeholder={t("contact.conpany")}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
                   required
                 />
@@ -228,7 +229,7 @@ const Contact = () => {
 
             <motion.div className="space-y-2" variants={itemVariants}>
               <label className="text-gray-600 font-medium">
-                Number of Workers Needed? *
+                {t("contact.employee")} *
               </label>
               <div className="flex items-center space-x-4">
                 <span className="inline-block border px-4 py-2 border-gray-300 rounded-lg bg-gray-50 font-medium min-w-[60px] text-center">
@@ -249,7 +250,7 @@ const Contact = () => {
 
             <motion.div className="space-y-2" variants={itemVariants}>
               <label htmlFor="message" className="text-gray-600 font-medium">
-                Send an inquiry
+                {t("contact.sendae")}
               </label>
               <textarea
                 id="message"
@@ -299,7 +300,7 @@ const Contact = () => {
                   <Send className="mr-2 h-4 w-4" />
                 </>
               )}
-              {isSubmitting ? "Sending..." : "Send Inquiry"}
+              {isSubmitting ? "Sending..." : t("contact.contactbtn")}
             </motion.button>
           </motion.form>
         )}
@@ -321,7 +322,7 @@ const Contact = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Look For The <span className="text-blue-600">Office Near</span> You
+          {t("contact.locationh")} <span className="text-blue-600">{t("contact.locationhh")}</span>{t("contact.locationhl")}
         </motion.h2>
       </motion.div>
 

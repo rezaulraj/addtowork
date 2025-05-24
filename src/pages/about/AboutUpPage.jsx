@@ -4,9 +4,11 @@ import LogoGallery from "../home/LogoGallery";
 import ImageShowCase from "./ImageShowCase";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useTranslation } from "react-i18next";
 
 const AboutUpPage = () => {
-  // Animation controls
+  const { t } = useTranslation();
+
   const controls = useAnimation();
   const [ref, inView] = useInView({
     threshold: 0.1,
@@ -19,7 +21,6 @@ const AboutUpPage = () => {
     }
   }, [controls, inView]);
 
-  // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -49,7 +50,6 @@ const AboutUpPage = () => {
 
   return (
     <div className="min-h-screen pt-4 overflow-x-hidden">
-      {/* Hero Section with Parallax Effect */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -77,7 +77,7 @@ const AboutUpPage = () => {
             animate={{ scale: 1 }}
             transition={{ delay: 0.5, type: "spring", stiffness: 100 }}
           >
-            About Us
+            {t("aboutus.abouth")}
           </motion.p>
           <motion.p
             className="text-4xl md:text-5xl text-[#023a51] font-bold my-4"
@@ -85,7 +85,7 @@ const AboutUpPage = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.7, duration: 0.8 }}
           >
-            Your Business, Our Expertise
+           {t("aboutus.aboutsh")}
           </motion.p>
           <motion.p
             className="text-xl text-foreground-muted"
@@ -93,15 +93,11 @@ const AboutUpPage = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 0.8 }}
           >
-            Leave the complexities of hiring and workforce management to our
-            experts. We specialize in connecting businesses with skilled
-            professionals, ensuring compliance and efficiency every step of the
-            way.
+            {t("aboutus.aboutp")}
           </motion.p>
         </motion.div>
       </motion.div>
 
-      {/* Image Showcase with Fade-in */}
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -111,7 +107,6 @@ const AboutUpPage = () => {
         <ImageShowCase />
       </motion.div>
 
-      {/* Get to Know Section */}
       <div className="bg-gradient-to-b from-gray-50 to-white py-16">
         <div className="container mx-auto px-4">
           <motion.h2
@@ -121,7 +116,7 @@ const AboutUpPage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            Let&apos;s get to know each other
+            {t("aboutus.absubh")}
           </motion.h2>
 
           <motion.div
@@ -135,20 +130,14 @@ const AboutUpPage = () => {
               className="text-lg font-medium text-gray-700"
               variants={itemVariants}
             >
-              Discover how Off2 Work&apos;s tailored solutions can address your
-              workforce challenges. Let&apos;s collaborate to create a seamless,
-              compliant path forward for your business.
+              {t("aboutus.absubp1")}
             </motion.p>
 
             <motion.p
               className="text-lg font-medium text-gray-700"
               variants={itemVariants}
             >
-              As your trusted partner, we help you find the right talent to
-              enhance productivity and competitiveness in the labor market. We
-              collaborate with partners in Nepal, India, Bangladesh, Uzbekistan,
-              Vietnam, Kosovo and Gulf to recruit top candidates tailored to
-              your needs.
+              {t("aboutus.absubp2")}
             </motion.p>
 
             <motion.div
@@ -158,9 +147,7 @@ const AboutUpPage = () => {
             >
               <ArrowRight className="w-8 h-8 text-[#673190] flex-shrink-0 mt-1" />
               <p className="text-lg font-medium text-gray-700">
-                With years of expertise in employment mediation and temporary
-                staffing, we are your go-to experts for foreign workforce
-                solutions.
+               {t("aboutus.absubp3")}
               </p>
             </motion.div>
           </motion.div>
@@ -219,7 +206,7 @@ const AboutUpPage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            Mission & Vision
+            {t("aboutus.mv")}
           </motion.h2>
 
           <motion.div
@@ -235,12 +222,10 @@ const AboutUpPage = () => {
               whileHover={{ y: -5 }}
             >
               <h2 className="text-2xl font-bold text-gray-800 mb-4">
-                Our mission
+                {t("aboutus.misstionh")}
               </h2>
               <p className="text-gray-700 mb-6">
-                Our mission is to deliver exceptional service and a seamless
-                business experience through quality solutions, a professional
-                approach, and competitive pricing.
+               {t("aboutus.missionp1")}
               </p>
               <div className="space-y-4">
                 <motion.div
@@ -249,8 +234,7 @@ const AboutUpPage = () => {
                 >
                   <ChevronRight className="w-5 h-5 text-[#673190] mt-1 flex-shrink-0" />
                   <p className="text-gray-700">
-                    We aim to boost productivity and competitiveness by
-                    identifying and attracting the best candidates.
+                    {t("aboutus.missionp2")}
                   </p>
                 </motion.div>
                 <motion.div
@@ -259,8 +243,7 @@ const AboutUpPage = () => {
                 >
                   <ChevronRight className="w-5 h-5 text-[#673190] mt-1 flex-shrink-0" />
                   <p className="text-gray-700">
-                    We strive to be recognized as a reliable partner committed
-                    to exceeding expectations.
+                    {t("aboutus.missionp3")}
                   </p>
                 </motion.div>
               </div>
@@ -272,11 +255,10 @@ const AboutUpPage = () => {
               whileHover={{ y: -5 }}
             >
               <h2 className="text-2xl font-bold text-gray-800 mb-4">
-                Our vision
+                {t("aboutus.visstionh")}
               </h2>
               <p className="text-gray-700 mb-6">
-                Our vision is to become a leading agency in workforce solutions,
-                known for excellence and innovation.
+                {t("aboutus.vissionp1")}
               </p>
               <div className="space-y-4">
                 <motion.div
@@ -285,8 +267,7 @@ const AboutUpPage = () => {
                 >
                   <ChevronRight className="w-5 h-5 text-[#673190] mt-1 flex-shrink-0" />
                   <p className="text-gray-700">
-                    We aim to build lasting relationships fostering mutual
-                    growth and success.
+                    {t("aboutus.vissionp2")}
                   </p>
                 </motion.div>
                 <motion.div
@@ -295,8 +276,7 @@ const AboutUpPage = () => {
                 >
                   <ChevronRight className="w-5 h-5 text-[#673190] mt-1 flex-shrink-0" />
                   <p className="text-gray-700">
-                    Our focus is on long-term collaboration and continuous
-                    improvement.
+                    {t("aboutus.vissionp3")}
                   </p>
                 </motion.div>
               </div>
