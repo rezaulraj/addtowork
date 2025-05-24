@@ -4,7 +4,6 @@ import { ArrowRight, File, Handshake, Users } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-// Animation variants
 const containerVariants = {
   hidden: { opacity: 0 },
   show: {
@@ -126,7 +125,6 @@ const TrustedWorkForce = () => {
   }, [location.hash]);
   return (
     <div className="min-h-screen pt-5">
-      {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -139,7 +137,6 @@ const TrustedWorkForce = () => {
         }}
         className="h-[500px] w-full flex items-center justify-center"
       >
-        {/* <div className="absolute inset-0 bg-black/30"></div> */}
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -233,7 +230,6 @@ const TrustedWorkForce = () => {
         </motion.div>
       </div>
 
-      {/* Services Tailored Section */}
       <div
         id="services-taiload"
         className="bg-gradient-to-b from-gray-100 to-white py-16"
@@ -297,10 +293,8 @@ const TrustedWorkForce = () => {
         </div>
       </div>
 
-      {/* Explore Services Section */}
       <div className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -338,7 +332,6 @@ const TrustedWorkForce = () => {
             </motion.div>
           </motion.div>
 
-          {/* Services Grid */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -354,7 +347,6 @@ const TrustedWorkForce = () => {
                 // variants={cardHover}
                 className={`${service.gradient} rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden border border-gray-100`}
               >
-                {/* Animated border bottom */}
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                 <Link
@@ -385,8 +377,7 @@ const TrustedWorkForce = () => {
             ))}
           </motion.div>
 
-          {/* Decorative elements */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
@@ -407,7 +398,7 @@ const TrustedWorkForce = () => {
                 }`}
               />
             ))}
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </div>

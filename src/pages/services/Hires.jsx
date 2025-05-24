@@ -103,14 +103,6 @@ const Hires = () => {
     show: { opacity: 1, y: 0 },
   };
 
-  const cardHover = {
-    hover: {
-      y: -10,
-      boxShadow:
-        "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-    },
-  };
-
   useEffect(() => {
     const hash = window.location.hash;
     if (hash) {
@@ -214,7 +206,6 @@ const Hires = () => {
         </motion.div>
       </div>
 
-      {/* Services Tailored Section */}
       <div id="service-tailored" className="bg-gray-200 py-10">
         <div className="max-w-screen-lg mx-auto p-2">
           <motion.div
@@ -272,10 +263,8 @@ const Hires = () => {
         </div>
       </div>
 
-      {/* Explore Services Section */}
       <div className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -309,7 +298,6 @@ const Hires = () => {
             </motion.div>
           </motion.div>
 
-          {/* Services Grid */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -324,7 +312,6 @@ const Hires = () => {
                 whileHover={{ y: -10 }}
                 className={`${service.gradient} rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden relative border border-gray-100`}
               >
-                {/* Animated border bottom */}
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                 <Link
@@ -347,8 +334,7 @@ const Hires = () => {
             ))}
           </motion.div>
 
-          {/* Decorative elements */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
@@ -363,7 +349,7 @@ const Hires = () => {
                 }`}
               />
             ))}
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </div>

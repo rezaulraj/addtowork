@@ -4,8 +4,6 @@ const ContactInfo = () => {
   return (
     <div className="max-w-[1280px] mx-auto px-4 py-12">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {/* Address */}
-
         <div className=" rounded-lg overflow-hidden hover:scale-105 hover:shadow-md hover:translate-y-1 shadow-gray-300 transition-transform duration-500 border border-[#afb0b4]">
           <div className="h-[300px] w-full">
             <iframe

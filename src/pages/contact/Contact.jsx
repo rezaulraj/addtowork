@@ -53,7 +53,6 @@ const Contact = () => {
     }
   }, [location.hash]);
 
-  // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -84,7 +83,6 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen pt-5 overflow-x-hidden">
-      {/* Hero Section with Parallax Effect */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -133,7 +131,6 @@ const Contact = () => {
         </motion.div>
       </motion.div>
 
-      {/* Contact Form */}
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -214,7 +211,7 @@ const Contact = () => {
               </div>
               <div className="space-y-2">
                 <label htmlFor="company" className="text-gray-600 font-medium">
-                   {t("contact.conpany")} *
+                  {t("contact.conpany")} *
                 </label>
                 <input
                   id="company"
@@ -306,7 +303,6 @@ const Contact = () => {
         )}
       </motion.div>
 
-      {/* Office Location Section */}
       <motion.div
         id="location"
         initial="hidden"
@@ -322,7 +318,9 @@ const Contact = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          {t("contact.locationh")} <span className="text-blue-600">{t("contact.locationhh")}</span>{t("contact.locationhl")}
+          {t("contact.locationh")}{" "}
+          <span className="text-blue-600">{t("contact.locationhh")}</span>
+          {t("contact.locationhl")}
         </motion.h2>
       </motion.div>
 

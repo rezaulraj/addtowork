@@ -83,33 +83,33 @@ const AeraOfWork = () => {
   const location = useLocation();
   const services = [
     t("areaofwork.aofservice1l1"),
-     t("areaofwork.aofservice1l2"),
-     t("areaofwork.aofservice1l3"),
+    t("areaofwork.aofservice1l2"),
+    t("areaofwork.aofservice1l3"),
   ];
   const services2 = [
     t("areaofwork.aofservice2l1"),
-     t("areaofwork.aofservice2l2"),
-     t("areaofwork.aofservice2l3"),
+    t("areaofwork.aofservice2l2"),
+    t("areaofwork.aofservice2l3"),
   ];
   const services3 = [
     t("areaofwork.aofservice3l1"),
-     t("areaofwork.aofservice3l2"),
-     t("areaofwork.aofservice3l3"),
+    t("areaofwork.aofservice3l2"),
+    t("areaofwork.aofservice3l3"),
   ];
   const services4 = [
     t("areaofwork.aofservice4l1"),
-     t("areaofwork.aofservice4l2"),
-     t("areaofwork.aofservice4l3"),
+    t("areaofwork.aofservice4l2"),
+    t("areaofwork.aofservice4l3"),
   ];
   const services5 = [
     t("areaofwork.aofservice5l1"),
-     t("areaofwork.aofservice5l2"),
-     t("areaofwork.aofservice5l3"),
+    t("areaofwork.aofservice5l2"),
+    t("areaofwork.aofservice5l3"),
   ];
   const services6 = [
     t("areaofwork.aofservice6l1"),
-     t("areaofwork.aofservice6l2"),
-     t("areaofwork.aofservice6l3"),
+    t("areaofwork.aofservice6l2"),
+    t("areaofwork.aofservice6l3"),
   ];
 
   useEffect(() => {
@@ -126,7 +126,6 @@ const AeraOfWork = () => {
 
   return (
     <div className="min-h-screen pt-5 overflow-hidden bg-gray-50">
-      {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -168,7 +167,6 @@ const AeraOfWork = () => {
         </div>
       </motion.div>
 
-      {/* Agriculture Section */}
       <div
         id="agriculture"
         className="max-w-[1000px] mx-auto flex flex-col md:flex-row bg-transparent gap-4 mt-2 md:mt-20 -mb-10"
@@ -186,7 +184,6 @@ const AeraOfWork = () => {
 
       <div className="bg-[#3E3F49] h-[180px]" />
 
-      {/* Wood Industry Section */}
       <div
         id="wood"
         className="max-w-[1000px] mx-auto flex flex-col md:flex-row flex-col-reverse gap-4 -mt-10 mb-8 md:mb-30"
@@ -202,7 +199,6 @@ const AeraOfWork = () => {
         />
       </div>
 
-      {/* Construction Section */}
       <div
         id="construction"
         className="max-w-[1000px] mx-auto flex flex-col md:flex-row bg-transparent gap-4 mt-30 -mb-10"
@@ -220,7 +216,6 @@ const AeraOfWork = () => {
 
       <div className="bg-[#3E3F49] h-[180px]" />
 
-      {/* Shipbuilding Section */}
       <div
         id="shipbuilding"
         className="max-w-[1000px] mx-auto flex flex-col md:flex-row flex-col-reverse gap-4 -mt-10 mb-8 md:mb-30"
@@ -236,7 +231,6 @@ const AeraOfWork = () => {
         />
       </div>
 
-      {/* Tourism Section */}
       <div className="max-w-[1000px] mx-auto flex flex-col md:flex-row bg-transparent gap-4 mt-8 md:mt-30 -mb-10">
         <TextCard
           title={t("areaofwork.tourismh")}
@@ -251,7 +245,6 @@ const AeraOfWork = () => {
 
       <div className="bg-[#3E3F49] h-[180px]" />
 
-      {/* Production Section */}
       <div className="max-w-[1000px] mx-auto flex flex-col md:flex-row flex-col-reverse gap-4 -mt-10 mb-8 md:mb-30">
         <ImageCard
           src="/images/Off2work/Area-of-Work/Production.jpg"
@@ -264,7 +257,6 @@ const AeraOfWork = () => {
         />
       </div>
 
-      {/* Footer Sections */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

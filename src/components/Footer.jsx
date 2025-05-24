@@ -17,7 +17,6 @@ const Footer = () => {
     <footer className=" bg-gray-100 ">
       <div className="max-w-screen-2xl mx-auto  py-8 px-6 text-gray-700">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Left Section */}
           <div>
             <Link to={"/"}>
               <img
@@ -35,7 +34,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Middle Section */}
           <div className="flex text-xl justify-evenly gap-4 space-y-2 text-[#063556]">
             <div className="flex flex-col space-y-4">
               <h2 className="text-2xl font-semibold">
@@ -89,7 +87,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Right Section */}
           <div className="space-y-2">
             <h3 className="text-2xl text-[#023a51] font-semibold">
               {t("footer.address")}
@@ -126,7 +123,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Section */}
         <div className="mt-8 flex items-center flex-col gap-4 md:flex-row justify-between text-center border-t border-gray-300 text-sm text-gray-500 pt-4">
           <p>©2025 • Powered by Off2 Work</p>
           <div className="flex items-center gap-2">

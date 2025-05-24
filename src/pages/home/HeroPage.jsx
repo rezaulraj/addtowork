@@ -14,7 +14,6 @@ const HeroPage = () => {
 
   return (
     <section className="relative w-full h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-      {/* Background Video */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: loaded ? 1 : 0 }}
@@ -38,7 +37,6 @@ const HeroPage = () => {
         </video>
       </motion.div>
 
-      {/* Background Image Overlay */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: loaded ? 0.5 : 0 }}
@@ -52,11 +50,9 @@ const HeroPage = () => {
         />
       </motion.div>
 
-      {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-[#023a51] via-[#023a51]/70 to-[#023a51]/30 z-20"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-[#023a51]/80 to-[#023a51]/10 z-20"></div>
 
-      {/* Content */}
       <motion.div
         variants={staggerContainer}
         initial="hidden"
@@ -99,7 +95,6 @@ const HeroPage = () => {
           </motion.div>
         </div>
 
-        {/* Scrolling indicator */}
         {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

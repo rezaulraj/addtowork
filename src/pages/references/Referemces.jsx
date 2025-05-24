@@ -153,12 +153,10 @@ const References = () => {
         transition={{ duration: 0.3 }}
         className={`relative overflow-hidden rounded-2xl shadow-lg transition-all duration-500 h-full ${industry.hoverColor}`}
       >
-        {/* Gradient Background */}
         <div
           className={`absolute inset-0 bg-gradient-to-br ${industry.color} opacity-90 transition-all duration-500`}
         ></div>
 
-        {/* Content */}
         <div className="relative z-10 p-8 h-full flex flex-col">
           <motion.div
             whileHover={{ rotate: 10, scale: 1.1 }}
@@ -189,7 +187,6 @@ const References = () => {
 
   return (
     <div className="min-h-screen pt-5 overflow-hidden">
-      {/* Hero Section */}
       <motion.div
         ref={heroRef}
         initial={{ opacity: 0 }}
@@ -231,10 +228,8 @@ const References = () => {
         </div>
       </motion.div>
 
-      {/* Testimonials Section */}
       <div className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-white">
         <div className="max-w-7xl mx-auto">
-          {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -251,7 +246,6 @@ const References = () => {
             </p>
           </motion.div>
 
-          {/* Testimonial Carousel */}
           <div className="relative max-w-4xl mx-auto">
             <AnimatePresence mode="wait">
               <motion.div
@@ -262,7 +256,6 @@ const References = () => {
                 transition={{ duration: 0.5 }}
                 className="bg-white p-10 rounded-3xl shadow-xl relative overflow-hidden"
               >
-                {/* Decorative elements */}
                 <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-400 to-blue-600"></div>
                 <Quote className="absolute top-6 right-6 text-blue-100 text-6xl" />
 
@@ -288,7 +281,6 @@ const References = () => {
               </motion.div>
             </AnimatePresence>
 
-            {/* Navigation Arrows */}
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -306,7 +298,6 @@ const References = () => {
               <ChevronRight className="text-blue-600" />
             </motion.button>
 
-            {/* Dots Indicator */}
             <div className="flex justify-center mt-8 space-x-2">
               {testimonials.map((_, index) => (
                 <motion.button
@@ -324,7 +315,6 @@ const References = () => {
             </div>
           </div>
 
-          {/* CTA Button */}
           <motion.div
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
@@ -340,10 +330,8 @@ const References = () => {
         </div>
       </div>
 
-      {/* Process Section */}
       <div className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-white">
         <div className="max-w-7xl mx-auto">
-          {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -367,9 +355,7 @@ const References = () => {
             ></motion.div>
           </motion.div>
 
-          {/* Process Steps */}
           <div className="flex flex-col lg:flex-row justify-center gap-8">
-            {/* Step Indicators */}
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -402,7 +388,6 @@ const References = () => {
               ))}
             </motion.div>
 
-            {/* Content */}
             <div className="flex-1 max-w-2xl mx-auto">
               <div className="relative h-[500px] md:h-64">
                 <AnimatePresence mode="wait">
@@ -436,7 +421,6 @@ const References = () => {
                 </AnimatePresence>
               </div>
 
-              {/* Navigation */}
               <div className="flex justify-between mt-8">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -470,7 +454,6 @@ const References = () => {
         </div>
       </div>
 
-      {/* Industries Section */}
       <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
@@ -491,7 +474,6 @@ const References = () => {
             </p>
           </motion.div>
 
-          {/* Industry Cards */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -504,7 +486,6 @@ const References = () => {
             ))}
           </motion.div>
 
-          {/* CTA Button */}
           <motion.div
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}

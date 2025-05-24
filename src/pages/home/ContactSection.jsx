@@ -44,7 +44,7 @@ const ContactSection = () => {
               {t("contact.homelocationh")}
             </motion.h2>
 
-            {/* Address */}
+           
             <div className="flex flex-col space-y-4">
               <p className="font-bold text-xl">{t("contact.officel")}</p>
               <div className="space-y-4">
@@ -96,7 +96,7 @@ const ContactSection = () => {
               </div>
             </div>
 
-            {/* Contact Info */}
+           
             {/* <motion.div
               whileHover={{ scale: 1.01 }}
               className="p-4 rounded-lg bg-gray-800/50"
@@ -114,7 +114,7 @@ const ContactSection = () => {
               </div>
             </motion.div> */}
 
-            {/* Working Hours */}
+           
             <motion.div
               whileHover={{ scale: 1.01 }}
               className="p-4 rounded-lg bg-gray-800/50"
@@ -132,12 +132,12 @@ const ContactSection = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right Side - Contact Form */}
+         
           <motion.div
             variants={fadeIn("left", "tween", 0.2, 1)}
             className="bg-white rounded-xl p-8 shadow-2xl relative overflow-hidden"
           >
-            {/* Decorative elements */}
+            
             <div className="absolute -top-20 -right-20 w-40 h-40 bg-blue-400/10 rounded-full"></div>
             <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-blue-600/10 rounded-full"></div>
 

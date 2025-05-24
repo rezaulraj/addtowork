@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 
 const ImageShowCase = () => {
   const { t } = useTranslation();
-  // Animation variants
+ 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -53,7 +53,7 @@ const ImageShowCase = () => {
       variants={containerVariants}
     >
       <div className="max-w-[1250px] mx-auto relative flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8 h-full">
-        {/* Left Image - Animated */}
+       
         <motion.div
           className="relative w-32 h-32 md:w-48 md:h-48 rounded-xl overflow-hidden md:absolute md:bottom-16 md:left-10 shadow-2xl"
           variants={imageVariants}
@@ -69,7 +69,7 @@ const ImageShowCase = () => {
           </div>
         </motion.div>
 
-        {/* Center Image - Main focus with parallax effect */}
+       
         <motion.div
           className="relative w-[80%] md:w-[500px] md:h-[500px] rounded-xl overflow-hidden shadow-2xl z-20"
           variants={{
@@ -107,7 +107,7 @@ const ImageShowCase = () => {
           </div>
         </motion.div>
 
-        {/* Right Image - Animated */}
+        
         <motion.div
           className="relative w-32 h-32 md:w-48 md:h-48 rounded-xl overflow-hidden md:absolute md:top-16 md:right-10 shadow-2xl"
           variants={imageVariants}
@@ -124,7 +124,7 @@ const ImageShowCase = () => {
         </motion.div>
       </div>
 
-      {/* Animated Accent Bar */}
+    
       <motion.div
         className="bg-[#83692c] w-full h-[130px] bottom-0 absolute -z-10"
         variants={accentBarVariants}

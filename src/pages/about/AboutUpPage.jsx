@@ -85,7 +85,7 @@ const AboutUpPage = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.7, duration: 0.8 }}
           >
-           {t("aboutus.aboutsh")}
+            {t("aboutus.aboutsh")}
           </motion.p>
           <motion.p
             className="text-xl text-foreground-muted"
@@ -147,14 +147,13 @@ const AboutUpPage = () => {
             >
               <ArrowRight className="w-8 h-8 text-[#673190] flex-shrink-0 mt-1" />
               <p className="text-lg font-medium text-gray-700">
-               {t("aboutus.absubp3")}
+                {t("aboutus.absubp3")}
               </p>
             </motion.div>
           </motion.div>
         </div>
       </div>
 
-      {/* Logo Gallery with Animation */}
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -164,9 +163,7 @@ const AboutUpPage = () => {
         <LogoGallery />
       </motion.div>
 
-      {/* Mission & Vision Section */}
       <div className="relative min-h-[600px] overflow-hidden bg-gradient-to-br from-green-50 via-emerald-100 to-teal-50 py-16">
-        {/* Animated background elements */}
         <motion.div
           className="absolute top-0 left-0 w-full h-full overflow-hidden"
           initial={{ opacity: 0 }}
@@ -224,27 +221,21 @@ const AboutUpPage = () => {
               <h2 className="text-2xl font-bold text-gray-800 mb-4">
                 {t("aboutus.misstionh")}
               </h2>
-              <p className="text-gray-700 mb-6">
-               {t("aboutus.missionp1")}
-              </p>
+              <p className="text-gray-700 mb-6">{t("aboutus.missionp1")}</p>
               <div className="space-y-4">
                 <motion.div
                   className="flex gap-3 items-start"
                   variants={itemVariants}
                 >
                   <ChevronRight className="w-5 h-5 text-[#673190] mt-1 flex-shrink-0" />
-                  <p className="text-gray-700">
-                    {t("aboutus.missionp2")}
-                  </p>
+                  <p className="text-gray-700">{t("aboutus.missionp2")}</p>
                 </motion.div>
                 <motion.div
                   className="flex gap-3 items-start"
                   variants={itemVariants}
                 >
                   <ChevronRight className="w-5 h-5 text-[#673190] mt-1 flex-shrink-0" />
-                  <p className="text-gray-700">
-                    {t("aboutus.missionp3")}
-                  </p>
+                  <p className="text-gray-700">{t("aboutus.missionp3")}</p>
                 </motion.div>
               </div>
             </motion.div>
@@ -257,27 +248,21 @@ const AboutUpPage = () => {
               <h2 className="text-2xl font-bold text-gray-800 mb-4">
                 {t("aboutus.visstionh")}
               </h2>
-              <p className="text-gray-700 mb-6">
-                {t("aboutus.vissionp1")}
-              </p>
+              <p className="text-gray-700 mb-6">{t("aboutus.vissionp1")}</p>
               <div className="space-y-4">
                 <motion.div
                   className="flex gap-3 items-start"
                   variants={itemVariants}
                 >
                   <ChevronRight className="w-5 h-5 text-[#673190] mt-1 flex-shrink-0" />
-                  <p className="text-gray-700">
-                    {t("aboutus.vissionp2")}
-                  </p>
+                  <p className="text-gray-700">{t("aboutus.vissionp2")}</p>
                 </motion.div>
                 <motion.div
                   className="flex gap-3 items-start"
                   variants={itemVariants}
                 >
                   <ChevronRight className="w-5 h-5 text-[#673190] mt-1 flex-shrink-0" />
-                  <p className="text-gray-700">
-                    {t("aboutus.vissionp3")}
-                  </p>
+                  <p className="text-gray-700">{t("aboutus.vissionp3")}</p>
                 </motion.div>
               </div>
             </motion.div>
