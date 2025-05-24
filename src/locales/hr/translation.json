@@ -308,6 +308,7 @@
     "absubp1": " Otkrijte kako prilagođena rješenja Off2 Work-a mogu odgovoriti na vaše izazove s radnom snagom. Suradnjom možemo stvoriti jednostavan i usklađen put za vaše poslovanje.",
     "absubp2": "Kao vaš pouzdan partner, pomažemo vam pronaći prave talente kako biste povećali produktivnost i konkurentnost na tržištu rada. Suradujemo s partnerima u Nepalu, Indiji, Bangladešu, Uzbekistanu, Vijetnamu, Kosovu i Zaljevskim zemljama kako bismo pronašli vrhunske kandidate prema vašim potrebama.",
     "absubp3": "S godinama iskustva u posredovanju pri zapošljavanju i privremenom zapošljavanju, mi smo vaši stručnjaci za strane radnike.",
+    "mv": "Misija i Vizija",
     "misstionh": "Naša misija",
     "missionp1": "Naša je misija pružiti vrhunsku uslugu i besprijekorno poslovno iskustvo kroz kvalitetna rješenja, profesionalan pristup i konkurentne cijene.",
     "missionp2": "Cilj nam je povećati produktivnost i konkurentnost identificiranjem i privlačenjem najboljih kandidata.",
@@ -315,7 +316,10 @@
     "visstionh": "Naša vizija",
     "vissionp1": "Naša je vizija postati vodeća agencija za rješenja vezana uz radnu snagu, poznata po izvrsnosti i inovacijama.",
     "vissionp2": "Cilj nam je graditi trajne odnose koji potiču uzajamni rast i uspjeh.",
-    "vissionp3": "Fokusirani smo na dugoročnu suradnju i kontinuirano unaprjeđenje."
+    "vissionp3": "Fokusirani smo na dugoročnu suradnju i kontinuirano unaprjeđenje.",
+    "bild": "Izgradnja izvrsnosti radne snage",
+    "gobal": "Globalni doseg",
+    "team": "Naš tim"
   },
   "footer": {
     "footert1": "Vjerujte Off2 Work-u za optimizaciju vaše radne snage",
@@ -331,32 +335,31 @@
     "support": "Podrška"
   },
   "faqs": {
-  "faqh": "Najčešća pitanja",
+    "faqh": "Najčešća pitanja",
 
-  "faqh1": "Koje su obveze agencije za zapošljavanje stranih radnika?",
-  "faqh1l1": "Pronalaženje odgovarajućih radnika prema vašim kriterijima, provođenje selekcijskog postupka i priprema potrebne dokumentacije.",
-  "faqh1l2": "Podnošenje svih potrebnih dokumenata za ishođenje privremenog boravka i radne dozvole za strane radnike.",
-  "faqh1l3": "Pokriće troškova putnog osiguranja za radnike.",
-  "faqh1l4": "Pomoć pri podnošenju zahtjeva za vizu za boravak i rad.",
-  "faqh1l5": "Organizacija i pokrivanje troškova avionskih karata za radnike.",
+    "faqh1": "Koje su obveze agencije za zapošljavanje stranih radnika?",
+    "faqh1l1": "Pronalaženje odgovarajućih radnika prema vašim kriterijima, provođenje selekcijskog postupka i priprema potrebne dokumentacije.",
+    "faqh1l2": "Podnošenje svih potrebnih dokumenata za ishođenje privremenog boravka i radne dozvole za strane radnike.",
+    "faqh1l3": "Pokriće troškova putnog osiguranja za radnike.",
+    "faqh1l4": "Pomoć pri podnošenju zahtjeva za vizu za boravak i rad.",
+    "faqh1l5": "Organizacija i pokrivanje troškova avionskih karata za radnike.",
 
-  "faqh2": "Koje su moje obveze kao poslodavca?",
-  "faqh2l1": "Osigurati smještaj i obroke za radnike po njihovom dolasku. Smještaj mora zadovoljavati minimalne životne uvjete, a ako obroci nisu osigurani, mora se isplaćivati prehrambeni dodatak. Radnike treba prijaviti na mirovinsko i zdravstveno osiguranje, kao i domaće zaposlenike.",
+    "faqh2": "Koje su moje obveze kao poslodavca?",
+    "faqh2l1": "Osigurati smještaj i obroke za radnike po njihovom dolasku. Smještaj mora zadovoljavati minimalne životne uvjete, a ako obroci nisu osigurani, mora se isplaćivati prehrambeni dodatak. Radnike treba prijaviti na mirovinsko i zdravstveno osiguranje, kao i domaće zaposlenike.",
 
-  "faqh3": "Koje uvjete moram ispuniti za dobivanje dozvole za boravak i rad?",
-  "faqh3l1": "Obavljati gospodarsku djelatnost u djelatnosti registriranoj u državi.",
-  "faqh3l2": "Zaposliti najmanje 1/4 hrvatskih državljana u odnosu na strane radnike, na puno radno vrijeme i na neodređeno, u posljednjih 6 mjeseci.",
-  "faqh3l3": "Priložiti potvrdu Porezne uprave o nepostojanju nepodmirenih javnih davanja, izdanu najkasnije na dan podnošenja zahtjeva.",
-  "faqh3l4": "Ne smijete imati pravomoćne presude za prekršaje iz područja rada ili socijalne sigurnosti.",
+    "faqh3": "Koje uvjete moram ispuniti za dobivanje dozvole za boravak i rad?",
+    "faqh3l1": "Obavljati gospodarsku djelatnost u djelatnosti registriranoj u državi.",
+    "faqh3l2": "Zaposliti najmanje 1/4 hrvatskih državljana u odnosu na strane radnike, na puno radno vrijeme i na neodređeno, u posljednjih 6 mjeseci.",
+    "faqh3l3": "Priložiti potvrdu Porezne uprave o nepostojanju nepodmirenih javnih davanja, izdanu najkasnije na dan podnošenja zahtjeva.",
+    "faqh3l4": "Ne smijete imati pravomoćne presude za prekršaje iz područja rada ili socijalne sigurnosti.",
 
-  "faqh4": "Može li radnik doći odmah?",
-  "faqh4l1": "Ne. Državljani trećih zemalja trebaju radnu dozvolu i vizu, što može trajati od 45 do 90 dana, ovisno o učinkovitosti nadležnih institucija.",
-  "faqh4l2": "Priprema dokumentacije: 4–10 dana (ovisno o poslodavcu).",
-  "faqh4l3": "Zapošljavanje i selekcija: 1–30 dana (do 60 dana za specijalizirane poslove).",
-  "faqh4l4": "Test tržišta rada (ako je primjenjivo): 15 dana.",
-  "faqh4l5": "Obrada dozvole za rad: 15–30 dana.",
-  "faqh4l6": "Obrada vize: 15–30 dana.",
-  "faqh4l7": "Organizacija putovanja: 1–10 dana."
-}
-
+    "faqh4": "Može li radnik doći odmah?",
+    "faqh4l1": "Ne. Državljani trećih zemalja trebaju radnu dozvolu i vizu, što može trajati od 45 do 90 dana, ovisno o učinkovitosti nadležnih institucija.",
+    "faqh4l2": "Priprema dokumentacije: 4–10 dana (ovisno o poslodavcu).",
+    "faqh4l3": "Zapošljavanje i selekcija: 1–30 dana (do 60 dana za specijalizirane poslove).",
+    "faqh4l4": "Test tržišta rada (ako je primjenjivo): 15 dana.",
+    "faqh4l5": "Obrada dozvole za rad: 15–30 dana.",
+    "faqh4l6": "Obrada vize: 15–30 dana.",
+    "faqh4l7": "Organizacija putovanja: 1–10 dana."
+  }
 }

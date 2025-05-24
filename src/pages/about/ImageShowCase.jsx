@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const ImageShowCase = () => {
+  const { t } = useTranslation();
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -63,7 +65,7 @@ const ImageShowCase = () => {
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-            <span className="text-white font-medium text-sm">Our Team</span>
+            <span className="text-white font-medium text-sm">{t("aboutus.team")}</span>
           </div>
         </motion.div>
 
@@ -100,7 +102,7 @@ const ImageShowCase = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.8, duration: 0.6 }}
             >
-              Building Workforce Excellence
+              {t("aboutus.bild")}
             </motion.h3>
           </div>
         </motion.div>
@@ -117,7 +119,7 @@ const ImageShowCase = () => {
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-            <span className="text-white font-medium text-sm">Global Reach</span>
+            <span className="text-white font-medium text-sm"> {t("aboutus.gobal")}</span>
           </div>
         </motion.div>
       </div>
