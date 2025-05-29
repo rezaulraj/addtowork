@@ -227,7 +227,7 @@ const Navbar = () => {
                         <div className="lg:hidden">
                           <button
                             onClick={() => toggleSubmenu(index)}
-                            className={`flex items-center justify-between w-full py-3 text-[#0f2a47] hover:text-blue-600 ${
+                            className={`flex items-center justify-between w-full py-3 text-[#0f2a47] hover:text-blue-600 cursor-pointer ${
                               currentPath === item.href ||
                               item.children.some(
                                 (child) => currentPath === child.href
@@ -252,13 +252,16 @@ const Navbar = () => {
                               <Link
                                 key={child.href}
                                 to={child.href}
-                                className={`block py-2 px-3 text-[#0f2a47] hover:bg-gray-100 rounded ${
+                                className={`flex items-center px-4 py-2 text-[#0f2a47] hover:bg-gray-50 hover:text-blue-600 transition-colors ${
                                   currentPath === child.href
                                     ? "font-medium bg-gray-100"
                                     : ""
                                 }`}
                                 onClick={() => setIsOpen(false)}
                               >
+                                {child.icon && (
+                                  <span className="mr-2">{child.icon}</span>
+                                )}
                                 {child.title}
                               </Link>
                             ))}
@@ -282,7 +285,7 @@ const Navbar = () => {
                 ))}
                 <Link
                   to="/contact"
-                  className="inline-block bg-[#0f2a47] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors mt-2 lg:mt-0"
+                  className="inline-block bg-[#0f2a47] text-center text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors mt-2 lg:mt-0"
                   onClick={() => setIsOpen(false)}
                 >
                   {t("header.contact_us")}
