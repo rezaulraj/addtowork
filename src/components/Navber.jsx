@@ -1,5 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { ChevronDown, Phone, Menu, X, Mail, ChevronRight } from "lucide-react";
+import {
+  ChevronDown,
+  Phone,
+  Menu,
+  X,
+  Mail,
+  ChevronRight,
+  Users,
+  Briefcase,
+  MapPin,
+} from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -21,6 +31,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState(null);
   const isScrolled = useIsScrolled();
+  const [selectedLang, setSelectedLang] = useState(i18n.language);
+  const [previewLang, setPreviewLang] = useState(null);
 
   useEffect(() => {
     const detectCountry = async () => {
@@ -44,9 +56,21 @@ const Navbar = () => {
       title: t("menu.services"),
       href: "/services",
       children: [
-        { title: t("services.hire_talent"), href: "/services/hires" },
-        { title: t("services.work_permit"), href: "/services/workpermit" },
-        { title: t("services.workforce"), href: "/services/trustedworkforce" },
+        {
+          title: t("services.hire_talent"),
+          href: "/services/hires",
+          icon: <Users className="h-4 w-4" />,
+        },
+        {
+          title: t("services.work_permit"),
+          href: "/services/workpermit",
+          icon: <Briefcase className="h-4 w-4" />,
+        },
+        {
+          title: t("services.workforce"),
+          href: "/services/trustedworkforce",
+          icon: <Users className="h-4 w-4" />,
+        },
       ],
     },
     { title: t("menu.areas"), href: "/areas-of-work" },
@@ -58,6 +82,24 @@ const Navbar = () => {
 
   const toggleSubmenu = (index) => {
     setOpenSubmenu(openSubmenu === index ? null : index);
+  };
+
+  useEffect(() => {
+    i18n.changeLanguage(selectedLang);
+  }, [selectedLang]);
+
+  const handleLanguageClick = (lang) => {
+    setSelectedLang(lang);
+  };
+
+  const handleMouseEnter = (lang) => {
+    setPreviewLang(lang);
+    i18n.changeLanguage(lang);
+  };
+
+  const handleMouseLeave = () => {
+    setPreviewLang(null);
+    i18n.changeLanguage(selectedLang);
   };
 
   return (
@@ -82,14 +124,14 @@ const Navbar = () => {
           </div>
 
           <div className={`${isOpen ? "block" : "hidden lg:block"} w-full`}>
-            
             {!isScrolled && (
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between py-2 ">
                 <div className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-6 mb-2 lg:mb-0 border-b border-gray-200 py-3">
                   <Link
                     to="/contact/#location"
-                    className="text-sm text-[#0f2a47] hover:underline"
+                    className="flex items-center text-sm text-[#0f2a47] hover:underline"
                   >
+                    <MapPin className="mr-1 h-4 w-4" />
                     {t("header.location")}
                   </Link>
                   <Link
@@ -117,10 +159,12 @@ const Navbar = () => {
                   </Link>
                   <div className="flex space-x-4">
                     <button
-                      onClick={() => i18n.changeLanguage("en")}
+                      onClick={() => handleLanguageClick("en")}
+                      onMouseEnter={() => handleMouseEnter("en")}
+                      onMouseLeave={handleMouseLeave}
                       className={`${
-                        i18n.language === "en"
-                          ? "border-b-2 border-[#0f2a47]"
+                        (previewLang || selectedLang) === "en"
+                          ? "border-b-2 border-[#0f2a47] cursor-pointer"
                           : ""
                       }`}
                     >
@@ -132,10 +176,12 @@ const Navbar = () => {
                       />
                     </button>
                     <button
-                      onClick={() => i18n.changeLanguage("hr")}
+                      onClick={() => handleLanguageClick("hr")}
+                      onMouseEnter={() => handleMouseEnter("hr")}
+                      onMouseLeave={handleMouseLeave}
                       className={`${
-                        i18n.language === "hr"
-                          ? "border-b-2 border-[#0f2a47]"
+                        (previewLang || selectedLang) === "hr"
+                          ? "border-b-2 border-[#0f2a47] cursor-pointer"
                           : ""
                       }`}
                     >
@@ -151,14 +197,12 @@ const Navbar = () => {
               </div>
             )}
 
-            
             <nav className="bg-white py-2">
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-2 lg:space-y-0">
                 {navItems.map((item, index) => (
                   <div key={item.title} className="relative">
                     {item.children ? (
                       <>
-                       
                         <div className="hidden lg:block relative group">
                           <div className="flex items-center space-x-1 py-2 text-[#0f2a47] hover:text-blue-600 cursor-pointer">
                             <span>{item.title}</span>
@@ -169,15 +213,17 @@ const Navbar = () => {
                               <Link
                                 key={child.href}
                                 to={child.href}
-                                className="block px-4 py-2 text-[#0f2a47] hover:bg-gray-50 hover:text-blue-600"
+                                className="flex items-center px-4 py-2 text-[#0f2a47] hover:bg-gray-50 hover:text-blue-600 transition-colors"
                               >
+                                {child.icon && (
+                                  <span className="mr-2">{child.icon}</span>
+                                )}
                                 {child.title}
                               </Link>
                             ))}
                           </div>
                         </div>
 
-                       
                         <div className="lg:hidden">
                           <button
                             onClick={() => toggleSubmenu(index)}
