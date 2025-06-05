@@ -128,13 +128,14 @@ const Hires = () => {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
-        className="h-[500px] w-full flex items-center justify-center"
+        className="h-[500px] w-full flex items-center justify-center relative"
       >
+        <div className="absolute inset-0 bg-gray-700/10 z-0"></div>
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="text-start max-w-screen-md mx-auto h-[400px] mt-8 p-4"
+          className="text-start max-w-screen-md mx-auto h-[400px] mt-8 p-4 relative bg-white/50 backdrop-blur-sm rounded-xl z-20"
         >
           <p className="text-2xl text-[#023a51] my-4">
             {t("service.servicehireh")}

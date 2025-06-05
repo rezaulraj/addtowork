@@ -136,9 +136,10 @@ const AeraOfWork = () => {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
-        className="h-[500px] w-full flex items-center justify-center"
+        className="h-[500px] w-full flex items-center justify-center relative"
       >
-        <div className="text-start max-w-screen-md mx-auto h-[400px] mt-8 p-4">
+        <div className="absolute inset-0 bg-gray-700/10 z-0"></div>
+        <div className="text-start max-w-screen-md mx-auto h-[400px] bg-white/50 backdrop-blur-sm rounded-xl mt-8 p-4 relative z-20">
           <motion.p
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

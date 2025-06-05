@@ -96,10 +96,10 @@ const Contact = () => {
             transform: "translateZ(0)",
           }}
         />
-        {/* <div className="absolute inset-0 bg-black/30" /> */}
+        <div className="absolute inset-0 bg-gray-700/10 z-0"></div>
 
         <motion.div
-          className="max-w-screen-md mx-auto min-h-[400px] space-y-4 mt-8 relative z-10"
+          className="max-w-screen-md mx-auto min-h-[400px] space-y-4 mt-8 p-4 bg-white/50 backdrop-blur-sm rounded-xl relative z-20"
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
