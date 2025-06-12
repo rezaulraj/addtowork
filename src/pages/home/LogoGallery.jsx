@@ -1,20 +1,20 @@
 import React from "react";
 import { motion } from "framer-motion";
 const logos = [
-  { src: "/images/logos/AgroNeretva_Logo.png", alt: "Agro Nerevo" },
-  { src: "/images/logos/dalisdoo.jpg", alt: "Dalis d.o.o." },
-  { src: "/images/logos/dam_logotip.jpg", alt: "Dam" },
-  { src: "/images/logos/demateh-reference.jpg", alt: "Demateh" },
-  { src: "/images/logos/ekos_cakes-1.png", alt: "Ekos Cakes" },
-  { src: "/images/logos/enna_fruit.png", alt: "Enna Fruit" },
-  { src: "/images/logos/hotel_pinija.png", alt: "Hotel Pinija" },
-  { src: "/images/logos/konzum.webp", alt: "Konzum" },
-  { src: "/images/logos/logo_jasenska.png", alt: "Jasenska" },
-  { src: "/images/logos/mirna_rovinj-2.png", alt: "Mirna Rovinj" },
-  { src: "/images/logos/moslavina_voce.png", alt: "Moslavina Voce" },
-  { src: "/images/logos/naturala.png", alt: "Naturala" },
-  { src: "/images/logos/opgcajkulic.jpg", alt: "Dan" },
-  { src: "/images/logos/pik-vrbovec.png", alt: "Pik Vrbovec" },
+  { src: "/images/logos/l1.png", alt: "Image" },
+  { src: "/images/logos/l2.png", alt: "Image" },
+  { src: "/images/logos/l3.png", alt: "Image" },
+  { src: "/images/logos/l4.png", alt: "Image" },
+  { src: "/images/logos/l5.png", alt: "Image" },
+  { src: "/images/logos/l6.png", alt: "Image" },
+  { src: "/images/logos/l7.png", alt: "Image" },
+  { src: "/images/logos/l8.png", alt: "Image" },
+  { src: "/images/logos/l9.png", alt: "Image" },
+  { src: "/images/logos/l10.png", alt: "Image" },
+  { src: "/images/logos/l11.png", alt: "Image" },
+  { src: "/images/logos/l12.jpeg", alt: "Image" },
+  { src: "/images/logos/l13.png", alt: "Image" },
+  { src: "/images/logos/l14.png", alt: "Image" },
 ];
 const LogoGallery = () => {
   return (
