@@ -26,6 +26,50 @@ const Footer = () => {
                 height={40}
               />
             </Link>
+            <div className="flex items-center gap-2 mt-3">
+              <Link
+                to={"https://www.facebook.com/off2work"}
+                target="_blank"
+                className="  "
+              >
+                <FaFacebookSquare className="w-8 h-8 p-1 bg-gray-600 text-white hover:bg-blue-900 rounded-md hover:text-white hover:translate-y-2 transition-transform duration-300 hover:shadow-2xl shadow-gray-400" />
+              </Link>
+              <Link
+                to={"https://www.linkedin.com/company/off2-work"}
+                className="  "
+                target="_blank"
+              >
+                <FaLinkedin className="w-8 h-8 p-1 bg-gray-600 text-white hover:bg-blue-900 rounded-md hover:text-white hover:translate-y-2 transition-transform duration-300 hover:shadow-2xl shadow-gray-400" />
+              </Link>
+              <Link
+                to={"https://x.com/off2_work"}
+                className="  "
+                target="_blank"
+              >
+                <FaSquareTwitter className="w-8 h-8 p-1 bg-gray-600 text-white hover:bg-blue-900 rounded-md hover:text-white hover:translate-y-2 transition-transform duration-300 hover:shadow-2xl shadow-gray-400" />
+              </Link>
+              <Link
+                to={"https://in.pinterest.com/off_2_work"}
+                className="  "
+                target="_blank"
+              >
+                <FaSquarePinterest className="w-8 h-8 p-1 bg-gray-600 text-white hover:bg-blue-900 rounded-md hover:text-white hover:translate-y-2 transition-transform duration-300 hover:shadow-2xl shadow-gray-400" />
+              </Link>
+              <Link
+                to={"https://www.youtube.com/@Off2Work"}
+                className="  "
+                target="_blank"
+              >
+                <FaYoutube className="w-8 h-8 p-1 bg-gray-600 text-white hover:bg-blue-900 rounded-md hover:text-white hover:translate-y-2 transition-transform duration-300 hover:shadow-2xl shadow-gray-400" />
+              </Link>
+              <Link
+                to={"https://www.tiktok.com/@off2.work"}
+                className="  "
+                target="_blank"
+              >
+                <AiFillTikTok className="w-8 h-8 p-1 bg-gray-600 text-white hover:bg-blue-900 rounded-md hover:text-white hover:translate-y-2 transition-transform duration-300 hover:shadow-2xl shadow-gray-400" />
+              </Link>
+            </div>
             <p className="mt-4 text-xl text-[#262930]">
               {t("footer.footert1")}
             </p>
@@ -91,86 +135,40 @@ const Footer = () => {
             <h3 className="text-2xl text-[#023a51] font-semibold">
               {t("footer.address")}
             </h3>
-            <p className="text-lg font-bold text-[#616e84] flex items-center gap-3">
+            <p className="text-lg font-bold text-[#555f70] flex items-center gap-3">
               <span>
                 <MapPinCheckInside />
               </span>
-              Romania Office:
+              Romania Office HQ
             </p>
             <Link href={""} className="text-base text-[#262930]">
-              HQ {">"} Municipiul Ploieşti, Strada MIHAI BRAVU, Nr. 239, Bloc
-              C4, Ap. 71, Judet Prahova
+              Municipiul Ploieşti, Strada MIHAI BRAVU, Nr. 239, Bloc C4, Ap. 71,
+              Judet Prahova
             </Link>
-            <p className="text-lg text-[#616e84] font-bold flex items-center mt-2 gap-3">
+            <p className="text-lg text-[#555f70] font-bold flex items-center mt-2 gap-3">
               <span>
                 <MapPinCheckInside />
               </span>
-              New Zealand:
+              New Zealand
             </p>
             <Link href={""} className="text-base text-[#262930]">
               Level 1/3 Johnsonville Road, Johnsonville, Wellington 6037
             </Link>
 
-            <p className="text-lg text-[#616e84] font-bold flex items-center mt-2 gap-3">
+            <p className="text-lg text-[#555f70] font-bold flex items-center mt-2 gap-3">
               <span>
                 <MapPinCheckInside />
               </span>
-              Australia:
+              Australia
             </p>
             <Link href={""} className="text-base text-[#262930]">
-              Level 25, 108 St Georges Terrace, Perth WA 6000
+              Level 25, 108 St Georges Terrace, PerthWA 6000
             </Link>
           </div>
         </div>
 
-        <div className="mt-8 flex items-center flex-col gap-4 md:flex-row justify-between text-center border-t border-gray-300 text-sm text-gray-500 pt-4">
+        <div className="mt-8 text-center border-t border-gray-300 text-sm text-gray-500 pt-4">
           <p>©2025 • Powered by Off2 Work</p>
-          <div className="flex items-center gap-2">
-            <Link
-              to={"https://www.facebook.com/off2work"}
-              target="_blank"
-              className="  "
-            >
-              <FaFacebookSquare className="w-8 h-8 p-1 bg-gray-600 text-white hover:bg-blue-900 rounded-md hover:text-white hover:translate-y-2 transition-transform duration-300 hover:shadow-2xl shadow-gray-400" />
-            </Link>
-            <Link
-              to={"https://www.linkedin.com/company/off2-work"}
-              className="  "
-              target="_blank"
-            >
-              <FaLinkedin className="w-8 h-8 p-1 bg-gray-600 text-white hover:bg-blue-900 rounded-md hover:text-white hover:translate-y-2 transition-transform duration-300 hover:shadow-2xl shadow-gray-400" />
-            </Link>
-            <Link to={"https://x.com/off2_work"} className="  " target="_blank">
-              <FaSquareTwitter className="w-8 h-8 p-1 bg-gray-600 text-white hover:bg-blue-900 rounded-md hover:text-white hover:translate-y-2 transition-transform duration-300 hover:shadow-2xl shadow-gray-400" />
-            </Link>
-            <Link
-              to={"https://in.pinterest.com/off_2_work"}
-              className="  "
-              target="_blank"
-            >
-              <FaSquarePinterest className="w-8 h-8 p-1 bg-gray-600 text-white hover:bg-blue-900 rounded-md hover:text-white hover:translate-y-2 transition-transform duration-300 hover:shadow-2xl shadow-gray-400" />
-            </Link>
-            <Link
-              to={"https://www.youtube.com/@Off2Work"}
-              className="  "
-              target="_blank"
-            >
-              <FaYoutube className="w-8 h-8 p-1 bg-gray-600 text-white hover:bg-blue-900 rounded-md hover:text-white hover:translate-y-2 transition-transform duration-300 hover:shadow-2xl shadow-gray-400" />
-            </Link>
-            <Link
-              to={"https://www.tiktok.com/@off2.work"}
-              className="  "
-              target="_blank"
-            >
-              <AiFillTikTok className="w-8 h-8 p-1 bg-gray-600 text-white hover:bg-blue-900 rounded-md hover:text-white hover:translate-y-2 transition-transform duration-300 hover:shadow-2xl shadow-gray-400" />
-            </Link>
-          </div>
-          <Link
-            to={"https://off2.work/"}
-            className="block text-[#063556] hover:underline flex items-center"
-          >
-            off2.work.com
-          </Link>
         </div>
       </div>
     </footer>

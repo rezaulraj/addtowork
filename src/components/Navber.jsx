@@ -32,7 +32,6 @@ const Navbar = () => {
   const [openSubmenu, setOpenSubmenu] = useState(null);
   const isScrolled = useIsScrolled();
   const [selectedLang, setSelectedLang] = useState(i18n.language);
-  const [previewLang, setPreviewLang] = useState(null);
 
   useEffect(() => {
     const detectCountry = async () => {
@@ -92,21 +91,11 @@ const Navbar = () => {
     setSelectedLang(lang);
   };
 
-  const handleMouseEnter = (lang) => {
-    setPreviewLang(lang);
-    i18n.changeLanguage(lang);
-  };
-
-  const handleMouseLeave = () => {
-    setPreviewLang(null);
-    i18n.changeLanguage(selectedLang);
-  };
-
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
       <div className="max-w-[1250px] mx-auto py-2 px-4">
         <div className="flex flex-col lg:flex-row gap-14 lg:items-center">
-          <div className="flex items-center justify-between py-2 lg:py-0">
+          <div className="flex items-center justify-between  lg:py-0">
             <Link to="/" className="flex items-center">
               <img
                 src="/images/off2worklogo.png"
@@ -160,10 +149,8 @@ const Navbar = () => {
                   <div className="flex space-x-4">
                     <button
                       onClick={() => handleLanguageClick("en")}
-                      onMouseEnter={() => handleMouseEnter("en")}
-                      onMouseLeave={handleMouseLeave}
                       className={`${
-                        (previewLang || selectedLang) === "en"
+                        selectedLang === "en"
                           ? "border-b-2 border-[#0f2a47] cursor-pointer"
                           : ""
                       }`}
@@ -177,10 +164,8 @@ const Navbar = () => {
                     </button>
                     <button
                       onClick={() => handleLanguageClick("hr")}
-                      onMouseEnter={() => handleMouseEnter("hr")}
-                      onMouseLeave={handleMouseLeave}
                       className={`${
-                        (previewLang || selectedLang) === "hr"
+                        selectedLang === "hr"
                           ? "border-b-2 border-[#0f2a47] cursor-pointer"
                           : ""
                       }`}

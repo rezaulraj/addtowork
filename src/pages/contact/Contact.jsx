@@ -303,26 +303,6 @@ const Contact = () => {
         )}
       </motion.div>
 
-      <motion.div
-        id="location"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInVariants}
-        className="max-w-screen-xl mx-auto px-4 md:px-2 mt-16 mb-8"
-      >
-        <motion.h2
-          className="font-bold text-3xl md:text-5xl max-w-md border-b-4 pb-2 border-[#404049]"
-          initial={{ x: -20, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          {t("contact.locationh")}{" "}
-          <span className="text-blue-600">{t("contact.locationhh")}</span>
-          {t("contact.locationhl")}
-        </motion.h2>
-      </motion.div>
 
       <motion.div
         initial="hidden"

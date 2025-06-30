@@ -44,7 +44,6 @@ const ContactSection = () => {
               {t("contact.homelocationh")}
             </motion.h2>
 
-           
             <div className="flex flex-col space-y-4">
               <p className="font-bold text-xl">{t("contact.officel")}</p>
               <div className="space-y-4">
@@ -56,11 +55,11 @@ const ContactSection = () => {
                     <span className="text-blue-400">
                       <MapPin />
                     </span>
-                    Romania Office:
+                    Romania Office HQ
                   </p>
                   <Link href={""} className="text-lg text-gray-400 ">
-                    HQ {">"} Municipiul Ploieşti, Strada MIHAI BRAVU, Nr. 239,
-                    Bloc C4, Ap. 71, Judet Prahova
+                    Municipiul Ploieşti, Strada MIHAI BRAVU, Nr. 239, Bloc C4,
+                    Ap. 71, Judet Prahova
                   </Link>
                 </motion.div>
 
@@ -72,7 +71,7 @@ const ContactSection = () => {
                     <span className="text-blue-400">
                       <MapPin />
                     </span>
-                    New Zealand:
+                    New Zealand
                   </p>
                   <Link href={""} className="text-lg text-gray-300 ">
                     Level 1/3 Johnsonville Road, Johnsonville, Wellington 6037
@@ -87,7 +86,7 @@ const ContactSection = () => {
                     <span className="text-blue-400">
                       <MapPin />
                     </span>
-                    Australia:
+                    Australia
                   </p>
                   <Link href={""} className="text-lg text-gray-300 ">
                     Level 25, 108 St Georges Terrace, Perth WA 6000
@@ -96,7 +95,6 @@ const ContactSection = () => {
               </div>
             </div>
 
-           
             {/* <motion.div
               whileHover={{ scale: 1.01 }}
               className="p-4 rounded-lg bg-gray-800/50"
@@ -114,13 +112,12 @@ const ContactSection = () => {
               </div>
             </motion.div> */}
 
-           
             <motion.div
               whileHover={{ scale: 1.01 }}
               className="p-4 rounded-lg bg-gray-800/50"
             >
               <p className="font-semibold text-gray-300 text-xl mb-3">
-                Working Hours:
+                Working Hours
               </p>
               <div className="flex items-center gap-4 text-gray-200">
                 <Clock className="w-5 h-5 text-blue-400" />
@@ -132,12 +129,10 @@ const ContactSection = () => {
             </motion.div>
           </motion.div>
 
-         
           <motion.div
             variants={fadeIn("left", "tween", 0.2, 1)}
             className="bg-white rounded-xl p-8 shadow-2xl relative overflow-hidden"
           >
-            
             <div className="absolute -top-20 -right-20 w-40 h-40 bg-blue-400/10 rounded-full"></div>
             <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-blue-600/10 rounded-full"></div>
 
